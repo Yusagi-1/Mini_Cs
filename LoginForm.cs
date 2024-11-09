@@ -15,7 +15,7 @@ namespace Mini_Cs
             lblTime.Text = DateTime.Now.ToLongTimeString();
         }
 
-
+        //Daniel Depaor
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
