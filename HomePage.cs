@@ -17,6 +17,6 @@ namespace Mini_Cs
         {
             InitializeComponent();
         }
-        private SampleActivity;
+        
     }
 }
