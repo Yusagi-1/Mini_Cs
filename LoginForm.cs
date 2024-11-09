@@ -23,6 +23,9 @@ namespace Mini_Cs
             Application.Exit();
         }
 
+
+
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
