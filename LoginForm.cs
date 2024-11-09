@@ -15,6 +15,8 @@ namespace Mini_Cs
             lblTime.Text = DateTime.Now.ToLongTimeString();
         }
 
+
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             HomePage homePage = new HomePage();
@@ -22,8 +24,6 @@ namespace Mini_Cs
             homePage.ShowDialog();
             Application.Exit();
         }
-
-
 
 
         private void timer1_Tick(object sender, EventArgs e)
