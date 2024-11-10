@@ -29,56 +29,39 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             tbUsername = new TextBox();
-            label1 = new Label();
             tbPassword = new TextBox();
-            label2 = new Label();
             btnLogin = new MaterialSkin.Controls.MaterialButton();
-            cbShowPassword = new CheckBox();
-            pictureBox1 = new PictureBox();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            lblDate = new Label();
-            panel1 = new Panel();
-            lblTime = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            pictureBox1 = new PictureBox();
+            iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            checkBox1 = new CheckBox();
+            lblDate = new Label();
+            lblTime = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
+            bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // tbUsername
             // 
-            tbUsername.Location = new Point(263, 120);
+            tbUsername.Location = new Point(71, 281);
             tbUsername.Name = "tbUsername";
-            tbUsername.Size = new Size(192, 23);
+            tbUsername.Size = new Size(241, 23);
             tbUsername.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(263, 102);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 15);
-            label1.TabIndex = 2;
-            label1.Text = "Username:";
             // 
             // tbPassword
             // 
-            tbPassword.Location = new Point(263, 181);
+            tbPassword.Location = new Point(71, 331);
             tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(192, 23);
+            tbPassword.Size = new Size(241, 23);
             tbPassword.TabIndex = 1;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(263, 163);
-            label2.Name = "label2";
-            label2.Size = new Size(57, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Password";
             // 
             // btnLogin
             // 
@@ -91,7 +74,7 @@
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.HighEmphasis = true;
             btnLogin.Icon = null;
-            btnLogin.Location = new Point(280, 285);
+            btnLogin.Location = new Point(107, 397);
             btnLogin.Margin = new Padding(4, 6, 4, 6);
             btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
             btnLogin.Name = "btnLogin";
@@ -104,88 +87,134 @@
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
-            // cbShowPassword
-            // 
-            cbShowPassword.AutoSize = true;
-            cbShowPassword.Location = new Point(347, 210);
-            cbShowPassword.Name = "cbShowPassword";
-            cbShowPassword.Size = new Size(108, 19);
-            cbShowPassword.TabIndex = 4;
-            cbShowPassword.Text = "Show Password";
-            cbShowPassword.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.logo_design;
-            pictureBox1.Location = new Point(55, 30);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 100);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
-            // 
-            // iconPictureBox1
-            // 
-            iconPictureBox1.BackColor = Color.CornflowerBlue;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
-            iconPictureBox1.IconColor = Color.White;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 23;
-            iconPictureBox1.Location = new Point(234, 120);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(23, 23);
-            iconPictureBox1.TabIndex = 7;
-            iconPictureBox1.TabStop = false;
-            // 
-            // iconPictureBox2
-            // 
-            iconPictureBox2.BackColor = Color.CornflowerBlue;
-            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Lock;
-            iconPictureBox2.IconColor = Color.White;
-            iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox2.IconSize = 23;
-            iconPictureBox2.Location = new Point(234, 181);
-            iconPictureBox2.Name = "iconPictureBox2";
-            iconPictureBox2.Size = new Size(23, 23);
-            iconPictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
-            iconPictureBox2.TabIndex = 7;
-            iconPictureBox2.TabStop = false;
-            // 
-            // lblDate
-            // 
-            lblDate.BackColor = Color.FromArgb(30, 0, 0, 0);
-            lblDate.Dock = DockStyle.Top;
-            lblDate.Location = new Point(0, 0);
-            lblDate.Name = "lblDate";
-            lblDate.Size = new Size(254, 51);
-            lblDate.TabIndex = 8;
-            lblDate.Text = "Date";
-            lblDate.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(30, 0, 0, 0);
-            panel1.Controls.Add(lblTime);
-            panel1.Controls.Add(lblDate);
-            panel1.Location = new Point(222, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(254, 99);
-            panel1.TabIndex = 9;
-            // 
-            // lblTime
-            // 
-            lblTime.Dock = DockStyle.Bottom;
-            lblTime.Location = new Point(0, 51);
-            lblTime.Name = "lblTime";
-            lblTime.Size = new Size(254, 48);
-            lblTime.TabIndex = 9;
-            lblTime.Text = "Time";
-            lblTime.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // timer1
             // 
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
+            // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.BackColor = Color.Transparent;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
+            iconPictureBox1.IconColor = Color.White;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.IconSize = 23;
+            iconPictureBox1.Location = new Point(42, 281);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(23, 23);
+            iconPictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            iconPictureBox1.TabIndex = 4;
+            iconPictureBox1.TabStop = false;
+            // 
+            // bunifuLabel1
+            // 
+            bunifuLabel1.AllowParentOverrides = false;
+            bunifuLabel1.AutoEllipsis = false;
+            bunifuLabel1.CursorType = Cursors.Default;
+            bunifuLabel1.Font = new Font("Segoe UI", 9F);
+            bunifuLabel1.Location = new Point(71, 260);
+            bunifuLabel1.Name = "bunifuLabel1";
+            bunifuLabel1.RightToLeft = RightToLeft.No;
+            bunifuLabel1.Size = new Size(53, 15);
+            bunifuLabel1.TabIndex = 5;
+            bunifuLabel1.Text = "Username";
+            bunifuLabel1.TextAlignment = ContentAlignment.TopLeft;
+            bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            bunifuLabel2.AllowParentOverrides = false;
+            bunifuLabel2.AutoEllipsis = false;
+            bunifuLabel2.CursorType = Cursors.Default;
+            bunifuLabel2.Font = new Font("Segoe UI", 9F);
+            bunifuLabel2.Location = new Point(71, 310);
+            bunifuLabel2.Name = "bunifuLabel2";
+            bunifuLabel2.RightToLeft = RightToLeft.No;
+            bunifuLabel2.Size = new Size(57, 15);
+            bunifuLabel2.TabIndex = 5;
+            bunifuLabel2.Text = "Passowrod";
+            bunifuLabel2.TextAlignment = ContentAlignment.TopLeft;
+            bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuGradientPanel1
+            // 
+            bunifuGradientPanel1.BackColor = Color.Transparent;
+            bunifuGradientPanel1.BackgroundImage = (Image)resources.GetObject("bunifuGradientPanel1.BackgroundImage");
+            bunifuGradientPanel1.BackgroundImageLayout = ImageLayout.Stretch;
+            bunifuGradientPanel1.BorderRadius = 1;
+            bunifuGradientPanel1.Controls.Add(lblTime);
+            bunifuGradientPanel1.Controls.Add(lblDate);
+            bunifuGradientPanel1.Controls.Add(checkBox1);
+            bunifuGradientPanel1.Controls.Add(bunifuLabel2);
+            bunifuGradientPanel1.Controls.Add(pictureBox1);
+            bunifuGradientPanel1.Controls.Add(bunifuLabel1);
+            bunifuGradientPanel1.Controls.Add(tbPassword);
+            bunifuGradientPanel1.Controls.Add(tbUsername);
+            bunifuGradientPanel1.Controls.Add(iconPictureBox2);
+            bunifuGradientPanel1.Controls.Add(iconPictureBox1);
+            bunifuGradientPanel1.Controls.Add(btnLogin);
+            bunifuGradientPanel1.Dock = DockStyle.Fill;
+            bunifuGradientPanel1.GradientBottomLeft = Color.FromArgb(205, 203, 192);
+            bunifuGradientPanel1.GradientBottomRight = Color.FromArgb(139, 145, 181);
+            bunifuGradientPanel1.GradientTopLeft = Color.FromArgb(99, 120, 175);
+            bunifuGradientPanel1.GradientTopRight = Color.FromArgb(99, 120, 175);
+            bunifuGradientPanel1.Location = new Point(0, 0);
+            bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            bunifuGradientPanel1.Quality = 10;
+            bunifuGradientPanel1.Size = new Size(354, 466);
+            bunifuGradientPanel1.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.logo_design;
+            pictureBox1.Location = new Point(100, 22);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(150, 150);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // iconPictureBox2
+            // 
+            iconPictureBox2.BackColor = Color.Transparent;
+            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Lock;
+            iconPictureBox2.IconColor = Color.White;
+            iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox2.IconSize = 23;
+            iconPictureBox2.Location = new Point(42, 331);
+            iconPictureBox2.Name = "iconPictureBox2";
+            iconPictureBox2.Size = new Size(23, 23);
+            iconPictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            iconPictureBox2.TabIndex = 4;
+            iconPictureBox2.TabStop = false;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(204, 360);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(108, 19);
+            checkBox1.TabIndex = 6;
+            checkBox1.Text = "Show Password";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // lblDate
+            // 
+            lblDate.Location = new Point(100, 188);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(150, 23);
+            lblDate.TabIndex = 7;
+            lblDate.Text = "Date Label";
+            lblDate.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblTime
+            // 
+            lblTime.Location = new Point(98, 220);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(150, 23);
+            lblTime.TabIndex = 7;
+            lblTime.Text = "Time Label";
+            lblTime.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // LoginForm
             // 
@@ -193,44 +222,35 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.CornflowerBlue;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(476, 437);
-            Controls.Add(iconPictureBox2);
-            Controls.Add(iconPictureBox1);
-            Controls.Add(pictureBox1);
-            Controls.Add(cbShowPassword);
-            Controls.Add(btnLogin);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(tbPassword);
-            Controls.Add(tbUsername);
-            Controls.Add(panel1);
+            ClientSize = new Size(354, 466);
+            Controls.Add(bunifuGradientPanel1);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += LoginForm_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
+            bunifuGradientPanel1.ResumeLayout(false);
+            bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
         private TextBox tbUsername;
-        private Label label1;
         private TextBox tbPassword;
-        private Label label2;
         private MaterialSkin.Controls.MaterialButton btnLogin;
-        private CheckBox cbShowPassword;
-        private PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private Label lblDate;
-        private Panel panel1;
-        private Label lblTime;
         private System.Windows.Forms.Timer timer1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
+        private PictureBox pictureBox1;
+        private CheckBox checkBox1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private Label lblTime;
+        private Label lblDate;
     }
 }
