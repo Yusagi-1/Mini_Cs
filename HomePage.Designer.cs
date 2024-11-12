@@ -29,226 +29,278 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
-            panel1 = new Panel();
-            iconButton5 = new FontAwesome.Sharp.IconButton();
-            iconButton6 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
+            btnInventory = new FontAwesome.Sharp.IconButton();
+            btnBookFuneral = new FontAwesome.Sharp.IconButton();
+            btnPromo = new FontAwesome.Sharp.IconButton();
+            btnHome = new FontAwesome.Sharp.IconButton();
+            btnCheckRecords = new FontAwesome.Sharp.IconButton();
             panel3 = new Panel();
-            pbUserProfile = new Bunifu.UI.WinForms.BunifuPictureBox();
+            panelNavBar = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            btn = new FontAwesome.Sharp.IconButton();
             panel2 = new Panel();
-            lblSetUsername = new Label();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbUserProfile).BeginInit();
+            bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            panelNavBar.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bunifuPictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
+            bunifuGradientPanel2.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // btnInventory
             // 
-            panel1.BackColor = Color.FromArgb(99, 120, 175);
-            panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Controls.Add(lblSetUsername);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(pbUserProfile);
-            panel1.Controls.Add(iconButton5);
-            panel1.Controls.Add(iconButton6);
-            panel1.Controls.Add(iconButton2);
-            panel1.Controls.Add(iconButton3);
-            panel1.Controls.Add(iconButton4);
-            panel1.Controls.Add(iconButton1);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(222, 920);
-            panel1.TabIndex = 0;
+            btnInventory.Dock = DockStyle.Top;
+            btnInventory.FlatAppearance.BorderSize = 0;
+            btnInventory.FlatStyle = FlatStyle.Flat;
+            btnInventory.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnInventory.ForeColor = Color.White;
+            btnInventory.IconChar = FontAwesome.Sharp.IconChar.Box;
+            btnInventory.IconColor = Color.Black;
+            btnInventory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnInventory.IconSize = 30;
+            btnInventory.ImageAlign = ContentAlignment.MiddleLeft;
+            btnInventory.Location = new Point(0, 429);
+            btnInventory.Name = "btnInventory";
+            btnInventory.Size = new Size(212, 60);
+            btnInventory.TabIndex = 0;
+            btnInventory.Text = "Inventory";
+            btnInventory.TextAlign = ContentAlignment.MiddleLeft;
+            btnInventory.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnInventory.UseVisualStyleBackColor = false;
+            btnInventory.Click += btnInventory_Click;
             // 
-            // iconButton5
+            // btnBookFuneral
             // 
-            iconButton5.BackColor = Color.FromArgb(99, 130, 190);
-            iconButton5.FlatAppearance.BorderSize = 0;
-            iconButton5.FlatStyle = FlatStyle.Flat;
-            iconButton5.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton5.ForeColor = Color.White;
-            iconButton5.IconChar = FontAwesome.Sharp.IconChar.Box;
-            iconButton5.IconColor = Color.Black;
-            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton5.IconSize = 30;
-            iconButton5.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton5.Location = new Point(0, 586);
-            iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(222, 60);
-            iconButton5.TabIndex = 6;
-            iconButton5.Text = "Inventory";
-            iconButton5.UseVisualStyleBackColor = false;
+            btnBookFuneral.Dock = DockStyle.Top;
+            btnBookFuneral.FlatAppearance.BorderSize = 0;
+            btnBookFuneral.FlatStyle = FlatStyle.Flat;
+            btnBookFuneral.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBookFuneral.ForeColor = Color.White;
+            btnBookFuneral.IconChar = FontAwesome.Sharp.IconChar.BookBookmark;
+            btnBookFuneral.IconColor = Color.Black;
+            btnBookFuneral.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnBookFuneral.IconSize = 30;
+            btnBookFuneral.ImageAlign = ContentAlignment.MiddleLeft;
+            btnBookFuneral.Location = new Point(0, 249);
+            btnBookFuneral.Name = "btnBookFuneral";
+            btnBookFuneral.Size = new Size(212, 60);
+            btnBookFuneral.TabIndex = 0;
+            btnBookFuneral.Text = "Book Funeral";
+            btnBookFuneral.TextAlign = ContentAlignment.MiddleLeft;
+            btnBookFuneral.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnBookFuneral.UseVisualStyleBackColor = false;
+            btnBookFuneral.Click += btnBookFuneral_Click;
             // 
-            // iconButton6
+            // btnPromo
             // 
-            iconButton6.BackColor = Color.FromArgb(99, 130, 190);
-            iconButton6.FlatAppearance.BorderSize = 0;
-            iconButton6.FlatStyle = FlatStyle.Flat;
-            iconButton6.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton6.ForeColor = Color.White;
-            iconButton6.IconChar = FontAwesome.Sharp.IconChar.House;
-            iconButton6.IconColor = Color.Black;
-            iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton6.IconSize = 30;
-            iconButton6.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton6.Location = new Point(0, 514);
-            iconButton6.Name = "iconButton6";
-            iconButton6.Size = new Size(222, 60);
-            iconButton6.TabIndex = 5;
-            iconButton6.Text = "Stocks";
-            iconButton6.UseVisualStyleBackColor = false;
+            btnPromo.Dock = DockStyle.Top;
+            btnPromo.FlatAppearance.BorderSize = 0;
+            btnPromo.FlatStyle = FlatStyle.Flat;
+            btnPromo.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPromo.ForeColor = Color.White;
+            btnPromo.IconChar = FontAwesome.Sharp.IconChar.Ticket;
+            btnPromo.IconColor = Color.Black;
+            btnPromo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnPromo.IconSize = 30;
+            btnPromo.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPromo.Location = new Point(0, 309);
+            btnPromo.Name = "btnPromo";
+            btnPromo.Size = new Size(212, 60);
+            btnPromo.TabIndex = 0;
+            btnPromo.Text = "Promo";
+            btnPromo.TextAlign = ContentAlignment.MiddleLeft;
+            btnPromo.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnPromo.UseVisualStyleBackColor = false;
+            btnPromo.Click += btnPromo_Click;
             // 
-            // iconButton2
+            // btnHome
             // 
-            iconButton2.BackColor = Color.FromArgb(99, 130, 190);
-            iconButton2.FlatAppearance.BorderSize = 0;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton2.ForeColor = Color.White;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Ticket;
-            iconButton2.IconColor = Color.Black;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 30;
-            iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(0, 370);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(222, 60);
-            iconButton2.TabIndex = 2;
-            iconButton2.Text = "Promo";
-            iconButton2.UseVisualStyleBackColor = false;
+            btnHome.Dock = DockStyle.Top;
+            btnHome.FlatAppearance.BorderSize = 0;
+            btnHome.FlatStyle = FlatStyle.Flat;
+            btnHome.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnHome.ForeColor = Color.White;
+            btnHome.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
+            btnHome.IconColor = Color.Black;
+            btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnHome.IconSize = 30;
+            btnHome.ImageAlign = ContentAlignment.MiddleLeft;
+            btnHome.Location = new Point(0, 189);
+            btnHome.Name = "btnHome";
+            btnHome.Size = new Size(212, 60);
+            btnHome.TabIndex = 0;
+            btnHome.Text = "Home";
+            btnHome.TextAlign = ContentAlignment.MiddleLeft;
+            btnHome.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnHome.UseVisualStyleBackColor = false;
+            btnHome.Click += btnHome_Click;
             // 
-            // iconButton3
+            // btnCheckRecords
             // 
-            iconButton3.BackColor = Color.FromArgb(99, 130, 190);
-            iconButton3.FlatAppearance.BorderSize = 0;
-            iconButton3.FlatStyle = FlatStyle.Flat;
-            iconButton3.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton3.ForeColor = Color.White;
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.Feather;
-            iconButton3.IconColor = Color.Black;
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.IconSize = 30;
-            iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton3.Location = new Point(0, 442);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(222, 60);
-            iconButton3.TabIndex = 4;
-            iconButton3.Text = "Logs";
-            iconButton3.UseVisualStyleBackColor = false;
-            // 
-            // iconButton4
-            // 
-            iconButton4.BackColor = Color.FromArgb(99, 130, 190);
-            iconButton4.FlatAppearance.BorderSize = 0;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton4.ForeColor = Color.White;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
-            iconButton4.IconColor = Color.Black;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 30;
-            iconButton4.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton4.Location = new Point(0, 298);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(222, 60);
-            iconButton4.TabIndex = 3;
-            iconButton4.Text = "Record";
-            iconButton4.UseVisualStyleBackColor = false;
-            // 
-            // iconButton1
-            // 
-            iconButton1.BackColor = Color.FromArgb(99, 130, 190);
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton1.ForeColor = Color.White;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 30;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(0, 226);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(222, 60);
-            iconButton1.TabIndex = 1;
-            iconButton1.Text = "DashBoard";
-            iconButton1.UseVisualStyleBackColor = false;
+            btnCheckRecords.Dock = DockStyle.Top;
+            btnCheckRecords.FlatAppearance.BorderSize = 0;
+            btnCheckRecords.FlatStyle = FlatStyle.Flat;
+            btnCheckRecords.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCheckRecords.ForeColor = Color.White;
+            btnCheckRecords.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
+            btnCheckRecords.IconColor = Color.Black;
+            btnCheckRecords.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnCheckRecords.IconSize = 30;
+            btnCheckRecords.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCheckRecords.Location = new Point(0, 369);
+            btnCheckRecords.Name = "btnCheckRecords";
+            btnCheckRecords.Size = new Size(212, 60);
+            btnCheckRecords.TabIndex = 0;
+            btnCheckRecords.Text = "Check Records";
+            btnCheckRecords.TextAlign = ContentAlignment.MiddleLeft;
+            btnCheckRecords.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCheckRecords.UseVisualStyleBackColor = false;
+            btnCheckRecords.Click += btnCheckRecords_Click;
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(99, 120, 189);
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(222, 0);
+            panel3.Location = new Point(0, 85);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1398, 0);
+            panel3.Size = new Size(1200, 0);
             panel3.TabIndex = 1;
             // 
-            // pbUserProfile
+            // panelNavBar
             // 
-            pbUserProfile.AllowFocused = false;
-            pbUserProfile.Anchor = AnchorStyles.None;
-            pbUserProfile.AutoSizeHeight = true;
-            pbUserProfile.BorderRadius = 75;
-            pbUserProfile.Image = (Image)resources.GetObject("pbUserProfile.Image");
-            pbUserProfile.IsCircle = true;
-            pbUserProfile.Location = new Point(36, 12);
-            pbUserProfile.Name = "pbUserProfile";
-            pbUserProfile.Size = new Size(150, 150);
-            pbUserProfile.SizeMode = PictureBoxSizeMode.Zoom;
-            pbUserProfile.TabIndex = 2;
-            pbUserProfile.TabStop = false;
-            pbUserProfile.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            panelNavBar.BackColor = Color.Transparent;
+            panelNavBar.BackgroundImage = (Image)resources.GetObject("panelNavBar.BackgroundImage");
+            panelNavBar.BackgroundImageLayout = ImageLayout.Stretch;
+            panelNavBar.BorderRadius = 0;
+            panelNavBar.Controls.Add(btn);
+            panelNavBar.Controls.Add(btnInventory);
+            panelNavBar.Controls.Add(btnCheckRecords);
+            panelNavBar.Controls.Add(btnPromo);
+            panelNavBar.Controls.Add(btnBookFuneral);
+            panelNavBar.Controls.Add(btnHome);
+            panelNavBar.Controls.Add(panel2);
+            panelNavBar.GradientBottomLeft = Color.FromArgb(139, 145, 181);
+            panelNavBar.GradientBottomRight = Color.FromArgb(139, 145, 181);
+            panelNavBar.GradientTopLeft = Color.FromArgb(99, 120, 175);
+            panelNavBar.GradientTopRight = Color.FromArgb(99, 120, 175);
+            panelNavBar.Location = new Point(0, 0);
+            panelNavBar.Name = "panelNavBar";
+            panelNavBar.Quality = 10;
+            panelNavBar.Size = new Size(212, 630);
+            panelNavBar.TabIndex = 7;
+            // 
+            // btn
+            // 
+            btn.Dock = DockStyle.Top;
+            btn.FlatAppearance.BorderSize = 0;
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn.ForeColor = Color.White;
+            btn.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
+            btn.IconColor = Color.Black;
+            btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn.IconSize = 30;
+            btn.ImageAlign = ContentAlignment.MiddleLeft;
+            btn.Location = new Point(0, 489);
+            btn.Name = "btn";
+            btn.Size = new Size(212, 60);
+            btn.TabIndex = 0;
+            btn.Text = "DashBoard";
+            btn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn.UseVisualStyleBackColor = false;
+            btn.Click += btn_Click;
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(139, 145, 181);
-            panel2.Location = new Point(5, 210);
+            panel2.Controls.Add(bunifuPictureBox1);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(212, 10);
-            panel2.TabIndex = 2;
+            panel2.Size = new Size(212, 189);
+            panel2.TabIndex = 9;
             // 
-            // lblSetUsername
+            // bunifuPictureBox1
             // 
-            lblSetUsername.Location = new Point(36, 177);
-            lblSetUsername.Name = "lblSetUsername";
-            lblSetUsername.Size = new Size(150, 30);
-            lblSetUsername.TabIndex = 2;
-            lblSetUsername.Text = "UserName";
-            lblSetUsername.TextAlign = ContentAlignment.MiddleCenter;
+            bunifuPictureBox1.AllowFocused = false;
+            bunifuPictureBox1.Anchor = AnchorStyles.None;
+            bunifuPictureBox1.AutoSizeHeight = true;
+            bunifuPictureBox1.BorderRadius = 63;
+            bunifuPictureBox1.Image = (Image)resources.GetObject("bunifuPictureBox1.Image");
+            bunifuPictureBox1.IsCircle = true;
+            bunifuPictureBox1.Location = new Point(41, 12);
+            bunifuPictureBox1.Name = "bunifuPictureBox1";
+            bunifuPictureBox1.Size = new Size(127, 127);
+            bunifuPictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            bunifuPictureBox1.TabIndex = 8;
+            bunifuPictureBox1.TabStop = false;
+            bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.BackColor = Color.Transparent;
+            iconPictureBox1.ForeColor = SystemColors.ButtonHighlight;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Bell;
+            iconPictureBox1.IconColor = SystemColors.ButtonHighlight;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.IconSize = 40;
+            iconPictureBox1.Location = new Point(1148, 22);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(40, 40);
+            iconPictureBox1.TabIndex = 8;
+            iconPictureBox1.TabStop = false;
+            // 
+            // bunifuGradientPanel2
+            // 
+            bunifuGradientPanel2.BackColor = Color.Transparent;
+            bunifuGradientPanel2.BackgroundImage = (Image)resources.GetObject("bunifuGradientPanel2.BackgroundImage");
+            bunifuGradientPanel2.BackgroundImageLayout = ImageLayout.Stretch;
+            bunifuGradientPanel2.BorderRadius = 0;
+            bunifuGradientPanel2.Controls.Add(iconPictureBox1);
+            bunifuGradientPanel2.Dock = DockStyle.Top;
+            bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(139, 145, 181);
+            bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(139, 145, 181);
+            bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(99, 120, 175);
+            bunifuGradientPanel2.GradientTopRight = Color.FromArgb(99, 120, 175);
+            bunifuGradientPanel2.Location = new Point(0, 0);
+            bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            bunifuGradientPanel2.Quality = 10;
+            bunifuGradientPanel2.Size = new Size(1200, 85);
+            bunifuGradientPanel2.TabIndex = 10;
             // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(139, 145, 181);
-            ClientSize = new Size(1620, 920);
+            BackColor = Color.White;
+            ClientSize = new Size(1200, 630);
+            Controls.Add(panelNavBar);
             Controls.Add(panel3);
-            Controls.Add(panel1);
+            Controls.Add(bunifuGradientPanel2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "HomePage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HomePage";
-            WindowState = FormWindowState.Maximized;
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbUserProfile).EndInit();
+            panelNavBar.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)bunifuPictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
+            bunifuGradientPanel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel panel1;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private Panel panel3;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton6;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnInventory;
+        private FontAwesome.Sharp.IconButton btnBookFuneral;
+        private FontAwesome.Sharp.IconButton btnHome;
+        private FontAwesome.Sharp.IconButton btnCheckRecords;
+        private FontAwesome.Sharp.IconButton btnPromo;
+        private Bunifu.UI.WinForms.BunifuGradientPanel panelNavBar;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconButton btn;
         private Panel panel2;
-        private Bunifu.UI.WinForms.BunifuPictureBox pbUserProfile;
-        private Label lblSetUsername;
+        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
     }
 }
