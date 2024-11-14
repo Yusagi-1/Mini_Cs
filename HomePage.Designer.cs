@@ -167,7 +167,7 @@
             btnUserManagement.Name = "btnUserManagement";
             btnUserManagement.Size = new Size(212, 60);
             btnUserManagement.TabIndex = 14;
-            btnUserManagement.Text = "User Management";
+            btnUserManagement.Text = "User ";
             btnUserManagement.TextAlign = ContentAlignment.MiddleLeft;
             btnUserManagement.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnUserManagement.UseVisualStyleBackColor = false;
@@ -233,7 +233,7 @@
             btnService.Name = "btnService";
             btnService.Size = new Size(212, 60);
             btnService.TabIndex = 11;
-            btnService.Text = "Service Management";
+            btnService.Text = "Service ";
             btnService.TextAlign = ContentAlignment.MiddleLeft;
             btnService.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnService.UseVisualStyleBackColor = false;
