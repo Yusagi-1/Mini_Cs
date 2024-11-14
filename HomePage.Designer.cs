@@ -29,90 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
-            btnInventory = new FontAwesome.Sharp.IconButton();
-            btnBookFuneral = new FontAwesome.Sharp.IconButton();
-            btnPromo = new FontAwesome.Sharp.IconButton();
             btnHome = new FontAwesome.Sharp.IconButton();
-            btnCheckRecords = new FontAwesome.Sharp.IconButton();
             panel3 = new Panel();
             panelNavBar = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            btn = new FontAwesome.Sharp.IconButton();
+            btnLogout = new FontAwesome.Sharp.IconButton();
+            btnAuditLog = new FontAwesome.Sharp.IconButton();
+            btnUserManagement = new FontAwesome.Sharp.IconButton();
+            btnReports = new FontAwesome.Sharp.IconButton();
+            btnTransaction = new FontAwesome.Sharp.IconButton();
+            btnService = new FontAwesome.Sharp.IconButton();
+            btnClient = new FontAwesome.Sharp.IconButton();
             panel2 = new Panel();
             bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            panelMain = new Panel();
             panelNavBar.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bunifuPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             bunifuGradientPanel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // btnInventory
-            // 
-            btnInventory.Dock = DockStyle.Top;
-            btnInventory.FlatAppearance.BorderSize = 0;
-            btnInventory.FlatStyle = FlatStyle.Flat;
-            btnInventory.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInventory.ForeColor = Color.White;
-            btnInventory.IconChar = FontAwesome.Sharp.IconChar.Box;
-            btnInventory.IconColor = Color.Black;
-            btnInventory.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnInventory.IconSize = 30;
-            btnInventory.ImageAlign = ContentAlignment.MiddleLeft;
-            btnInventory.Location = new Point(0, 429);
-            btnInventory.Name = "btnInventory";
-            btnInventory.Size = new Size(212, 60);
-            btnInventory.TabIndex = 0;
-            btnInventory.Text = "Inventory";
-            btnInventory.TextAlign = ContentAlignment.MiddleLeft;
-            btnInventory.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnInventory.UseVisualStyleBackColor = false;
-            btnInventory.Click += btnInventory_Click;
-            // 
-            // btnBookFuneral
-            // 
-            btnBookFuneral.Dock = DockStyle.Top;
-            btnBookFuneral.FlatAppearance.BorderSize = 0;
-            btnBookFuneral.FlatStyle = FlatStyle.Flat;
-            btnBookFuneral.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBookFuneral.ForeColor = Color.White;
-            btnBookFuneral.IconChar = FontAwesome.Sharp.IconChar.BookBookmark;
-            btnBookFuneral.IconColor = Color.Black;
-            btnBookFuneral.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnBookFuneral.IconSize = 30;
-            btnBookFuneral.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBookFuneral.Location = new Point(0, 249);
-            btnBookFuneral.Name = "btnBookFuneral";
-            btnBookFuneral.Size = new Size(212, 60);
-            btnBookFuneral.TabIndex = 0;
-            btnBookFuneral.Text = "Book Funeral";
-            btnBookFuneral.TextAlign = ContentAlignment.MiddleLeft;
-            btnBookFuneral.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBookFuneral.UseVisualStyleBackColor = false;
-            btnBookFuneral.Click += btnBookFuneral_Click;
-            // 
-            // btnPromo
-            // 
-            btnPromo.Dock = DockStyle.Top;
-            btnPromo.FlatAppearance.BorderSize = 0;
-            btnPromo.FlatStyle = FlatStyle.Flat;
-            btnPromo.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnPromo.ForeColor = Color.White;
-            btnPromo.IconChar = FontAwesome.Sharp.IconChar.Ticket;
-            btnPromo.IconColor = Color.Black;
-            btnPromo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnPromo.IconSize = 30;
-            btnPromo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPromo.Location = new Point(0, 309);
-            btnPromo.Name = "btnPromo";
-            btnPromo.Size = new Size(212, 60);
-            btnPromo.TabIndex = 0;
-            btnPromo.Text = "Promo";
-            btnPromo.TextAlign = ContentAlignment.MiddleLeft;
-            btnPromo.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnPromo.UseVisualStyleBackColor = false;
-            btnPromo.Click += btnPromo_Click;
             // 
             // btnHome
             // 
@@ -136,28 +73,6 @@
             btnHome.UseVisualStyleBackColor = false;
             btnHome.Click += btnHome_Click;
             // 
-            // btnCheckRecords
-            // 
-            btnCheckRecords.Dock = DockStyle.Top;
-            btnCheckRecords.FlatAppearance.BorderSize = 0;
-            btnCheckRecords.FlatStyle = FlatStyle.Flat;
-            btnCheckRecords.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCheckRecords.ForeColor = Color.White;
-            btnCheckRecords.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
-            btnCheckRecords.IconColor = Color.Black;
-            btnCheckRecords.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnCheckRecords.IconSize = 30;
-            btnCheckRecords.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCheckRecords.Location = new Point(0, 369);
-            btnCheckRecords.Name = "btnCheckRecords";
-            btnCheckRecords.Size = new Size(212, 60);
-            btnCheckRecords.TabIndex = 0;
-            btnCheckRecords.Text = "Check Records";
-            btnCheckRecords.TextAlign = ContentAlignment.MiddleLeft;
-            btnCheckRecords.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnCheckRecords.UseVisualStyleBackColor = false;
-            btnCheckRecords.Click += btnCheckRecords_Click;
-            // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(99, 120, 189);
@@ -173,11 +88,13 @@
             panelNavBar.BackgroundImage = (Image)resources.GetObject("panelNavBar.BackgroundImage");
             panelNavBar.BackgroundImageLayout = ImageLayout.Stretch;
             panelNavBar.BorderRadius = 0;
-            panelNavBar.Controls.Add(btn);
-            panelNavBar.Controls.Add(btnInventory);
-            panelNavBar.Controls.Add(btnCheckRecords);
-            panelNavBar.Controls.Add(btnPromo);
-            panelNavBar.Controls.Add(btnBookFuneral);
+            panelNavBar.Controls.Add(btnLogout);
+            panelNavBar.Controls.Add(btnAuditLog);
+            panelNavBar.Controls.Add(btnUserManagement);
+            panelNavBar.Controls.Add(btnReports);
+            panelNavBar.Controls.Add(btnTransaction);
+            panelNavBar.Controls.Add(btnService);
+            panelNavBar.Controls.Add(btnClient);
             panelNavBar.Controls.Add(btnHome);
             panelNavBar.Controls.Add(panel2);
             panelNavBar.GradientBottomLeft = Color.FromArgb(139, 145, 181);
@@ -187,29 +104,162 @@
             panelNavBar.Location = new Point(0, 0);
             panelNavBar.Name = "panelNavBar";
             panelNavBar.Quality = 10;
-            panelNavBar.Size = new Size(212, 630);
+            panelNavBar.Size = new Size(212, 789);
             panelNavBar.TabIndex = 7;
             // 
-            // btn
+            // btnLogout
             // 
-            btn.Dock = DockStyle.Top;
-            btn.FlatAppearance.BorderSize = 0;
-            btn.FlatStyle = FlatStyle.Flat;
-            btn.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn.ForeColor = Color.White;
-            btn.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
-            btn.IconColor = Color.Black;
-            btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn.IconSize = 30;
-            btn.ImageAlign = ContentAlignment.MiddleLeft;
-            btn.Location = new Point(0, 489);
-            btn.Name = "btn";
-            btn.Size = new Size(212, 60);
-            btn.TabIndex = 0;
-            btn.Text = "DashBoard";
-            btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn.UseVisualStyleBackColor = false;
-            btn.Click += btn_Click;
+            btnLogout.Dock = DockStyle.Top;
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = Color.White;
+            btnLogout.IconChar = FontAwesome.Sharp.IconChar.Close;
+            btnLogout.IconColor = Color.Black;
+            btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnLogout.IconSize = 30;
+            btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLogout.Location = new Point(0, 609);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(212, 60);
+            btnLogout.TabIndex = 16;
+            btnLogout.Text = "Logout";
+            btnLogout.TextAlign = ContentAlignment.MiddleLeft;
+            btnLogout.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // btnAuditLog
+            // 
+            btnAuditLog.Dock = DockStyle.Top;
+            btnAuditLog.FlatAppearance.BorderSize = 0;
+            btnAuditLog.FlatStyle = FlatStyle.Flat;
+            btnAuditLog.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAuditLog.ForeColor = Color.White;
+            btnAuditLog.IconChar = FontAwesome.Sharp.IconChar.Search;
+            btnAuditLog.IconColor = Color.Black;
+            btnAuditLog.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAuditLog.IconSize = 30;
+            btnAuditLog.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAuditLog.Location = new Point(0, 549);
+            btnAuditLog.Name = "btnAuditLog";
+            btnAuditLog.Size = new Size(212, 60);
+            btnAuditLog.TabIndex = 15;
+            btnAuditLog.Text = "Audit Log";
+            btnAuditLog.TextAlign = ContentAlignment.MiddleLeft;
+            btnAuditLog.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAuditLog.UseVisualStyleBackColor = false;
+            btnAuditLog.Click += btnAuditLog_Click;
+            // 
+            // btnUserManagement
+            // 
+            btnUserManagement.Dock = DockStyle.Top;
+            btnUserManagement.FlatAppearance.BorderSize = 0;
+            btnUserManagement.FlatStyle = FlatStyle.Flat;
+            btnUserManagement.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUserManagement.ForeColor = Color.White;
+            btnUserManagement.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            btnUserManagement.IconColor = Color.Black;
+            btnUserManagement.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnUserManagement.IconSize = 30;
+            btnUserManagement.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUserManagement.Location = new Point(0, 489);
+            btnUserManagement.Name = "btnUserManagement";
+            btnUserManagement.Size = new Size(212, 60);
+            btnUserManagement.TabIndex = 14;
+            btnUserManagement.Text = "User Management";
+            btnUserManagement.TextAlign = ContentAlignment.MiddleLeft;
+            btnUserManagement.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUserManagement.UseVisualStyleBackColor = false;
+            btnUserManagement.Click += btnUserManagement_Click;
+            // 
+            // btnReports
+            // 
+            btnReports.Dock = DockStyle.Top;
+            btnReports.FlatAppearance.BorderSize = 0;
+            btnReports.FlatStyle = FlatStyle.Flat;
+            btnReports.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReports.ForeColor = Color.White;
+            btnReports.IconChar = FontAwesome.Sharp.IconChar.BarChart;
+            btnReports.IconColor = Color.Black;
+            btnReports.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnReports.IconSize = 30;
+            btnReports.ImageAlign = ContentAlignment.MiddleLeft;
+            btnReports.Location = new Point(0, 429);
+            btnReports.Name = "btnReports";
+            btnReports.Size = new Size(212, 60);
+            btnReports.TabIndex = 13;
+            btnReports.Text = "Reports";
+            btnReports.TextAlign = ContentAlignment.MiddleLeft;
+            btnReports.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnReports.UseVisualStyleBackColor = false;
+            btnReports.Click += btnReports_Click;
+            // 
+            // btnTransaction
+            // 
+            btnTransaction.Dock = DockStyle.Top;
+            btnTransaction.FlatAppearance.BorderSize = 0;
+            btnTransaction.FlatStyle = FlatStyle.Flat;
+            btnTransaction.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTransaction.ForeColor = Color.White;
+            btnTransaction.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
+            btnTransaction.IconColor = Color.Black;
+            btnTransaction.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnTransaction.IconSize = 30;
+            btnTransaction.ImageAlign = ContentAlignment.MiddleLeft;
+            btnTransaction.Location = new Point(0, 369);
+            btnTransaction.Name = "btnTransaction";
+            btnTransaction.Size = new Size(212, 60);
+            btnTransaction.TabIndex = 12;
+            btnTransaction.Text = "Transaction";
+            btnTransaction.TextAlign = ContentAlignment.MiddleLeft;
+            btnTransaction.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnTransaction.UseVisualStyleBackColor = false;
+            btnTransaction.Click += btnTransaction_Click;
+            // 
+            // btnService
+            // 
+            btnService.Dock = DockStyle.Top;
+            btnService.FlatAppearance.BorderSize = 0;
+            btnService.FlatStyle = FlatStyle.Flat;
+            btnService.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnService.ForeColor = Color.White;
+            btnService.IconChar = FontAwesome.Sharp.IconChar.Tools;
+            btnService.IconColor = Color.Black;
+            btnService.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnService.IconSize = 30;
+            btnService.ImageAlign = ContentAlignment.MiddleLeft;
+            btnService.Location = new Point(0, 309);
+            btnService.Name = "btnService";
+            btnService.Size = new Size(212, 60);
+            btnService.TabIndex = 11;
+            btnService.Text = "Service Management";
+            btnService.TextAlign = ContentAlignment.MiddleLeft;
+            btnService.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnService.UseVisualStyleBackColor = false;
+            btnService.Click += btnService_Click;
+            // 
+            // btnClient
+            // 
+            btnClient.Dock = DockStyle.Top;
+            btnClient.FlatAppearance.BorderSize = 0;
+            btnClient.FlatStyle = FlatStyle.Flat;
+            btnClient.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClient.ForeColor = Color.White;
+            btnClient.IconChar = FontAwesome.Sharp.IconChar.Male;
+            btnClient.IconColor = Color.Black;
+            btnClient.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnClient.IconSize = 30;
+            btnClient.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClient.Location = new Point(0, 249);
+            btnClient.Name = "btnClient";
+            btnClient.Size = new Size(212, 60);
+            btnClient.TabIndex = 10;
+            btnClient.Text = "Client Records";
+            btnClient.TextAlign = ContentAlignment.MiddleLeft;
+            btnClient.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnClient.UseVisualStyleBackColor = false;
+            btnClient.Click += btnClient_Click;
             // 
             // panel2
             // 
@@ -268,12 +318,21 @@
             bunifuGradientPanel2.Size = new Size(1200, 85);
             bunifuGradientPanel2.TabIndex = 10;
             // 
+            // panelMain
+            // 
+            panelMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelMain.Location = new Point(218, 86);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(982, 703);
+            panelMain.TabIndex = 11;
+            // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1200, 630);
+            ClientSize = new Size(1200, 788);
+            Controls.Add(panelMain);
             Controls.Add(panelNavBar);
             Controls.Add(panel3);
             Controls.Add(bunifuGradientPanel2);
@@ -281,6 +340,7 @@
             Name = "HomePage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HomePage";
+            WindowState = FormWindowState.Maximized;
             panelNavBar.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)bunifuPictureBox1).EndInit();
@@ -291,16 +351,21 @@
 
         #endregion
         private Panel panel3;
-        private FontAwesome.Sharp.IconButton btnInventory;
-        private FontAwesome.Sharp.IconButton btnBookFuneral;
         private FontAwesome.Sharp.IconButton btnHome;
-        private FontAwesome.Sharp.IconButton btnCheckRecords;
-        private FontAwesome.Sharp.IconButton btnPromo;
         private Bunifu.UI.WinForms.BunifuGradientPanel panelNavBar;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private FontAwesome.Sharp.IconButton btn;
         private Panel panel2;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
+        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnService;
+        private FontAwesome.Sharp.IconButton btnClient;
+        private FontAwesome.Sharp.IconButton btnTransaction;
+        private FontAwesome.Sharp.IconButton btnLogout;
+        private FontAwesome.Sharp.IconButton btnAuditLog;
+        private FontAwesome.Sharp.IconButton btnUserManagement;
+        private FontAwesome.Sharp.IconButton btnReports;
+        private Panel panelMain;
     }
 }

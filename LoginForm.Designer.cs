@@ -38,11 +38,11 @@
             bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            lblTime = new Label();
+            lblDate = new Label();
+            checkBoxShowPassword = new CheckBox();
             pictureBox1 = new PictureBox();
             iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            checkBox1 = new CheckBox();
-            lblDate = new Label();
-            lblTime = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -54,7 +54,7 @@
             tbUsername.Location = new Point(71, 281);
             tbUsername.Name = "tbUsername";
             tbUsername.Size = new Size(241, 23);
-            tbUsername.TabIndex = 1;
+            tbUsername.TabIndex = 0;
             // 
             // tbPassword
             // 
@@ -130,11 +130,12 @@
             bunifuLabel2.Location = new Point(71, 310);
             bunifuLabel2.Name = "bunifuLabel2";
             bunifuLabel2.RightToLeft = RightToLeft.No;
-            bunifuLabel2.Size = new Size(57, 15);
+            bunifuLabel2.Size = new Size(50, 15);
             bunifuLabel2.TabIndex = 5;
-            bunifuLabel2.Text = "Passowrod";
+            bunifuLabel2.Text = "Password";
             bunifuLabel2.TextAlignment = ContentAlignment.TopLeft;
             bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            bunifuLabel2.Click += bunifuLabel2_Click;
             // 
             // bunifuGradientPanel1
             // 
@@ -144,7 +145,7 @@
             bunifuGradientPanel1.BorderRadius = 1;
             bunifuGradientPanel1.Controls.Add(lblTime);
             bunifuGradientPanel1.Controls.Add(lblDate);
-            bunifuGradientPanel1.Controls.Add(checkBox1);
+            bunifuGradientPanel1.Controls.Add(checkBoxShowPassword);
             bunifuGradientPanel1.Controls.Add(bunifuLabel2);
             bunifuGradientPanel1.Controls.Add(pictureBox1);
             bunifuGradientPanel1.Controls.Add(bunifuLabel1);
@@ -163,6 +164,35 @@
             bunifuGradientPanel1.Quality = 10;
             bunifuGradientPanel1.Size = new Size(354, 466);
             bunifuGradientPanel1.TabIndex = 7;
+            // 
+            // lblTime
+            // 
+            lblTime.Location = new Point(98, 220);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(150, 23);
+            lblTime.TabIndex = 7;
+            lblTime.Text = "Time Label";
+            lblTime.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblDate
+            // 
+            lblDate.Location = new Point(100, 188);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(150, 23);
+            lblDate.TabIndex = 7;
+            lblDate.Text = "Date Label";
+            lblDate.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // checkBoxShowPassword
+            // 
+            checkBoxShowPassword.AutoSize = true;
+            checkBoxShowPassword.Location = new Point(204, 360);
+            checkBoxShowPassword.Name = "checkBoxShowPassword";
+            checkBoxShowPassword.Size = new Size(108, 19);
+            checkBoxShowPassword.TabIndex = 6;
+            checkBoxShowPassword.Text = "Show Password";
+            checkBoxShowPassword.UseVisualStyleBackColor = true;
+            checkBoxShowPassword.CheckedChanged += checkBoxShowPassword_CheckedChanged;
             // 
             // pictureBox1
             // 
@@ -187,34 +217,6 @@
             iconPictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             iconPictureBox2.TabIndex = 4;
             iconPictureBox2.TabStop = false;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(204, 360);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(108, 19);
-            checkBox1.TabIndex = 6;
-            checkBox1.Text = "Show Password";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // lblDate
-            // 
-            lblDate.Location = new Point(100, 188);
-            lblDate.Name = "lblDate";
-            lblDate.Size = new Size(150, 23);
-            lblDate.TabIndex = 7;
-            lblDate.Text = "Date Label";
-            lblDate.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblTime
-            // 
-            lblTime.Location = new Point(98, 220);
-            lblTime.Name = "lblTime";
-            lblTime.Size = new Size(150, 23);
-            lblTime.TabIndex = 7;
-            lblTime.Text = "Time Label";
-            lblTime.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // LoginForm
             // 
@@ -248,7 +250,7 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private PictureBox pictureBox1;
-        private CheckBox checkBox1;
+        private CheckBox checkBoxShowPassword;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private Label lblTime;
         private Label lblDate;

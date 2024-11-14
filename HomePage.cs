@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
+using Microsoft.Data.SqlClient;
+using System.Configuration;
 using FontAwesome.Sharp;
 using Color = System.Drawing.Color;
 
@@ -19,7 +21,7 @@ namespace Mini_Cs
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
-
+        string connectionString = ConfigurationManager.ConnectionStrings["RecordKeepingConnection"].ConnectionString;
         public HomePage()
         {
             InitializeComponent();
@@ -77,29 +79,82 @@ namespace Mini_Cs
             ActivatedButton(sender, RGBColors.color1);
         }
 
-        private void btnBookFuneral_Click(object sender, EventArgs e)
-        {
-            ActivatedButton(sender, RGBColors.color1);
-        }
-
-        private void btnPromo_Click(object sender, EventArgs e)
-        {
-            ActivatedButton(sender, RGBColors.color2);
-        }
-
-        private void btnCheckRecords_Click(object sender, EventArgs e)
-        {
-            ActivatedButton(sender, RGBColors.color3);
-        }
-
-        private void btnInventory_Click(object sender, EventArgs e)
-        {
-            ActivatedButton(sender, RGBColors.color4);
-        }
-
-        private void btn_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             ActivatedButton(sender, RGBColors.color5);
+            Application.Exit();
+        }
+
+        private void btnAuditLog_Click(object sender, EventArgs e)
+        {
+            ActivatedButton(sender, RGBColors.color4);
+            FrmAuditLog auditLogForm = new FrmAuditLog();
+            auditLogForm.TopLevel = false; 
+            auditLogForm.FormBorderStyle = FormBorderStyle.None; 
+            auditLogForm.Dock = DockStyle.Fill; 
+            panelMain.Controls.Clear(); 
+            panelMain.Controls.Add(auditLogForm); 
+            auditLogForm.Show();
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+            ActivatedButton(sender, RGBColors.color3);
+            FrmUserManagement userManagementForm = new FrmUserManagement();
+            userManagementForm.TopLevel = false;
+            userManagementForm.FormBorderStyle = FormBorderStyle.None;
+            userManagementForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(userManagementForm);
+            userManagementForm.Show();
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            ActivatedButton(sender, RGBColors.color2);
+            FrmReport reportsForm = new FrmReport();
+            reportsForm.TopLevel = false;
+            reportsForm.FormBorderStyle = FormBorderStyle.None;
+            reportsForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(reportsForm);
+            reportsForm.Show();
+        }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            ActivatedButton(sender, RGBColors.color1);
+            FrmTransaction transactionForm = new FrmTransaction();
+            transactionForm.TopLevel = false;
+            transactionForm.FormBorderStyle = FormBorderStyle.None;
+            transactionForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(transactionForm);
+            transactionForm.Show();
+        }
+
+        private void btnService_Click(object sender, EventArgs e)
+        {
+            ActivatedButton(sender, RGBColors.color5);
+            FrmService serviceForm = new FrmService();
+            serviceForm.TopLevel = false;
+            serviceForm.FormBorderStyle = FormBorderStyle.None;
+            serviceForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(serviceForm);
+            serviceForm.Show();
+        }
+
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            ActivatedButton(sender, RGBColors.color3);
+            FrmClient clientForm = new FrmClient();
+            clientForm.TopLevel = false;
+            clientForm.FormBorderStyle = FormBorderStyle.None;
+            clientForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(clientForm);
+            clientForm.Show();
         }
     }
 }
