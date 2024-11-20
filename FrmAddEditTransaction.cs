@@ -17,32 +17,28 @@ namespace Mini_Cs
         private int? transactionId;
         private DataTable clientsTable;
         private DataTable servicesTable;
-        private BindingSource clientBindingSource;
-        private BindingSource serviceBindingSource;
+
         public FrmAddEditTransaction()
         {
             InitializeComponent();
-            cmbClient.DropDownStyle = ComboBoxStyle.DropDown; 
+            cmbClient.DropDownStyle = ComboBoxStyle.DropDown;
             cmbService.DropDownStyle = ComboBoxStyle.DropDown;
             LoadClients();
             LoadServices();
             LoadCreatedByUsers();
-            txtAmount.ReadOnly = true;  
-
+            txtAmount.ReadOnly = true;
             UpdateAmount();
-
         }
-        public FrmAddEditTransaction(int transactionId) : this() 
+        public FrmAddEditTransaction(int transactionId) : this()
         {
             this.transactionId = transactionId;
-            LoadTransactionData(transactionId); 
+            LoadTransactionData(transactionId);
         }
         private void FrmAddEditTransaction_Load(object sender, EventArgs e)
         {
-           
-            numQuantity.ValueChanged += (s, e) => UpdateAmount();
             txtDiscount.TextChanged += (s, e) => UpdateAmount();
         }
+
 
         private void LoadClients()
         {
@@ -57,7 +53,6 @@ namespace Mini_Cs
                 cmbClient.DisplayMember = "FullName";
                 cmbClient.ValueMember = "ClientID";
 
-               
                 AutoCompleteStringCollection clientAutoCompleteCollection = new AutoCompleteStringCollection();
                 foreach (DataRow row in clientsTable.Rows)
                 {
@@ -70,7 +65,7 @@ namespace Mini_Cs
             }
         }
 
-  
+
         private void LoadServices()
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -84,23 +79,11 @@ namespace Mini_Cs
                 cmbService.DisplayMember = "ServiceName";
                 cmbService.ValueMember = "ServiceID";
 
-                
                 cmbService.SelectedIndexChanged += (s, e) => UpdateAmount();
             }
         }
 
-        private void CmbClient_TextChanged(object sender, EventArgs e)
-        {
-            string filterText = cmbClient.Text;
-            clientBindingSource.Filter = $"FullName LIKE '%{filterText}%'";
-        }
 
-      
-        private void CmbService_TextChanged(object sender, EventArgs e)
-        {
-            string filterText = cmbService.Text;
-            serviceBindingSource.Filter = $"ServiceName LIKE '%{filterText}%'";
-        }
 
         private void LoadCreatedByUsers()
         {
@@ -119,7 +102,7 @@ namespace Mini_Cs
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "SELECT ClientID, ServiceID, TransactionDate, Amount, Notes, CreatedBy, Quantity, Discount FROM Transactions WHERE TransactionID = @TransactionID";
+                string query = "SELECT ClientID, ServiceID, TransactionDate, Amount, Notes, CreatedBy, Discount FROM Transactions WHERE TransactionID = @TransactionID";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@TransactionID", transactionId);
                 conn.Open();
@@ -132,14 +115,12 @@ namespace Mini_Cs
                     txtAmount.Text = reader["Amount"].ToString();
                     txtNotes.Text = reader["Notes"].ToString();
                     cmbCreatedBy.SelectedValue = reader["CreatedBy"];
-                    numQuantity.Value = Convert.ToInt32(reader["Quantity"]);
                     txtDiscount.Text = reader["Discount"].ToString();
                 }
             }
         }
         private void UpdateAmount()
         {
-            
             if (cmbService.SelectedValue == null)
             {
                 MessageBox.Show("Please select a valid service.");
@@ -149,35 +130,22 @@ namespace Mini_Cs
             int serviceId = Convert.ToInt32(cmbService.SelectedValue);
             decimal servicePrice = GetServicePrice(serviceId);
 
-            
-            Console.WriteLine($"Service Price: {servicePrice}");
-
-           
             if (servicePrice == 0)
             {
                 MessageBox.Show("Service price is not available.");
                 return;
             }
 
-            // Proceed with amount calculation
-            int quantity = (int)numQuantity.Value;
             decimal discount = 0m;
 
-            // Validate and parse the discount if it exists
             if (decimal.TryParse(txtDiscount.Text, out discount))
             {
-                // For percentage discount, you can adjust the formula if needed
-                Console.WriteLine($"Discount: {discount}");
+                discount = Math.Max(discount, 0); // Ensure non-negative discount
             }
 
-            // Calculate the amount: Price * Quantity - Discount
-            decimal amount = (servicePrice * quantity) - discount;
+            decimal amount = servicePrice - discount;
             if (amount < 0) amount = 0m;
 
-            // Log the final calculated amount
-            Console.WriteLine($"Calculated Amount: {amount}");
-
-            // Update the amount text box
             txtAmount.Text = amount.ToString("C2", new System.Globalization.CultureInfo("es-MX"));
         }
 
@@ -189,40 +157,33 @@ namespace Mini_Cs
                 conn.Open();
                 string query;
 
-                // Get service price from database
                 decimal servicePrice = GetServicePrice(Convert.ToInt32(cmbService.SelectedValue));
-
-                // Get quantity and discount
-                int quantity = (int)numQuantity.Value;
                 decimal discount = 0m;
-                if (decimal.TryParse(txtDiscount.Text, out discount)) // Try parsing discount
+
+                if (decimal.TryParse(txtDiscount.Text, out discount))
                 {
-                    discount = discount;
+                    discount = Math.Max(discount, 0);
                 }
 
-                // Calculate amount based on service price, quantity, and discount
-                decimal amount = (servicePrice * quantity) - discount;
+                decimal amount = servicePrice - discount;
+                if (amount < 0) amount = 0m;
 
-                // Adjust amount for discount, if necessary
-                if (amount < 0) amount = 0m;  // Ensure amount is non-negative
-
-                if (transactionId.HasValue) // Update existing transaction
+                if (transactionId.HasValue)
                 {
-                    query = "UPDATE Transactions SET ClientID = @ClientID, ServiceID = @ServiceID, TransactionDate = @TransactionDate, Amount = @Amount, Notes = @Notes, CreatedBy = @CreatedBy, Quantity = @Quantity, Discount = @Discount WHERE TransactionID = @TransactionID";
+                    query = "UPDATE Transactions SET ClientID = @ClientID, ServiceID = @ServiceID, TransactionDate = @TransactionDate, Amount = @Amount, Notes = @Notes, CreatedBy = @CreatedBy, Discount = @Discount WHERE TransactionID = @TransactionID";
                 }
-                else // Add new transaction
+                else
                 {
-                    query = "INSERT INTO Transactions (ClientID, ServiceID, TransactionDate, Amount, Notes, CreatedBy, Quantity, Discount) VALUES (@ClientID, @ServiceID, @TransactionDate, @Amount, @Notes, @CreatedBy, @Quantity, @Discount)";
+                    query = "INSERT INTO Transactions (ClientID, ServiceID, TransactionDate, Amount, Notes, CreatedBy, Discount) VALUES (@ClientID, @ServiceID, @TransactionDate, @Amount, @Notes, @CreatedBy, @Discount)";
                 }
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@ClientID", cmbClient.SelectedValue);
                 cmd.Parameters.AddWithValue("@ServiceID", cmbService.SelectedValue);
                 cmd.Parameters.AddWithValue("@TransactionDate", dtpTransactionDate.Value);
-                cmd.Parameters.AddWithValue("@Amount", amount);  // Use calculated amount
+                cmd.Parameters.AddWithValue("@Amount", amount);
                 cmd.Parameters.AddWithValue("@Notes", txtNotes.Text);
                 cmd.Parameters.AddWithValue("@CreatedBy", cmbCreatedBy.SelectedValue);
-                cmd.Parameters.AddWithValue("@Quantity", quantity);
                 cmd.Parameters.AddWithValue("@Discount", discount);
 
                 if (transactionId.HasValue)
@@ -244,19 +205,14 @@ namespace Mini_Cs
                 conn.Open();
 
                 object result = cmd.ExecuteScalar();
-
                 if (result != DBNull.Value)
                 {
                     price = Convert.ToDecimal(result);
                 }
-
-                // Debugging: Log the fetched price to ensure it's correct
-                Console.WriteLine($"Fetched Service Price for ServiceID {serviceId}: {price}");
             }
 
             return price;
         }
-
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             txtSearchClient = new MaterialSkin.Controls.MaterialMaskedTextBox();
             dgvClients = new Bunifu.UI.WinForms.BunifuDataGridView();
             btnAddClient = new MaterialSkin.Controls.MaterialButton();
@@ -85,21 +85,21 @@
             // dgvClients
             // 
             dgvClients.AllowCustomTheming = false;
-            dataGridViewCellStyle10.BackColor = Color.FromArgb(248, 251, 255);
-            dataGridViewCellStyle10.ForeColor = Color.Black;
-            dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(248, 251, 255);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvClients.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvClients.BorderStyle = BorderStyle.None;
             dgvClients.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvClients.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.DodgerBlue;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI Semibold", 11.75F, FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(24, 115, 204);
-            dataGridViewCellStyle11.SelectionForeColor = Color.White;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 11.75F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(24, 115, 204);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvClients.ColumnHeadersHeight = 40;
             dgvClients.CurrentTheme.AlternatingRowsStyle.BackColor = Color.FromArgb(248, 251, 255);
             dgvClients.CurrentTheme.AlternatingRowsStyle.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
@@ -119,14 +119,14 @@
             dgvClients.CurrentTheme.RowsStyle.ForeColor = Color.Black;
             dgvClients.CurrentTheme.RowsStyle.SelectionBackColor = Color.FromArgb(210, 232, 255);
             dgvClients.CurrentTheme.RowsStyle.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = Color.White;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(210, 232, 255);
-            dataGridViewCellStyle12.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
-            dgvClients.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(210, 232, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvClients.DefaultCellStyle = dataGridViewCellStyle3;
             dgvClients.EnableHeadersVisualStyles = false;
             dgvClients.GridColor = Color.FromArgb(221, 238, 255);
             dgvClients.HeaderBackColor = Color.DodgerBlue;
@@ -137,7 +137,7 @@
             dgvClients.RowHeadersVisible = false;
             dgvClients.RowTemplate.Height = 40;
             dgvClients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvClients.Size = new Size(792, 317);
+            dgvClients.Size = new Size(1010, 317);
             dgvClients.TabIndex = 1;
             dgvClients.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             dgvClients.CellContentClick += dgvClients_CellContentClick;
@@ -226,7 +226,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(893, 538);
+            ClientSize = new Size(1143, 538);
             Controls.Add(btnViewDetails);
             Controls.Add(btnDeleteClient);
             Controls.Add(btnEditClient);

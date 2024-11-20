@@ -41,10 +41,7 @@
             materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            numQuantity = new NumericUpDown();
             txtDiscount = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            ((System.ComponentModel.ISupportInitialize)numQuantity).BeginInit();
             SuspendLayout();
             // 
             // dtpTransactionDate
@@ -270,13 +267,6 @@
             materialLabel4.TabIndex = 13;
             materialLabel4.Text = "User";
             // 
-            // numQuantity
-            // 
-            numQuantity.Location = new Point(418, 174);
-            numQuantity.Name = "numQuantity";
-            numQuantity.Size = new Size(212, 23);
-            numQuantity.TabIndex = 14;
-            // 
             // txtDiscount
             // 
             txtDiscount.AllowPromptAsInput = true;
@@ -319,26 +309,12 @@
             txtDiscount.UseSystemPasswordChar = false;
             txtDiscount.ValidatingType = null;
             // 
-            // materialLabel5
-            // 
-            materialLabel5.AutoSize = true;
-            materialLabel5.Depth = 0;
-            materialLabel5.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel5.Location = new Point(418, 152);
-            materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel5.Name = "materialLabel5";
-            materialLabel5.Size = new Size(61, 19);
-            materialLabel5.TabIndex = 16;
-            materialLabel5.Text = "Quantity";
-            // 
             // FrmAddEditTransaction
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(706, 371);
-            Controls.Add(materialLabel5);
             Controls.Add(txtDiscount);
-            Controls.Add(numQuantity);
             Controls.Add(materialLabel4);
             Controls.Add(materialLabel3);
             Controls.Add(materialLabel2);
@@ -355,7 +331,6 @@
             Name = "FrmAddEditTransaction";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmAddEditTransaction";
-            ((System.ComponentModel.ISupportInitialize)numQuantity).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -373,8 +348,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private NumericUpDown numQuantity;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtDiscount;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
     }
 }

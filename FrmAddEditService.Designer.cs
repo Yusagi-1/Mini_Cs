@@ -36,6 +36,12 @@
             btnSave = new MaterialSkin.Controls.MaterialButton();
             btnCancel = new MaterialSkin.Controls.MaterialButton();
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            cbIncludesChapel = new MaterialSkin.Controls.MaterialCheckbox();
+            cbCasket = new MaterialSkin.Controls.MaterialCheckbox();
+            cbAircon = new MaterialSkin.Controls.MaterialCheckbox();
+            cbEmbalming = new MaterialSkin.Controls.MaterialCheckbox();
+            cbPresidential = new MaterialSkin.Controls.MaterialCheckbox();
+            cbFreeChapel = new MaterialSkin.Controls.MaterialCheckbox();
             ((System.ComponentModel.ISupportInitialize)numDuration).BeginInit();
             SuspendLayout();
             // 
@@ -230,11 +236,119 @@
             materialLabel1.TabIndex = 7;
             materialLabel1.Text = "Duration";
             // 
+            // cbIncludesChapel
+            // 
+            cbIncludesChapel.AutoSize = true;
+            cbIncludesChapel.Depth = 0;
+            cbIncludesChapel.Location = new Point(595, 48);
+            cbIncludesChapel.Margin = new Padding(0);
+            cbIncludesChapel.MouseLocation = new Point(-1, -1);
+            cbIncludesChapel.MouseState = MaterialSkin.MouseState.HOVER;
+            cbIncludesChapel.Name = "cbIncludesChapel";
+            cbIncludesChapel.ReadOnly = false;
+            cbIncludesChapel.Ripple = true;
+            cbIncludesChapel.Size = new Size(84, 37);
+            cbIncludesChapel.TabIndex = 8;
+            cbIncludesChapel.Text = "Chapel";
+            cbIncludesChapel.UseVisualStyleBackColor = true;
+            cbIncludesChapel.CheckedChanged += cbIncludesChapel_CheckedChanged;
+            // 
+            // cbCasket
+            // 
+            cbCasket.AutoSize = true;
+            cbCasket.Depth = 0;
+            cbCasket.Location = new Point(595, 85);
+            cbCasket.Margin = new Padding(0);
+            cbCasket.MouseLocation = new Point(-1, -1);
+            cbCasket.MouseState = MaterialSkin.MouseState.HOVER;
+            cbCasket.Name = "cbCasket";
+            cbCasket.ReadOnly = false;
+            cbCasket.Ripple = true;
+            cbCasket.Size = new Size(83, 37);
+            cbCasket.TabIndex = 9;
+            cbCasket.Text = "Casket";
+            cbCasket.UseVisualStyleBackColor = true;
+            cbCasket.CheckedChanged += cbCasket_CheckedChanged;
+            // 
+            // cbAircon
+            // 
+            cbAircon.AutoSize = true;
+            cbAircon.Depth = 0;
+            cbAircon.Location = new Point(595, 122);
+            cbAircon.Margin = new Padding(0);
+            cbAircon.MouseLocation = new Point(-1, -1);
+            cbAircon.MouseState = MaterialSkin.MouseState.HOVER;
+            cbAircon.Name = "cbAircon";
+            cbAircon.ReadOnly = false;
+            cbAircon.Ripple = true;
+            cbAircon.Size = new Size(80, 37);
+            cbAircon.TabIndex = 10;
+            cbAircon.Text = "Aircon";
+            cbAircon.UseVisualStyleBackColor = true;
+            cbAircon.CheckedChanged += cbAircon_CheckedChanged;
+            // 
+            // cbEmbalming
+            // 
+            cbEmbalming.AutoSize = true;
+            cbEmbalming.Depth = 0;
+            cbEmbalming.Location = new Point(595, 159);
+            cbEmbalming.Margin = new Padding(0);
+            cbEmbalming.MouseLocation = new Point(-1, -1);
+            cbEmbalming.MouseState = MaterialSkin.MouseState.HOVER;
+            cbEmbalming.Name = "cbEmbalming";
+            cbEmbalming.ReadOnly = false;
+            cbEmbalming.Ripple = true;
+            cbEmbalming.Size = new Size(116, 37);
+            cbEmbalming.TabIndex = 11;
+            cbEmbalming.Text = "Embalming";
+            cbEmbalming.UseVisualStyleBackColor = true;
+            cbEmbalming.CheckedChanged += cbEmbalming_CheckedChanged;
+            // 
+            // cbPresidential
+            // 
+            cbPresidential.AutoSize = true;
+            cbPresidential.Depth = 0;
+            cbPresidential.Location = new Point(595, 196);
+            cbPresidential.Margin = new Padding(0);
+            cbPresidential.MouseLocation = new Point(-1, -1);
+            cbPresidential.MouseState = MaterialSkin.MouseState.HOVER;
+            cbPresidential.Name = "cbPresidential";
+            cbPresidential.ReadOnly = false;
+            cbPresidential.Ripple = true;
+            cbPresidential.Size = new Size(118, 37);
+            cbPresidential.TabIndex = 12;
+            cbPresidential.Text = "Presidential";
+            cbPresidential.UseVisualStyleBackColor = true;
+            cbPresidential.CheckedChanged += cbPresidential_CheckedChanged;
+            // 
+            // cbFreeChapel
+            // 
+            cbFreeChapel.AutoSize = true;
+            cbFreeChapel.Depth = 0;
+            cbFreeChapel.Location = new Point(593, 233);
+            cbFreeChapel.Margin = new Padding(0);
+            cbFreeChapel.MouseLocation = new Point(-1, -1);
+            cbFreeChapel.MouseState = MaterialSkin.MouseState.HOVER;
+            cbFreeChapel.Name = "cbFreeChapel";
+            cbFreeChapel.ReadOnly = false;
+            cbFreeChapel.Ripple = true;
+            cbFreeChapel.Size = new Size(118, 37);
+            cbFreeChapel.TabIndex = 13;
+            cbFreeChapel.Text = "Free Chapel";
+            cbFreeChapel.UseVisualStyleBackColor = true;
+            cbFreeChapel.CheckedChanged += cbFreeChapel_CheckedChanged;
+            // 
             // FrmAddEditService
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(624, 371);
+            ClientSize = new Size(820, 371);
+            Controls.Add(cbFreeChapel);
+            Controls.Add(cbPresidential);
+            Controls.Add(cbEmbalming);
+            Controls.Add(cbAircon);
+            Controls.Add(cbCasket);
+            Controls.Add(cbIncludesChapel);
             Controls.Add(materialLabel1);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
@@ -262,5 +376,11 @@
         private MaterialSkin.Controls.MaterialButton btnSave;
         private MaterialSkin.Controls.MaterialButton btnCancel;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialCheckbox cbIncludesChapel;
+        private MaterialSkin.Controls.MaterialCheckbox cbCasket;
+        private MaterialSkin.Controls.MaterialCheckbox cbAircon;
+        private MaterialSkin.Controls.MaterialCheckbox cbEmbalming;
+        private MaterialSkin.Controls.MaterialCheckbox cbPresidential;
+        private MaterialSkin.Controls.MaterialCheckbox cbFreeChapel;
     }
 }

@@ -89,11 +89,11 @@ namespace Mini_Cs
         {
             ActivatedButton(sender, RGBColors.color4);
             FrmAuditLog auditLogForm = new FrmAuditLog();
-            auditLogForm.TopLevel = false; 
-            auditLogForm.FormBorderStyle = FormBorderStyle.None; 
-            auditLogForm.Dock = DockStyle.Fill; 
-            panelMain.Controls.Clear(); 
-            panelMain.Controls.Add(auditLogForm); 
+            auditLogForm.TopLevel = false;
+            auditLogForm.FormBorderStyle = FormBorderStyle.None;
+            auditLogForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(auditLogForm);
             auditLogForm.Show();
         }
 
@@ -155,6 +155,18 @@ namespace Mini_Cs
             panelMain.Controls.Clear();
             panelMain.Controls.Add(clientForm);
             clientForm.Show();
+        }
+
+        private void btnDeceased_Click(object sender, EventArgs e)
+        {
+            ActivatedButton(sender, RGBColors.color3);
+            FrmDeceased deceasedForm = new FrmDeceased();
+            deceasedForm.TopLevel = false;
+            deceasedForm.FormBorderStyle = FormBorderStyle.None;
+            deceasedForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(deceasedForm);
+            deceasedForm.Show();
         }
     }
 }

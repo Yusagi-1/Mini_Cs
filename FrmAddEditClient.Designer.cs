@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddEditClient));
             txtFullName = new MaterialSkin.Controls.MaterialMaskedTextBox();
             txtContactNumber = new MaterialSkin.Controls.MaterialMaskedTextBox();
             txtAddress = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            dtpDateOfBirth = new Bunifu.UI.WinForms.BunifuDatePicker();
             cmbCreatedBy = new MaterialSkin.Controls.MaterialComboBox();
             btnSave = new MaterialSkin.Controls.MaterialButton();
             btnCancel = new MaterialSkin.Controls.MaterialButton();
-            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            txtEmail = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            txtNotes = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
             SuspendLayout();
             // 
             // txtFullName
@@ -80,6 +79,7 @@
             txtFullName.TrailingIcon = null;
             txtFullName.UseSystemPasswordChar = false;
             txtFullName.ValidatingType = null;
+            txtFullName.Click += txtFamilyName_Click;
             // 
             // txtContactNumber
             // 
@@ -96,7 +96,7 @@
             txtContactNumber.Hint = "Contact Number";
             txtContactNumber.InsertKeyMode = InsertKeyMode.Default;
             txtContactNumber.LeadingIcon = null;
-            txtContactNumber.Location = new Point(48, 128);
+            txtContactNumber.Location = new Point(48, 121);
             txtContactNumber.Mask = "";
             txtContactNumber.MaxLength = 32767;
             txtContactNumber.MouseState = MaterialSkin.MouseState.OUT;
@@ -138,7 +138,7 @@
             txtAddress.Hint = "Address";
             txtAddress.InsertKeyMode = InsertKeyMode.Default;
             txtAddress.LeadingIcon = null;
-            txtAddress.Location = new Point(48, 200);
+            txtAddress.Location = new Point(48, 195);
             txtAddress.Mask = "";
             txtAddress.MaxLength = 32767;
             txtAddress.MouseState = MaterialSkin.MouseState.OUT;
@@ -155,7 +155,7 @@
             txtAddress.SelectionLength = 0;
             txtAddress.SelectionStart = 0;
             txtAddress.ShortcutsEnabled = true;
-            txtAddress.Size = new Size(534, 48);
+            txtAddress.Size = new Size(525, 48);
             txtAddress.SkipLiterals = true;
             txtAddress.TabIndex = 2;
             txtAddress.TabStop = false;
@@ -164,31 +164,6 @@
             txtAddress.TrailingIcon = null;
             txtAddress.UseSystemPasswordChar = false;
             txtAddress.ValidatingType = null;
-            // 
-            // dtpDateOfBirth
-            // 
-            dtpDateOfBirth.BackColor = Color.Transparent;
-            dtpDateOfBirth.BorderColor = Color.Silver;
-            dtpDateOfBirth.BorderRadius = 1;
-            dtpDateOfBirth.Color = Color.Silver;
-            dtpDateOfBirth.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            dtpDateOfBirth.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            dtpDateOfBirth.DisabledColor = Color.Gray;
-            dtpDateOfBirth.DisplayWeekNumbers = false;
-            dtpDateOfBirth.DPHeight = 0;
-            dtpDateOfBirth.DropDownAlign = LeftRightAlignment.Right;
-            dtpDateOfBirth.FillDatePicker = false;
-            dtpDateOfBirth.Font = new Font("Segoe UI", 9F);
-            dtpDateOfBirth.ForeColor = Color.Black;
-            dtpDateOfBirth.Icon = (Image)resources.GetObject("dtpDateOfBirth.Icon");
-            dtpDateOfBirth.IconColor = Color.Gray;
-            dtpDateOfBirth.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            dtpDateOfBirth.LeftTextMargin = 5;
-            dtpDateOfBirth.Location = new Point(332, 144);
-            dtpDateOfBirth.MinimumSize = new Size(0, 32);
-            dtpDateOfBirth.Name = "dtpDateOfBirth";
-            dtpDateOfBirth.Size = new Size(241, 32);
-            dtpDateOfBirth.TabIndex = 3;
             // 
             // cmbCreatedBy
             // 
@@ -219,7 +194,7 @@
             btnSave.Depth = 0;
             btnSave.HighEmphasis = true;
             btnSave.Icon = null;
-            btnSave.Location = new Point(143, 293);
+            btnSave.Location = new Point(143, 348);
             btnSave.Margin = new Padding(4, 6, 4, 6);
             btnSave.MouseState = MaterialSkin.MouseState.HOVER;
             btnSave.Name = "btnSave";
@@ -239,7 +214,7 @@
             btnCancel.Depth = 0;
             btnCancel.HighEmphasis = true;
             btnCancel.Icon = null;
-            btnCancel.Location = new Point(422, 293);
+            btnCancel.Location = new Point(422, 348);
             btnCancel.Margin = new Padding(4, 6, 4, 6);
             btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             btnCancel.Name = "btnCancel";
@@ -252,28 +227,85 @@
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
             // 
-            // materialLabel1
+            // txtEmail
             // 
-            materialLabel1.AutoSize = true;
-            materialLabel1.Depth = 0;
-            materialLabel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel1.Location = new Point(332, 122);
-            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel1.Name = "materialLabel1";
-            materialLabel1.Size = new Size(90, 19);
-            materialLabel1.TabIndex = 7;
-            materialLabel1.Text = "Date of Birth";
+            txtEmail.AllowPromptAsInput = true;
+            txtEmail.AnimateReadOnly = false;
+            txtEmail.AsciiOnly = false;
+            txtEmail.BackgroundImageLayout = ImageLayout.None;
+            txtEmail.BeepOnError = false;
+            txtEmail.CutCopyMaskFormat = MaskFormat.IncludeLiterals;
+            txtEmail.Depth = 0;
+            txtEmail.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtEmail.HidePromptOnLeave = false;
+            txtEmail.HideSelection = true;
+            txtEmail.Hint = "Email";
+            txtEmail.InsertKeyMode = InsertKeyMode.Default;
+            txtEmail.LeadingIcon = null;
+            txtEmail.Location = new Point(332, 121);
+            txtEmail.Mask = "";
+            txtEmail.MaxLength = 32767;
+            txtEmail.MouseState = MaterialSkin.MouseState.OUT;
+            txtEmail.Name = "txtEmail";
+            txtEmail.PasswordChar = '\0';
+            txtEmail.PrefixSuffixText = null;
+            txtEmail.PromptChar = '_';
+            txtEmail.ReadOnly = false;
+            txtEmail.RejectInputOnFirstFailure = false;
+            txtEmail.ResetOnPrompt = true;
+            txtEmail.ResetOnSpace = true;
+            txtEmail.RightToLeft = RightToLeft.No;
+            txtEmail.SelectedText = "";
+            txtEmail.SelectionLength = 0;
+            txtEmail.SelectionStart = 0;
+            txtEmail.ShortcutsEnabled = true;
+            txtEmail.Size = new Size(241, 48);
+            txtEmail.SkipLiterals = true;
+            txtEmail.TabIndex = 7;
+            txtEmail.TabStop = false;
+            txtEmail.TextAlign = HorizontalAlignment.Left;
+            txtEmail.TextMaskFormat = MaskFormat.IncludeLiterals;
+            txtEmail.TrailingIcon = null;
+            txtEmail.UseSystemPasswordChar = false;
+            txtEmail.ValidatingType = null;
+            txtEmail.Click += txtEmail_Click;
+            // 
+            // txtNotes
+            // 
+            txtNotes.AnimateReadOnly = false;
+            txtNotes.BackgroundImageLayout = ImageLayout.None;
+            txtNotes.CharacterCasing = CharacterCasing.Normal;
+            txtNotes.Depth = 0;
+            txtNotes.HideSelection = true;
+            txtNotes.Hint = "Notes";
+            txtNotes.Location = new Point(48, 254);
+            txtNotes.MaxLength = 32767;
+            txtNotes.MouseState = MaterialSkin.MouseState.OUT;
+            txtNotes.Name = "txtNotes";
+            txtNotes.PasswordChar = '\0';
+            txtNotes.ReadOnly = false;
+            txtNotes.ScrollBars = ScrollBars.None;
+            txtNotes.SelectedText = "";
+            txtNotes.SelectionLength = 0;
+            txtNotes.SelectionStart = 0;
+            txtNotes.ShortcutsEnabled = true;
+            txtNotes.Size = new Size(525, 72);
+            txtNotes.TabIndex = 8;
+            txtNotes.TabStop = false;
+            txtNotes.TextAlign = HorizontalAlignment.Left;
+            txtNotes.UseSystemPasswordChar = false;
+            txtNotes.Click += txtNotes_Click;
             // 
             // FrmAddEditClient
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(624, 371);
-            Controls.Add(materialLabel1);
+            ClientSize = new Size(622, 437);
+            Controls.Add(txtNotes);
+            Controls.Add(txtEmail);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(cmbCreatedBy);
-            Controls.Add(dtpDateOfBirth);
             Controls.Add(txtAddress);
             Controls.Add(txtContactNumber);
             Controls.Add(txtFullName);
@@ -290,10 +322,11 @@
         private MaterialSkin.Controls.MaterialMaskedTextBox txtFullName;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtContactNumber;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtAddress;
-        private Bunifu.UI.WinForms.BunifuDatePicker dtpDateOfBirth;
         private MaterialSkin.Controls.MaterialComboBox cmbCreatedBy;
         private MaterialSkin.Controls.MaterialButton btnSave;
         private MaterialSkin.Controls.MaterialButton btnCancel;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialMaskedTextBox txtEmail;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox2 txtNotes;
+        private MaterialSkin.Controls.MaterialCheckbox cbFreeChapel;
     }
 }

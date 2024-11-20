@@ -24,13 +24,34 @@ namespace Mini_Cs
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "SELECT ServiceID, ServiceName, Description, Price, DurationDays, Username AS CreatedBy FROM Services JOIN Users ON Services.CreatedBy = Users.UserID";
+                // Exclude CreatedAt and CreatedBy columns
+                string query = @"
+            SELECT 
+                ServiceID AS [ID], 
+                ServiceName AS [Service Name], 
+                Description AS [Description], 
+                Price AS [Price (₱)], 
+                DurationDays AS [Duration (Days)], 
+                IncludesChapel AS [Chapel], 
+                IncludesCasket AS [Casket], 
+                WithAircon AS [Air Conditioning], 
+                IncludesEmbalming AS [Embalming], 
+                IsPresidential AS [Presidential], 
+                IsFreeChapel AS [Free Chapel] 
+            FROM Services";
+
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataTable servicesTable = new DataTable();
                 adapter.Fill(servicesTable);
+
+                // Bind the DataTable to the DataGridView
                 dgvServices.DataSource = servicesTable;
+
+                // Optional: Set AutoSize mode for better display
+                dgvServices.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
         }
+
 
         private void btnAddService_Click(object sender, EventArgs e)
         {
