@@ -15,15 +15,25 @@ namespace Mini_Cs
         public LoginForm()
         {
             InitializeComponent();
+            this.KeyDown += new KeyEventHandler(LoginForm_KeyDown);
+
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            this.KeyPreview = true;
             lblDate.Text = DateTime.Now.ToLongDateString();
             lblTime.Text = DateTime.Now.ToLongTimeString();
             //AddUser("123", "123", "Manager");
             tbUsername.Focus();
             tbPassword.PasswordChar = '*';
+        }
+        private void LoginForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();  // Simulate button click
+            }
         }
 
         //ADD USER METHOD USE ONLY IF NO USERS IN DATABASE

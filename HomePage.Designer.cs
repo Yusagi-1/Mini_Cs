@@ -45,6 +45,7 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             panelMain = new Panel();
+            btnPayment = new FontAwesome.Sharp.IconButton();
             panelNavBar.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bunifuPictureBox1).BeginInit();
@@ -89,10 +90,12 @@
             panelNavBar.BackgroundImage = (Image)resources.GetObject("panelNavBar.BackgroundImage");
             panelNavBar.BackgroundImageLayout = ImageLayout.Stretch;
             panelNavBar.BorderRadius = 0;
+
             panelNavBar.Controls.Add(btnLogout);
             panelNavBar.Controls.Add(btnAuditLog);
             panelNavBar.Controls.Add(btnUserManagement);
             panelNavBar.Controls.Add(btnReports);
+            panelNavBar.Controls.Add(btnPayment);
             panelNavBar.Controls.Add(btnTransaction);
             panelNavBar.Controls.Add(btnService);
             panelNavBar.Controls.Add(btnDeceased);
@@ -247,7 +250,7 @@
             btnDeceased.FlatStyle = FlatStyle.Flat;
             btnDeceased.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDeceased.ForeColor = Color.White;
-            btnDeceased.IconChar = FontAwesome.Sharp.IconChar.Male;
+            btnDeceased.IconChar = FontAwesome.Sharp.IconChar.Cross;
             btnDeceased.IconColor = Color.Black;
             btnDeceased.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnDeceased.IconSize = 30;
@@ -349,6 +352,27 @@
             panelMain.Size = new Size(982, 703);
             panelMain.TabIndex = 11;
             // 
+            // btnPayment
+            // 
+            btnPayment.Dock = DockStyle.Top;
+            btnPayment.FlatAppearance.BorderSize = 0;
+            btnPayment.FlatStyle = FlatStyle.Flat;
+            btnPayment.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPayment.ForeColor = Color.White;
+            btnPayment.IconChar = FontAwesome.Sharp.IconChar.CreditCard;
+            btnPayment.IconColor = Color.Black;
+            btnPayment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnPayment.IconSize = 30;
+            btnPayment.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPayment.Location = new Point(0, 669);
+            btnPayment.Name = "btnPayment";
+            btnPayment.Size = new Size(212, 60);
+            btnPayment.TabIndex = 18;
+            btnPayment.Text = "Payment";
+            btnPayment.TextAlign = ContentAlignment.MiddleLeft;
+            btnPayment.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnPayment.UseVisualStyleBackColor = false;
+            // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -391,5 +415,6 @@
         private FontAwesome.Sharp.IconButton btnReports;
         private Panel panelMain;
         private FontAwesome.Sharp.IconButton btnDeceased;
+        private FontAwesome.Sharp.IconButton btnPayment;
     }
 }
