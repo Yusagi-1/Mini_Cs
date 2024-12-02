@@ -14,6 +14,7 @@ using Microsoft.Data.SqlClient;
 using System.Configuration;
 using FontAwesome.Sharp;
 using Color = System.Drawing.Color;
+using Mini_Cs.Goite_Added_frmChildForms;
 
 namespace Mini_Cs
 {
@@ -136,13 +137,20 @@ namespace Mini_Cs
         private void btnService_Click(object sender, EventArgs e)
         {
             ActivatedButton(sender, RGBColors.color5);
-            FrmService serviceForm = new FrmService();
+            frmAddService02 servicefrm = new frmAddService02();
+            servicefrm.TopLevel = false;
+            servicefrm.FormBorderStyle = FormBorderStyle.None;
+            servicefrm.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(servicefrm);
+            servicefrm.Show();
+            /*FrmService serviceForm = new FrmService();
             serviceForm.TopLevel = false;
             serviceForm.FormBorderStyle = FormBorderStyle.None;
             serviceForm.Dock = DockStyle.Fill;
             panelMain.Controls.Clear();
             panelMain.Controls.Add(serviceForm);
-            serviceForm.Show();
+            serviceForm.Show();*/
         }
 
         private void btnClient_Click(object sender, EventArgs e)

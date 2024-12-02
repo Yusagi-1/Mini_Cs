@@ -63,6 +63,26 @@ namespace Mini_Cs.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _362653007_238664698993364_1155547492567031378_n {
+            get {
+                object obj = ResourceManager.GetObject("362653007_238664698993364_1155547492567031378_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _462553716_860454129629235_5350213509748007368_n {
+            get {
+                object obj = ResourceManager.GetObject("462553716_860454129629235_5350213509748007368_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_design {
             get {
                 object obj = ResourceManager.GetObject("logo-design", resourceCulture);
