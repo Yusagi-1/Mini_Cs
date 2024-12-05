@@ -45,14 +45,12 @@
             pictureBox1 = new PictureBox();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             panelMain = new Panel();
             panelNavBar.SuspendLayout();
             picBoxPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             bunifuGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             SuspendLayout();
             // 
             // btnHome
@@ -347,13 +345,12 @@
             // 
             // bunifuGradientPanel2
             // 
+            bunifuGradientPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             bunifuGradientPanel2.BackColor = Color.Transparent;
             bunifuGradientPanel2.BackgroundImage = (Image)resources.GetObject("bunifuGradientPanel2.BackgroundImage");
             bunifuGradientPanel2.BackgroundImageLayout = ImageLayout.Stretch;
             bunifuGradientPanel2.BorderRadius = 0;
-            bunifuGradientPanel2.Controls.Add(iconPictureBox2);
             bunifuGradientPanel2.Controls.Add(iconPictureBox1);
-            bunifuGradientPanel2.Dock = DockStyle.Top;
             bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(139, 145, 181);
             bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(139, 145, 181);
             bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(99, 120, 175);
@@ -361,30 +358,15 @@
             bunifuGradientPanel2.Location = new Point(219, 0);
             bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             bunifuGradientPanel2.Quality = 10;
-            bunifuGradientPanel2.Size = new Size(1381, 85);
+            bunifuGradientPanel2.Size = new Size(1442, 85);
             bunifuGradientPanel2.TabIndex = 10;
-            // 
-            // iconPictureBox2
-            // 
-            iconPictureBox2.BackColor = Color.Transparent;
-            iconPictureBox2.ForeColor = SystemColors.ControlText;
-            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.NetworkWired;
-            iconPictureBox2.IconColor = SystemColors.ControlText;
-            iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox2.IconSize = 40;
-            iconPictureBox2.Location = new Point(1326, 21);
-            iconPictureBox2.Name = "iconPictureBox2";
-            iconPictureBox2.Size = new Size(43, 40);
-            iconPictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            iconPictureBox2.TabIndex = 9;
-            iconPictureBox2.TabStop = false;
             // 
             // panelMain
             // 
             panelMain.Dock = DockStyle.Bottom;
-            panelMain.Location = new Point(219, 91);
+            panelMain.Location = new Point(219, 29);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1381, 829);
+            panelMain.Size = new Size(1381, 891);
             panelMain.TabIndex = 11;
             // 
             // HomePage
@@ -407,7 +389,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             bunifuGradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -431,6 +412,5 @@
         private FontAwesome.Sharp.IconButton btnDeceased;
         private FontAwesome.Sharp.IconButton btnPayment;
         private PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
     }
 }

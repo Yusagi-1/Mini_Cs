@@ -325,7 +325,7 @@
             // 
             cbFreeChapel.AutoSize = true;
             cbFreeChapel.Depth = 0;
-            cbFreeChapel.Location = new Point(593, 233);
+            cbFreeChapel.Location = new Point(595, 233);
             cbFreeChapel.Margin = new Padding(0);
             cbFreeChapel.MouseLocation = new Point(-1, -1);
             cbFreeChapel.MouseState = MaterialSkin.MouseState.HOVER;

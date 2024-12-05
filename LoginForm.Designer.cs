@@ -38,6 +38,7 @@
             bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             lblTime = new Label();
             lblDate = new Label();
             checkBoxShowPassword = new CheckBox();
@@ -143,6 +144,7 @@
             bunifuGradientPanel1.BackgroundImage = (Image)resources.GetObject("bunifuGradientPanel1.BackgroundImage");
             bunifuGradientPanel1.BackgroundImageLayout = ImageLayout.Stretch;
             bunifuGradientPanel1.BorderRadius = 1;
+            bunifuGradientPanel1.Controls.Add(iconButton1);
             bunifuGradientPanel1.Controls.Add(lblTime);
             bunifuGradientPanel1.Controls.Add(lblDate);
             bunifuGradientPanel1.Controls.Add(checkBoxShowPassword);
@@ -165,20 +167,39 @@
             bunifuGradientPanel1.Size = new Size(354, 466);
             bunifuGradientPanel1.TabIndex = 7;
             // 
+            // iconButton1
+            // 
+            iconButton1.FlatAppearance.BorderColor = SystemColors.ActiveCaption;
+            iconButton1.FlatAppearance.BorderSize = 0;
+            iconButton1.FlatStyle = FlatStyle.Flat;
+            iconButton1.ForeColor = Color.Transparent;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.X;
+            iconButton1.IconColor = SystemColors.ActiveCaption;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 30;
+            iconButton1.Location = new Point(305, 0);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Size = new Size(49, 32);
+            iconButton1.TabIndex = 8;
+            iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
+            // 
             // lblTime
             // 
-            lblTime.Location = new Point(98, 220);
+            lblTime.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTime.Location = new Point(102, 211);
             lblTime.Name = "lblTime";
-            lblTime.Size = new Size(150, 23);
+            lblTime.Size = new Size(148, 32);
             lblTime.TabIndex = 7;
             lblTime.Text = "Time Label";
             lblTime.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblDate
             // 
-            lblDate.Location = new Point(100, 188);
+            lblDate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDate.Location = new Point(12, 188);
             lblDate.Name = "lblDate";
-            lblDate.Size = new Size(150, 23);
+            lblDate.Size = new Size(328, 23);
             lblDate.TabIndex = 7;
             lblDate.Text = "Date Label";
             lblDate.TextAlign = ContentAlignment.MiddleCenter;
@@ -196,7 +217,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.logo_design;
+            pictureBox1.Image = Properties.Resources._362653007_238664698993364_1155547492567031378_n;
             pictureBox1.Location = new Point(100, 22);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(150, 150);
@@ -254,5 +275,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private Label lblTime;
         private Label lblDate;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

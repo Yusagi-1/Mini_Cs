@@ -79,7 +79,13 @@ namespace Mini_Cs
         private void btnHome_Click(object sender, EventArgs e)
         {
             ActivatedButton(sender, RGBColors.color1);
-            
+            Home home = new Home();
+            home.TopLevel = false;
+            home.FormBorderStyle = FormBorderStyle.None;
+            home.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(home);
+            home.Show();
 
         }
 

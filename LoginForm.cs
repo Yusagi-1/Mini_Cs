@@ -165,12 +165,17 @@ namespace Mini_Cs
         {
             if (checkBoxShowPassword.Checked)
             {
-                tbPassword.PasswordChar = '\0'; 
+                tbPassword.PasswordChar = '\0';
             }
             else
             {
                 tbPassword.PasswordChar = '*';
             }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
