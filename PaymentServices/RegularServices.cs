@@ -109,43 +109,11 @@ namespace Mini_Cs.PaymentServices
 
         private void btnProceed_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtGrossPrice.Text) ||
-                string.IsNullOrEmpty(txtPlanValue.Text) ||
-                string.IsNullOrEmpty(txtContractPrice.Text))
-            {
-                MessageBox.Show("Please fill out all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                UpdatePaymentDetails();
+                parentForm.sharedData.PaymentDetails = paymentDetails;
 
-            DialogResult result = MessageBox.Show("Are you sure you want to proceed with saving the payment details and move to the next step?",
-                                                  "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    UpdatePaymentDetails();
-                    parentForm.sharedData.PaymentDetails = paymentDetails;
-
-                    MessageBox.Show("Payment details saved successfully. Proceeding to the Representative form...", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Correct parameter passing
-                    Representative representativeForm = new Representative(parentForm, parentForm.sharedData.RepresentativeInfo);
-
-
-
-                    parentForm.OpenFormInPanel(representativeForm);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"An error occurred while saving payment details: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Proceeding has been canceled.", "Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                MessageBox.Show("Payment details saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
-
     }
 }
