@@ -39,6 +39,7 @@ namespace Mini_Cs
             public static Color color4 = Color.FromArgb(95, 77, 221);
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
+            public static Color colorb = Color.FromArgb(0, 0, 0);
 
 
         }
@@ -68,9 +69,9 @@ namespace Mini_Cs
             if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.Transparent;
-                currentBtn.ForeColor = Color.Gainsboro;
+                currentBtn.ForeColor = Color.White;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.Gainsboro;
+                currentBtn.IconColor = Color.Black;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
@@ -78,6 +79,8 @@ namespace Mini_Cs
         private void btnHome_Click(object sender, EventArgs e)
         {
             ActivatedButton(sender, RGBColors.color1);
+            
+
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -136,7 +139,8 @@ namespace Mini_Cs
 
         private void btnService_Click(object sender, EventArgs e)
         {
-            ActivatedButton(sender, RGBColors.color5);
+            
+            ActivatedButton(sender, RGBColors.color5); // Assuming this activates some visual state
             frmAddService02 servicefrm = new frmAddService02();
             servicefrm.TopLevel = false;
             servicefrm.FormBorderStyle = FormBorderStyle.None;
@@ -144,13 +148,6 @@ namespace Mini_Cs
             panelMain.Controls.Clear();
             panelMain.Controls.Add(servicefrm);
             servicefrm.Show();
-            /*FrmService serviceForm = new FrmService();
-            serviceForm.TopLevel = false;
-            serviceForm.FormBorderStyle = FormBorderStyle.None;
-            serviceForm.Dock = DockStyle.Fill;
-            panelMain.Controls.Clear();
-            panelMain.Controls.Add(serviceForm);
-            serviceForm.Show();*/
         }
 
         private void btnClient_Click(object sender, EventArgs e)
