@@ -38,7 +38,7 @@
             dpDateofDeath = new Bunifu.UI.WinForms.BunifuDatePicker();
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            btnSave = new MaterialSkin.Controls.MaterialButton();
+            btnProceed = new MaterialSkin.Controls.MaterialButton();
             SuspendLayout();
             // 
             // txtName
@@ -142,6 +142,7 @@
             cbGender.Hint = "Gender";
             cbGender.IntegralHeight = false;
             cbGender.ItemHeight = 43;
+            cbGender.Items.AddRange(new object[] { "Male", "Female" });
             cbGender.Location = new Point(62, 203);
             cbGender.MaxDropDownItems = 4;
             cbGender.MouseState = MaterialSkin.MouseState.OUT;
@@ -166,6 +167,7 @@
             cbCivilStatus.Hint = "Civil Status";
             cbCivilStatus.IntegralHeight = false;
             cbCivilStatus.ItemHeight = 43;
+            cbCivilStatus.Items.AddRange(new object[] { "Single", "Married", "Divorce", "Widow" });
             cbCivilStatus.Location = new Point(62, 285);
             cbCivilStatus.MaxDropDownItems = 4;
             cbCivilStatus.MouseState = MaterialSkin.MouseState.OUT;
@@ -294,32 +296,32 @@
             materialLabel2.TabIndex = 8;
             materialLabel2.Text = "Date of Death";
             // 
-            // btnSave
+            // btnProceed
             // 
-            btnSave.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnSave.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnSave.Depth = 0;
-            btnSave.HighEmphasis = true;
-            btnSave.Icon = null;
-            btnSave.Location = new Point(291, 366);
-            btnSave.Margin = new Padding(4, 6, 4, 6);
-            btnSave.MouseState = MaterialSkin.MouseState.HOVER;
-            btnSave.Name = "btnSave";
-            btnSave.NoAccentTextColor = Color.Empty;
-            btnSave.Size = new Size(158, 36);
-            btnSave.TabIndex = 9;
-            btnSave.Text = "SAVE";
-            btnSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnSave.UseAccentColor = false;
-            btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += btnSave_Click;
+            btnProceed.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnProceed.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnProceed.Depth = 0;
+            btnProceed.HighEmphasis = true;
+            btnProceed.Icon = null;
+            btnProceed.Location = new Point(683, 385);
+            btnProceed.Margin = new Padding(4, 6, 4, 6);
+            btnProceed.MouseState = MaterialSkin.MouseState.HOVER;
+            btnProceed.Name = "btnProceed";
+            btnProceed.NoAccentTextColor = Color.Empty;
+            btnProceed.Size = new Size(86, 36);
+            btnProceed.TabIndex = 9;
+            btnProceed.Text = "Proceed";
+            btnProceed.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnProceed.UseAccentColor = false;
+            btnProceed.UseVisualStyleBackColor = true;
+            btnProceed.Click += btnProceed_Click;
             // 
             // Deceased
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnSave);
+            Controls.Add(btnProceed);
             Controls.Add(materialLabel2);
             Controls.Add(materialLabel1);
             Controls.Add(dpDateofDeath);
@@ -329,6 +331,7 @@
             Controls.Add(cbGender);
             Controls.Add(txtAddress);
             Controls.Add(txtName);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Deceased";
             Text = "Deceased";
             ResumeLayout(false);
@@ -346,6 +349,6 @@
         private Bunifu.UI.WinForms.BunifuDatePicker dpDateofDeath;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialButton btnSave;
+        private MaterialSkin.Controls.MaterialButton btnProceed;
     }
 }

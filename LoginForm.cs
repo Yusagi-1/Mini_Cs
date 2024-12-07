@@ -24,7 +24,7 @@ namespace Mini_Cs
             this.KeyPreview = true;
             lblDate.Text = DateTime.Now.ToLongDateString();
             lblTime.Text = DateTime.Now.ToLongTimeString();
-            //AddUser("123", "123", "Manager");
+            AddUser("123", "123", "Manager");
             tbUsername.Focus();
             tbPassword.PasswordChar = '*';
         }

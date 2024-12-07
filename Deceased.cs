@@ -9,95 +9,89 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Mini_Cs
 {
     public partial class Deceased : Form
     {
-        private readonly string connectionString = ConfigurationManager.ConnectionStrings["RecordKeepingConnection"].ConnectionString;
-
-        public Deceased()
+        private Customers parentForm; // Reference to parent form
+        private DeceasedInfoData deceasedData; // Shared data object
+        public Deceased(Customers parent, DeceasedInfoData data)
         {
             InitializeComponent();
+            parentForm = parent;
+            deceasedData = data ?? new DeceasedInfoData();
+            BindDataToControls();
         }
 
         private void txtName_Click(object sender, EventArgs e)
         {
-
+            deceasedData.Name = txtName.Text;
         }
 
         private void txtAddress_Click(object sender, EventArgs e)
         {
-
+            deceasedData.Address = txtAddress.Text;
         }
 
         private void cbCivilStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
+            deceasedData.CivilStatus = cbCivilStatus.SelectedItem?.ToString();
 
         }
 
         private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            deceasedData.Gender = cbGender.SelectedItem?.ToString();
         }
 
         private void txtPwd_Click(object sender, EventArgs e)
         {
-
+            deceasedData.OSCAPWDID = txtPwd.Text;
         }
 
         private void dpBirthdate_ValueChanged(object sender, EventArgs e)
         {
-
+            deceasedData.Birthdate = dpBirthdate.Value;
         }
 
         private void dpDateofDeath_ValueChanged(object sender, EventArgs e)
         {
-
+            deceasedData.DateOfDeath = dpDateofDeath.Value;
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BindDataToControls()
         {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    
-                    string query = @"
-                        INSERT INTO DeceasedInfo (Name, Address, Gender, CivilStatus, Birthdate, OSCAPWDID, DateOfDeath) 
-                        VALUES (@Name, @Address, @Gender, @CivilStatus, @Birthdate, @OSCAPWDID, @DateOfDeath)";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                      
-                        command.Parameters.AddWithValue("@Name", txtName.Text);
-                        command.Parameters.AddWithValue("@Address", txtAddress.Text);
-                        command.Parameters.AddWithValue("@Gender", cbGender.SelectedItem?.ToString());
-                        command.Parameters.AddWithValue("@CivilStatus", cbCivilStatus.SelectedItem?.ToString());
-                        command.Parameters.AddWithValue("@Birthdate", dpBirthdate.Value);
-                        command.Parameters.AddWithValue("@OSCAPWDID", txtPwd.Text);
-                        command.Parameters.AddWithValue("@DateOfDeath", dpDateofDeath.Value);
-
-                       
-                        connection.Open();
-                        int result = command.ExecuteNonQuery();
-
-                        if (result > 0)
-                        {
-                            MessageBox.Show("Deceased information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Failed to save deceased information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            txtName.Text = deceasedData.Name;
+            txtAddress.Text = deceasedData.Address;
+            cbCivilStatus.SelectedItem = deceasedData.CivilStatus;
+            cbGender.SelectedItem = deceasedData.Gender;
+            dpBirthdate.Value = deceasedData.Birthdate.GetValueOrDefault(DateTime.Now);
+            dpDateofDeath.Value = deceasedData.DateOfDeath.GetValueOrDefault(DateTime.Now);
+            txtPwd.Text = deceasedData.OSCAPWDID;
         }
+
+        private void btnProceed_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtAddress.Text))
+            {
+                MessageBox.Show("Please fill out all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Populate deceased data
+            deceasedData.Name = txtName.Text;
+            deceasedData.Address = txtAddress.Text;
+            deceasedData.CivilStatus = cbCivilStatus.SelectedItem?.ToString();
+            deceasedData.Gender = cbGender.SelectedItem?.ToString();
+            deceasedData.Birthdate = dpBirthdate.Value;
+            deceasedData.DateOfDeath = dpDateofDeath.Value;
+            deceasedData.OSCAPWDID = txtPwd.Text;
+
+            // Navigate to Service form
+            Service serviceForm = new Service(parentForm, deceasedData);
+            parentForm.OpenFormInPanel(serviceForm);
+        }
+
     }
 }

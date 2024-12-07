@@ -1,6 +1,6 @@
 ﻿namespace Mini_Cs
 {
-    partial class FrmReport
+    partial class Service
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
-            // 
-            // FrmReport
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(800, 450);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "FrmReport";
-            Text = "FrmReport";
-            ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Service";
         }
 
         #endregion
