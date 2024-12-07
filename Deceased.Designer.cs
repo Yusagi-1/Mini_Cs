@@ -38,6 +38,7 @@
             dpDateofDeath = new Bunifu.UI.WinForms.BunifuDatePicker();
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            btnSave = new MaterialSkin.Controls.MaterialButton();
             SuspendLayout();
             // 
             // txtName
@@ -49,7 +50,7 @@
             txtName.BeepOnError = false;
             txtName.CutCopyMaskFormat = MaskFormat.IncludeLiterals;
             txtName.Depth = 0;
-            txtName.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtName.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtName.HidePromptOnLeave = false;
             txtName.HideSelection = true;
             txtName.Hint = "Name";
@@ -81,6 +82,7 @@
             txtName.TrailingIcon = null;
             txtName.UseSystemPasswordChar = false;
             txtName.ValidatingType = null;
+            txtName.Click += txtName_Click;
             // 
             // txtAddress
             // 
@@ -123,6 +125,7 @@
             txtAddress.TrailingIcon = null;
             txtAddress.UseSystemPasswordChar = false;
             txtAddress.ValidatingType = null;
+            txtAddress.Click += txtAddress_Click;
             // 
             // cbGender
             // 
@@ -133,7 +136,7 @@
             cbGender.DropDownHeight = 174;
             cbGender.DropDownStyle = ComboBoxStyle.DropDownList;
             cbGender.DropDownWidth = 121;
-            cbGender.Font = new Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cbGender.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             cbGender.ForeColor = Color.FromArgb(222, 0, 0, 0);
             cbGender.FormattingEnabled = true;
             cbGender.Hint = "Gender";
@@ -146,6 +149,7 @@
             cbGender.Size = new Size(250, 49);
             cbGender.StartIndex = 0;
             cbGender.TabIndex = 2;
+            cbGender.SelectedIndexChanged += cbGender_SelectedIndexChanged;
             // 
             // cbCivilStatus
             // 
@@ -169,6 +173,7 @@
             cbCivilStatus.Size = new Size(250, 49);
             cbCivilStatus.StartIndex = 0;
             cbCivilStatus.TabIndex = 3;
+            cbCivilStatus.SelectedIndexChanged += cbCivilStatus_SelectedIndexChanged;
             // 
             // dpBirthdate
             // 
@@ -181,6 +186,7 @@
             dpBirthdate.DisabledColor = Color.Gray;
             dpBirthdate.DisplayWeekNumbers = false;
             dpBirthdate.DPHeight = 0;
+            dpBirthdate.DropDownAlign = LeftRightAlignment.Right;
             dpBirthdate.FillDatePicker = false;
             dpBirthdate.Font = new Font("Segoe UI", 9F);
             dpBirthdate.ForeColor = Color.Black;
@@ -193,6 +199,7 @@
             dpBirthdate.Name = "dpBirthdate";
             dpBirthdate.Size = new Size(250, 32);
             dpBirthdate.TabIndex = 4;
+            dpBirthdate.ValueChanged += dpBirthdate_ValueChanged;
             // 
             // txtPwd
             // 
@@ -235,6 +242,7 @@
             txtPwd.TrailingIcon = null;
             txtPwd.UseSystemPasswordChar = false;
             txtPwd.ValidatingType = null;
+            txtPwd.Click += txtPwd_Click;
             // 
             // dpDateofDeath
             // 
@@ -247,6 +255,7 @@
             dpDateofDeath.DisabledColor = Color.Gray;
             dpDateofDeath.DisplayWeekNumbers = false;
             dpDateofDeath.DPHeight = 0;
+            dpDateofDeath.DropDownAlign = LeftRightAlignment.Right;
             dpDateofDeath.FillDatePicker = false;
             dpDateofDeath.Font = new Font("Segoe UI", 9F);
             dpDateofDeath.ForeColor = Color.Black;
@@ -259,6 +268,7 @@
             dpDateofDeath.Name = "dpDateofDeath";
             dpDateofDeath.Size = new Size(250, 32);
             dpDateofDeath.TabIndex = 6;
+            dpDateofDeath.ValueChanged += dpDateofDeath_ValueChanged;
             // 
             // materialLabel1
             // 
@@ -284,11 +294,32 @@
             materialLabel2.TabIndex = 8;
             materialLabel2.Text = "Date of Death";
             // 
+            // btnSave
+            // 
+            btnSave.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnSave.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnSave.Depth = 0;
+            btnSave.HighEmphasis = true;
+            btnSave.Icon = null;
+            btnSave.Location = new Point(291, 366);
+            btnSave.Margin = new Padding(4, 6, 4, 6);
+            btnSave.MouseState = MaterialSkin.MouseState.HOVER;
+            btnSave.Name = "btnSave";
+            btnSave.NoAccentTextColor = Color.Empty;
+            btnSave.Size = new Size(158, 36);
+            btnSave.TabIndex = 9;
+            btnSave.Text = "SAVE";
+            btnSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnSave.UseAccentColor = false;
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
+            // 
             // Deceased
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSave);
             Controls.Add(materialLabel2);
             Controls.Add(materialLabel1);
             Controls.Add(dpDateofDeath);
@@ -315,5 +346,6 @@
         private Bunifu.UI.WinForms.BunifuDatePicker dpDateofDeath;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialButton btnSave;
     }
 }
