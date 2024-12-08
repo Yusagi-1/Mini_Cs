@@ -49,6 +49,10 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -61,10 +65,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties34 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties35 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties36 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             label1 = new Label();
             panel2 = new Panel();
@@ -85,6 +85,9 @@
             label6 = new Label();
             tbViewingPlace = new Bunifu.UI.WinForms.BunifuTextBox();
             panel5 = new Panel();
+            label8 = new Label();
+            dDpPickDate = new Bunifu.UI.WinForms.BunifuDatePicker();
+            tbDpAddress = new Bunifu.UI.WinForms.BunifuTextBox();
             tbDpTime = new Bunifu.UI.WinForms.BunifuTextBox();
             label7 = new Label();
             panel4 = new Panel();
@@ -101,9 +104,6 @@
             checkBoxCremation = new CheckBox();
             checkBoxBurial = new CheckBox();
             label4 = new Label();
-            tbDpAddress = new Bunifu.UI.WinForms.BunifuTextBox();
-            dDpPickDate = new Bunifu.UI.WinForms.BunifuDatePicker();
-            label8 = new Label();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             panel5.SuspendLayout();
@@ -518,6 +518,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(bunifuDatePicker1);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(checkBoxAutopsyNo);
@@ -644,7 +645,6 @@
             tbViewingPlace.TextPlaceholder = "Enter Viewing Place";
             tbViewingPlace.UseSystemPasswordChar = false;
             tbViewingPlace.WordWrap = true;
-            //tbViewingPlace.TextChanged += tbViewingPlace_TextChanged;
             // 
             // panel5
             // 
@@ -657,6 +657,114 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(237, 261);
             panel5.TabIndex = 1;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(3, 96);
+            label8.Name = "label8";
+            label8.Size = new Size(34, 15);
+            label8.TabIndex = 8;
+            label8.Text = "Date:";
+            // 
+            // dDpPickDate
+            // 
+            dDpPickDate.BackColor = Color.Transparent;
+            dDpPickDate.BorderColor = Color.Silver;
+            dDpPickDate.BorderRadius = 1;
+            dDpPickDate.Color = Color.Silver;
+            dDpPickDate.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            dDpPickDate.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            dDpPickDate.DisabledColor = Color.Gray;
+            dDpPickDate.DisplayWeekNumbers = false;
+            dDpPickDate.DPHeight = 0;
+            dDpPickDate.DropDownAlign = LeftRightAlignment.Right;
+            dDpPickDate.FillDatePicker = false;
+            dDpPickDate.Font = new Font("Segoe UI", 9F);
+            dDpPickDate.ForeColor = Color.Black;
+            dDpPickDate.Icon = (Image)resources.GetObject("dDpPickDate.Icon");
+            dDpPickDate.IconColor = Color.Gray;
+            dDpPickDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            dDpPickDate.LeftTextMargin = 5;
+            dDpPickDate.Location = new Point(3, 114);
+            dDpPickDate.MinimumSize = new Size(0, 32);
+            dDpPickDate.Name = "dDpPickDate";
+            dDpPickDate.Size = new Size(231, 32);
+            dDpPickDate.TabIndex = 7;
+            // 
+            // tbDpAddress
+            // 
+            tbDpAddress.AcceptsReturn = false;
+            tbDpAddress.AcceptsTab = false;
+            tbDpAddress.AnimationSpeed = 200;
+            tbDpAddress.AutoCompleteMode = AutoCompleteMode.None;
+            tbDpAddress.AutoCompleteSource = AutoCompleteSource.None;
+            tbDpAddress.AutoSizeHeight = true;
+            tbDpAddress.BackColor = Color.Transparent;
+            tbDpAddress.BackgroundImage = (Image)resources.GetObject("tbDpAddress.BackgroundImage");
+            tbDpAddress.BorderColorActive = Color.DodgerBlue;
+            tbDpAddress.BorderColorDisabled = Color.FromArgb(204, 204, 204);
+            tbDpAddress.BorderColorHover = Color.FromArgb(105, 181, 255);
+            tbDpAddress.BorderColorIdle = Color.Silver;
+            tbDpAddress.BorderRadius = 1;
+            tbDpAddress.BorderThickness = 1;
+            tbDpAddress.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            tbDpAddress.CharacterCasing = CharacterCasing.Normal;
+            tbDpAddress.DefaultFont = new Font("Segoe UI", 9.25F);
+            tbDpAddress.DefaultText = "";
+            tbDpAddress.FillColor = Color.White;
+            tbDpAddress.HideSelection = true;
+            tbDpAddress.IconLeft = null;
+            tbDpAddress.IconLeftCursor = Cursors.IBeam;
+            tbDpAddress.IconPadding = 10;
+            tbDpAddress.IconRight = null;
+            tbDpAddress.IconRightCursor = Cursors.IBeam;
+            tbDpAddress.Location = new Point(3, 26);
+            tbDpAddress.MaxLength = 32767;
+            tbDpAddress.MinimumSize = new Size(1, 1);
+            tbDpAddress.Modified = false;
+            tbDpAddress.Multiline = false;
+            tbDpAddress.Name = "tbDpAddress";
+            stateProperties21.BorderColor = Color.DodgerBlue;
+            stateProperties21.FillColor = Color.Empty;
+            stateProperties21.ForeColor = Color.Empty;
+            stateProperties21.PlaceholderForeColor = Color.Empty;
+            tbDpAddress.OnActiveState = stateProperties21;
+            stateProperties22.BorderColor = Color.FromArgb(204, 204, 204);
+            stateProperties22.FillColor = Color.FromArgb(240, 240, 240);
+            stateProperties22.ForeColor = Color.FromArgb(109, 109, 109);
+            stateProperties22.PlaceholderForeColor = Color.DarkGray;
+            tbDpAddress.OnDisabledState = stateProperties22;
+            stateProperties23.BorderColor = Color.FromArgb(105, 181, 255);
+            stateProperties23.FillColor = Color.Empty;
+            stateProperties23.ForeColor = Color.Empty;
+            stateProperties23.PlaceholderForeColor = Color.Empty;
+            tbDpAddress.OnHoverState = stateProperties23;
+            stateProperties24.BorderColor = Color.Silver;
+            stateProperties24.FillColor = Color.White;
+            stateProperties24.ForeColor = Color.Empty;
+            stateProperties24.PlaceholderForeColor = Color.Empty;
+            tbDpAddress.OnIdleState = stateProperties24;
+            tbDpAddress.Padding = new Padding(3);
+            tbDpAddress.PasswordChar = '\0';
+            tbDpAddress.PlaceholderForeColor = Color.Silver;
+            tbDpAddress.PlaceholderText = "Enter  Address";
+            tbDpAddress.ReadOnly = false;
+            tbDpAddress.ScrollBars = ScrollBars.None;
+            tbDpAddress.SelectedText = "";
+            tbDpAddress.SelectionLength = 0;
+            tbDpAddress.SelectionStart = 0;
+            tbDpAddress.ShortcutsEnabled = true;
+            tbDpAddress.Size = new Size(231, 39);
+            tbDpAddress.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            tbDpAddress.TabIndex = 6;
+            tbDpAddress.TextAlign = HorizontalAlignment.Left;
+            tbDpAddress.TextMarginBottom = 0;
+            tbDpAddress.TextMarginLeft = 3;
+            tbDpAddress.TextMarginTop = 1;
+            tbDpAddress.TextPlaceholder = "Enter  Address";
+            tbDpAddress.UseSystemPasswordChar = false;
+            tbDpAddress.WordWrap = true;
             // 
             // tbDpTime
             // 
@@ -869,7 +977,6 @@
             checkBoxHearse.TabIndex = 1;
             checkBoxHearse.Text = "Hearse";
             checkBoxHearse.UseVisualStyleBackColor = true;
-            //checkBoxHearse.CheckedChanged += checkBoxHearse_CheckedChanged;
             // 
             // label5
             // 
@@ -978,7 +1085,6 @@
             checkBoxDmOthers.TabIndex = 4;
             checkBoxDmOthers.Text = "Others";
             checkBoxDmOthers.UseVisualStyleBackColor = true;
-            //checkBoxDmOthers.CheckedChanged += checkBoxDmOthers_CheckedChanged;
             // 
             // checkBoxTransfer
             // 
@@ -1020,114 +1126,6 @@
             label4.TabIndex = 0;
             label4.Text = "Disposition Manners";
             label4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // tbDpAddress
-            // 
-            tbDpAddress.AcceptsReturn = false;
-            tbDpAddress.AcceptsTab = false;
-            tbDpAddress.AnimationSpeed = 200;
-            tbDpAddress.AutoCompleteMode = AutoCompleteMode.None;
-            tbDpAddress.AutoCompleteSource = AutoCompleteSource.None;
-            tbDpAddress.AutoSizeHeight = true;
-            tbDpAddress.BackColor = Color.Transparent;
-            tbDpAddress.BackgroundImage = (Image)resources.GetObject("tbDpAddress.BackgroundImage");
-            tbDpAddress.BorderColorActive = Color.DodgerBlue;
-            tbDpAddress.BorderColorDisabled = Color.FromArgb(204, 204, 204);
-            tbDpAddress.BorderColorHover = Color.FromArgb(105, 181, 255);
-            tbDpAddress.BorderColorIdle = Color.Silver;
-            tbDpAddress.BorderRadius = 1;
-            tbDpAddress.BorderThickness = 1;
-            tbDpAddress.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            tbDpAddress.CharacterCasing = CharacterCasing.Normal;
-            tbDpAddress.DefaultFont = new Font("Segoe UI", 9.25F);
-            tbDpAddress.DefaultText = "";
-            tbDpAddress.FillColor = Color.White;
-            tbDpAddress.HideSelection = true;
-            tbDpAddress.IconLeft = null;
-            tbDpAddress.IconLeftCursor = Cursors.IBeam;
-            tbDpAddress.IconPadding = 10;
-            tbDpAddress.IconRight = null;
-            tbDpAddress.IconRightCursor = Cursors.IBeam;
-            tbDpAddress.Location = new Point(3, 26);
-            tbDpAddress.MaxLength = 32767;
-            tbDpAddress.MinimumSize = new Size(1, 1);
-            tbDpAddress.Modified = false;
-            tbDpAddress.Multiline = false;
-            tbDpAddress.Name = "tbDpAddress";
-            stateProperties21.BorderColor = Color.DodgerBlue;
-            stateProperties21.FillColor = Color.Empty;
-            stateProperties21.ForeColor = Color.Empty;
-            stateProperties21.PlaceholderForeColor = Color.Empty;
-            tbDpAddress.OnActiveState = stateProperties21;
-            stateProperties22.BorderColor = Color.FromArgb(204, 204, 204);
-            stateProperties22.FillColor = Color.FromArgb(240, 240, 240);
-            stateProperties22.ForeColor = Color.FromArgb(109, 109, 109);
-            stateProperties22.PlaceholderForeColor = Color.DarkGray;
-            tbDpAddress.OnDisabledState = stateProperties22;
-            stateProperties23.BorderColor = Color.FromArgb(105, 181, 255);
-            stateProperties23.FillColor = Color.Empty;
-            stateProperties23.ForeColor = Color.Empty;
-            stateProperties23.PlaceholderForeColor = Color.Empty;
-            tbDpAddress.OnHoverState = stateProperties23;
-            stateProperties24.BorderColor = Color.Silver;
-            stateProperties24.FillColor = Color.White;
-            stateProperties24.ForeColor = Color.Empty;
-            stateProperties24.PlaceholderForeColor = Color.Empty;
-            tbDpAddress.OnIdleState = stateProperties24;
-            tbDpAddress.Padding = new Padding(3);
-            tbDpAddress.PasswordChar = '\0';
-            tbDpAddress.PlaceholderForeColor = Color.Silver;
-            tbDpAddress.PlaceholderText = "Enter  Address";
-            tbDpAddress.ReadOnly = false;
-            tbDpAddress.ScrollBars = ScrollBars.None;
-            tbDpAddress.SelectedText = "";
-            tbDpAddress.SelectionLength = 0;
-            tbDpAddress.SelectionStart = 0;
-            tbDpAddress.ShortcutsEnabled = true;
-            tbDpAddress.Size = new Size(231, 39);
-            tbDpAddress.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            tbDpAddress.TabIndex = 6;
-            tbDpAddress.TextAlign = HorizontalAlignment.Left;
-            tbDpAddress.TextMarginBottom = 0;
-            tbDpAddress.TextMarginLeft = 3;
-            tbDpAddress.TextMarginTop = 1;
-            tbDpAddress.TextPlaceholder = "Enter  Address";
-            tbDpAddress.UseSystemPasswordChar = false;
-            tbDpAddress.WordWrap = true;
-            // 
-            // dDpPickDate
-            // 
-            dDpPickDate.BackColor = Color.Transparent;
-            dDpPickDate.BorderColor = Color.Silver;
-            dDpPickDate.BorderRadius = 1;
-            dDpPickDate.Color = Color.Silver;
-            dDpPickDate.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            dDpPickDate.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            dDpPickDate.DisabledColor = Color.Gray;
-            dDpPickDate.DisplayWeekNumbers = false;
-            dDpPickDate.DPHeight = 0;
-            dDpPickDate.FillDatePicker = false;
-            dDpPickDate.Font = new Font("Segoe UI", 9F);
-            dDpPickDate.ForeColor = Color.Black;
-            dDpPickDate.Icon = (Image)resources.GetObject("dDpPickDate.Icon");
-            dDpPickDate.IconColor = Color.Gray;
-            dDpPickDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            dDpPickDate.LeftTextMargin = 5;
-            dDpPickDate.Location = new Point(3, 114);
-            dDpPickDate.MinimumSize = new Size(0, 32);
-            dDpPickDate.Name = "dDpPickDate";
-            dDpPickDate.Size = new Size(231, 32);
-            dDpPickDate.TabIndex = 7;
-            //dDpPickDate.ValueChanged += bunifuDatePicker2_ValueChanged;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(3, 96);
-            label8.Name = "label8";
-            label8.Size = new Size(34, 15);
-            label8.TabIndex = 8;
-            label8.Text = "Date:";
             // 
             // Service
             // 

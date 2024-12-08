@@ -42,7 +42,7 @@
             // 
             panelChildForm.Location = new Point(52, 80);
             panelChildForm.Name = "panelChildForm";
-            panelChildForm.Size = new Size(1014, 473);
+            panelChildForm.Size = new Size(1034, 415);
             panelChildForm.TabIndex = 11;
             panelChildForm.Paint += panelChildForm_Paint;
             // 
@@ -53,7 +53,7 @@
             btnCustomerInfo.Depth = 0;
             btnCustomerInfo.HighEmphasis = true;
             btnCustomerInfo.Icon = null;
-            btnCustomerInfo.Location = new Point(13, 15);
+            btnCustomerInfo.Location = new Point(52, 15);
             btnCustomerInfo.Margin = new Padding(4, 6, 4, 6);
             btnCustomerInfo.MouseState = MaterialSkin.MouseState.HOVER;
             btnCustomerInfo.Name = "btnCustomerInfo";
@@ -73,7 +73,7 @@
             btnService.Depth = 0;
             btnService.HighEmphasis = true;
             btnService.Icon = null;
-            btnService.Location = new Point(296, 15);
+            btnService.Location = new Point(335, 15);
             btnService.Margin = new Padding(4, 6, 4, 6);
             btnService.MouseState = MaterialSkin.MouseState.HOVER;
             btnService.Name = "btnService";
@@ -93,7 +93,7 @@
             btnDeceasedInfo.Depth = 0;
             btnDeceasedInfo.HighEmphasis = true;
             btnDeceasedInfo.Icon = null;
-            btnDeceasedInfo.Location = new Point(157, 15);
+            btnDeceasedInfo.Location = new Point(196, 15);
             btnDeceasedInfo.Margin = new Padding(4, 6, 4, 6);
             btnDeceasedInfo.MouseState = MaterialSkin.MouseState.HOVER;
             btnDeceasedInfo.Name = "btnDeceasedInfo";
@@ -113,7 +113,7 @@
             btnPlan.Depth = 0;
             btnPlan.HighEmphasis = true;
             btnPlan.Icon = null;
-            btnPlan.Location = new Point(445, 15);
+            btnPlan.Location = new Point(484, 15);
             btnPlan.Margin = new Padding(4, 6, 4, 6);
             btnPlan.MouseState = MaterialSkin.MouseState.HOVER;
             btnPlan.Name = "btnPlan";
@@ -133,7 +133,7 @@
             btnPayment.Depth = 0;
             btnPayment.HighEmphasis = true;
             btnPayment.Icon = null;
-            btnPayment.Location = new Point(573, 15);
+            btnPayment.Location = new Point(612, 15);
             btnPayment.Margin = new Padding(4, 6, 4, 6);
             btnPayment.MouseState = MaterialSkin.MouseState.HOVER;
             btnPayment.Name = "btnPayment";
@@ -153,7 +153,7 @@
             btnRepresentative.Depth = 0;
             btnRepresentative.HighEmphasis = true;
             btnRepresentative.Icon = null;
-            btnRepresentative.Location = new Point(733, 15);
+            btnRepresentative.Location = new Point(772, 15);
             btnRepresentative.Margin = new Padding(4, 6, 4, 6);
             btnRepresentative.MouseState = MaterialSkin.MouseState.HOVER;
             btnRepresentative.Name = "btnRepresentative";
@@ -173,7 +173,7 @@
             btnSaveAll.Depth = 0;
             btnSaveAll.HighEmphasis = true;
             btnSaveAll.Icon = null;
-            btnSaveAll.Location = new Point(1038, 15);
+            btnSaveAll.Location = new Point(1022, 15);
             btnSaveAll.Margin = new Padding(4, 6, 4, 6);
             btnSaveAll.MouseState = MaterialSkin.MouseState.HOVER;
             btnSaveAll.Name = "btnSaveAll";
@@ -190,7 +190,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1115, 600);
+            BackColor = Color.White;
+            ClientSize = new Size(1136, 544);
             Controls.Add(btnSaveAll);
             Controls.Add(btnRepresentative);
             Controls.Add(btnPayment);

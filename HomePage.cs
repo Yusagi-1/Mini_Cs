@@ -88,13 +88,29 @@ namespace Mini_Cs
             home.Show();
 
         }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             ActivatedButton(sender, RGBColors.color5);
             Application.Exit();
         }
 
-        
+        private void btnCustomer_Click_1(object sender, EventArgs e)
+        {
+            ActivatedButton(sender, RGBColors.color1);
+            Customers customer = new Customers();
+            customer.TopLevel = false;
+            customer.FormBorderStyle = FormBorderStyle.None;
+            customer.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(customer);
+            customer.Show();
+
+
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

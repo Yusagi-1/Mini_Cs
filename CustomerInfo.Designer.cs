@@ -258,6 +258,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1047, 450);
             Controls.Add(txtBoxOthers);
             Controls.Add(checkBoxOther);
