@@ -14,12 +14,14 @@ namespace Mini_Cs
     public partial class Service : Form
     {
         private Customers parentForm;
-        private DeceasedInfoData deceasedData;
-        public Service(Customers parent, DeceasedInfoData data)
+        private DeceasedInfoData deceasedInfo;
+        public Service(Customers parent, DeceasedInfoData info) 
         {
             InitializeComponent();
             parentForm = parent;
-            deceasedData = data;
+            deceasedInfo = info;
         }
+            
+        
     }
 }

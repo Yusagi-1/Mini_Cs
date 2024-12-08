@@ -98,6 +98,7 @@ namespace Mini_Cs
             }
 
             OpenFormInPanel(new Service(this, sharedData.DeceasedInfo));
+
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
