@@ -9,11 +9,13 @@ namespace Mini_Cs
         private List<CustomerData> customerDataList = new List<CustomerData>();
         private CustomerInfo customerInfoForm;
         private Deceased deceasedForm;
-        private CustomerData sharedData = new CustomerData();
+        public CustomerData sharedData = new CustomerData();
+
         public Customers()
         {
             InitializeComponent();
             InitializeChildForms();
+
         }
         public void AddCustomerData(CustomerData data)
         {
@@ -33,12 +35,37 @@ namespace Mini_Cs
                 foreach (var customerData in customerDataList)
                 {
                     Console.WriteLine($"Saving CustomerID: {customerData.CustomerID}"); // Log CustomerID for debugging
+
+                    // Save customer data
                     dbManager.SaveCustomer(customerData);
 
+                    // Save deceased info if available
                     if (customerData.DeceasedInfo != null)
                     {
                         customerData.DeceasedInfo.CustomerID = customerData.CustomerID;
                         dbManager.SaveDeceasedInfo(customerData.DeceasedInfo);
+                    }
+
+                    // Save service details if available
+                    if (customerData.ServiceDetails != null)
+                    {
+                        customerData.ServiceDetails.CustomerID = customerData.CustomerID;
+                        dbManager.SaveServiceDetails(customerData.ServiceDetails);
+                    }
+                    if (customerData.DeathCertification != null)
+                    {
+                        customerData.DeathCertification.CustomerID = customerData.CustomerID;
+                        dbManager.SaveDeathCertification(customerData.DeathCertification);
+                    }
+                    if (customerData.VehiclesAssigned != null)
+                    {
+                        customerData.VehiclesAssigned.CustomerID = customerData.CustomerID;
+                        dbManager.SaveVehiclesAssigned(customerData.VehiclesAssigned);
+                    }
+                    if (customerData.DispositionDetails != null)
+                    {
+                        customerData.DispositionDetails.CustomerID = customerData.CustomerID;
+                        dbManager.SaveDispositionDetails(customerData.DispositionDetails);
                     }
                 }
 
@@ -50,6 +77,7 @@ namespace Mini_Cs
                 MessageBox.Show($"An error occurred while saving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         private void InitializeChildForms()
@@ -83,21 +111,24 @@ namespace Mini_Cs
         {
             if (deceasedForm == null)
             {
-                deceasedForm = new Deceased(this, sharedData.DeceasedInfo);
+                // Ensure sharedData.DeceasedInfo is initialized
+                if (sharedData.DeceasedInfo == null)
+                {
+                    sharedData.DeceasedInfo = new DeceasedInfoData();
+                }
+                deceasedForm = new Deceased(this, sharedData.DeceasedInfo); // Pass the DeceasedInfoData object
             }
             OpenFormInPanel(deceasedForm);
         }
 
-
         private void btnService_Click(object sender, EventArgs e)
         {
-            if (sharedData.DeceasedInfo == null)
+            if (sharedData.ServiceDetails == null)
             {
-                MessageBox.Show("No deceased information available.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                sharedData.ServiceDetails = new ServiceDetailsData();
             }
 
-            OpenFormInPanel(new Service(this, sharedData.DeceasedInfo));
+            OpenFormInPanel(new Service(this, sharedData.ServiceDetails, sharedData.DeathCertification, sharedData.DispositionDetails, sharedData.VehiclesAssigned));
 
         }
 
@@ -108,12 +139,12 @@ namespace Mini_Cs
 
         private void btnPlan_Click(object sender, EventArgs e)
         {
-            //OpenFormInPanel(new Plan());
+            OpenFormInPanel(new Plan());
         }
 
         private void btnRepresentative_Click(object sender, EventArgs e)
         {
-            //OpenFormInPanel(new Representative());
+            OpenFormInPanel(new Representative());
         }
 
         private void panelChildForm_Paint(object sender, PaintEventArgs e)

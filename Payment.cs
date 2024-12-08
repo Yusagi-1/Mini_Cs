@@ -17,17 +17,20 @@ namespace Mini_Cs
         public Payment()
         {
             InitializeComponent();
-        }
-        private void InitializeChildForms()
-        {
-            
-            regularServices = new RegularServices(this);
-            LoadChildForm(regularServices);
+            InitializeChildForms();
         }
 
         private void panelChildForm_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void InitializeChildForms()
+        {
+
+            regularServices = new RegularServices(this);
+
+            // Display it in the panel immediately
+            LoadChildForm(regularServices);
         }
         private void LoadChildForm(Form childForm)
         {

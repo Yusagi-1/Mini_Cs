@@ -72,6 +72,131 @@ namespace Mini_Cs
                 throw;
             }
         }
+        public void SaveServiceDetails(ServiceDetailsData data)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    string query = @"
+                INSERT INTO ServiceDetails (CustomerID, CasketCode, UrnCode, ViewingPlace, EmbalmingDays, Autopsy) 
+                VALUES (@CustomerID, @CasketCode, @UrnCode, @ViewingPlace, @EmbalmingDays, @Autopsy)";
+
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CustomerID", data.CustomerID);
+                        command.Parameters.AddWithValue("@CasketCode", data.CasketCode ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@UrnCode", data.UrnCode ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@ViewingPlace", data.ViewingPlace ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@EmbalmingDays", data.EmbalmingDays);
+                        command.Parameters.AddWithValue("@Autopsy", data.Autopsy);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        Console.WriteLine($"ServiceDetails saved for CustomerID: {data.CustomerID}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in SaveServiceDetails: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Save DeathCertificationData
+        public void SaveDeathCertification(DeathCertificationData data)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    string query = @"
+                INSERT INTO DeathCertification (CustomerID, IssuedBy, OthersDetails) 
+                VALUES (@CustomerID, @IssuedBy, @OthersDetails)";
+
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CustomerID", data.CustomerID);
+                        command.Parameters.AddWithValue("@IssuedBy", data.IssuedBy ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@OthersDetails", data.OthersDetails ?? (object)DBNull.Value);
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        Console.WriteLine($"DeathCertification saved for CustomerID: {data.CustomerID}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in SaveDeathCertification: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Save DispositionDetailsData
+        public void SaveDispositionDetails(DispositionDetailsData data)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    string query = @"
+                INSERT INTO DispositionDetails (CustomerID, DispositionManner, DispositionOtherDetails, DispositionPlace, DispositionDateTime) 
+                VALUES (@CustomerID, @DispositionManner, @DispositionOtherDetails, @DispositionPlace, @DispositionDateTime)";
+
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CustomerID", data.CustomerID);
+                        command.Parameters.AddWithValue("@DispositionManner", data.DispositionManner ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@DispositionOtherDetails", data.DispositionOtherDetails ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@DispositionPlace", data.DispositionPlace ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@DispositionDateTime", data.DispositionDateTime ?? (object)DBNull.Value);
+                        
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        Console.WriteLine($"DispositionDetails saved for CustomerID: {data.CustomerID}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in SaveDispositionDetails: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Save VehiclesAssignedData
+        public void SaveVehiclesAssigned(VehiclesAssignedData data)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    string query = @"
+                INSERT INTO VehiclesAssigned (CustomerID, VehicleType, VehicleOtherDetails, DateReceivedByRepresentative) 
+                VALUES (@CustomerID, @VehicleType, @VehicleOtherDetails, @DateReceivedByRepresentative)";
+
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CustomerID", data.CustomerID);
+                        command.Parameters.AddWithValue("@VehicleType", data.VehicleType ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@VehicleOtherDetails", data.VehicleOtherDetails ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@DateReceivedByRepresentative", data.DateReceivedByRepresentative ?? (object)DBNull.Value);
+                      
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        Console.WriteLine($"VehiclesAssigned saved for CustomerID: {data.CustomerID}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in SaveVehiclesAssigned: {ex.Message}");
+                throw;
+            }
+        }
 
     }
 }

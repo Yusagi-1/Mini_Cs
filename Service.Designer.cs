@@ -29,48 +29,48 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Service));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties33 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties34 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties35 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties36 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties73 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties74 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties75 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties76 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties77 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties78 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties79 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties80 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties81 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties82 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties83 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties84 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties85 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties86 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties87 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties88 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties89 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties90 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties91 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties92 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties93 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties94 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties95 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties96 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties97 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties98 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties99 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties100 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties101 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties102 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties103 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties104 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties105 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties106 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties107 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties108 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             label1 = new Label();
             panel2 = new Panel();
             tbDcOthers = new Bunifu.UI.WinForms.BunifuTextBox();
             checkBoxDcOthers = new CheckBox();
-            checkBox3 = new CheckBox();
+            checkBoxPublicHealthOfficer = new CheckBox();
             checkBoxHospitalAuthority = new CheckBox();
             checkboxPrivatePhysiscian = new CheckBox();
             label3 = new Label();
@@ -81,7 +81,8 @@
             checkBoxAutopsyYes = new CheckBox();
             checkBoxAutopsyNo = new CheckBox();
             panel1 = new Panel();
-            bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
+            btnProceed = new MaterialSkin.Controls.MaterialButton();
+            dpDateRecievedByRep = new Bunifu.UI.WinForms.BunifuDatePicker();
             label6 = new Label();
             tbViewingPlace = new Bunifu.UI.WinForms.BunifuTextBox();
             panel5 = new Panel();
@@ -131,7 +132,7 @@
             // 
             panel2.Controls.Add(tbDcOthers);
             panel2.Controls.Add(checkBoxDcOthers);
-            panel2.Controls.Add(checkBox3);
+            panel2.Controls.Add(checkBoxPublicHealthOfficer);
             panel2.Controls.Add(checkBoxHospitalAuthority);
             panel2.Controls.Add(checkboxPrivatePhysiscian);
             panel2.Controls.Add(label3);
@@ -173,26 +174,26 @@
             tbDcOthers.Modified = false;
             tbDcOthers.Multiline = false;
             tbDcOthers.Name = "tbDcOthers";
-            stateProperties1.BorderColor = Color.DodgerBlue;
-            stateProperties1.FillColor = Color.Empty;
-            stateProperties1.ForeColor = Color.Empty;
-            stateProperties1.PlaceholderForeColor = Color.Empty;
-            tbDcOthers.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = Color.FromArgb(204, 204, 204);
-            stateProperties2.FillColor = Color.FromArgb(240, 240, 240);
-            stateProperties2.ForeColor = Color.FromArgb(109, 109, 109);
-            stateProperties2.PlaceholderForeColor = Color.DarkGray;
-            tbDcOthers.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = Color.FromArgb(105, 181, 255);
-            stateProperties3.FillColor = Color.Empty;
-            stateProperties3.ForeColor = Color.Empty;
-            stateProperties3.PlaceholderForeColor = Color.Empty;
-            tbDcOthers.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = Color.Silver;
-            stateProperties4.FillColor = Color.White;
-            stateProperties4.ForeColor = Color.Empty;
-            stateProperties4.PlaceholderForeColor = Color.Empty;
-            tbDcOthers.OnIdleState = stateProperties4;
+            stateProperties73.BorderColor = Color.DodgerBlue;
+            stateProperties73.FillColor = Color.Empty;
+            stateProperties73.ForeColor = Color.Empty;
+            stateProperties73.PlaceholderForeColor = Color.Empty;
+            tbDcOthers.OnActiveState = stateProperties73;
+            stateProperties74.BorderColor = Color.FromArgb(204, 204, 204);
+            stateProperties74.FillColor = Color.FromArgb(240, 240, 240);
+            stateProperties74.ForeColor = Color.FromArgb(109, 109, 109);
+            stateProperties74.PlaceholderForeColor = Color.DarkGray;
+            tbDcOthers.OnDisabledState = stateProperties74;
+            stateProperties75.BorderColor = Color.FromArgb(105, 181, 255);
+            stateProperties75.FillColor = Color.Empty;
+            stateProperties75.ForeColor = Color.Empty;
+            stateProperties75.PlaceholderForeColor = Color.Empty;
+            tbDcOthers.OnHoverState = stateProperties75;
+            stateProperties76.BorderColor = Color.Silver;
+            stateProperties76.FillColor = Color.White;
+            stateProperties76.ForeColor = Color.Empty;
+            stateProperties76.PlaceholderForeColor = Color.Empty;
+            tbDcOthers.OnIdleState = stateProperties76;
             tbDcOthers.Padding = new Padding(3);
             tbDcOthers.PasswordChar = '\0';
             tbDcOthers.PlaceholderForeColor = Color.Silver;
@@ -213,6 +214,7 @@
             tbDcOthers.TextPlaceholder = "Enter text";
             tbDcOthers.UseSystemPasswordChar = false;
             tbDcOthers.WordWrap = true;
+            tbDcOthers.TextChanged += tbDcOthers_TextChanged;
             // 
             // checkBoxDcOthers
             // 
@@ -223,16 +225,18 @@
             checkBoxDcOthers.TabIndex = 4;
             checkBoxDcOthers.Text = "Others";
             checkBoxDcOthers.UseVisualStyleBackColor = true;
+            checkBoxDcOthers.CheckedChanged += checkBoxDcOthers_CheckedChanged;
             // 
-            // checkBox3
+            // checkBoxPublicHealthOfficer
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(3, 121);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(139, 19);
-            checkBox3.TabIndex = 3;
-            checkBox3.Text = "Public Health Officer ";
-            checkBox3.UseVisualStyleBackColor = true;
+            checkBoxPublicHealthOfficer.AutoSize = true;
+            checkBoxPublicHealthOfficer.Location = new Point(3, 121);
+            checkBoxPublicHealthOfficer.Name = "checkBoxPublicHealthOfficer";
+            checkBoxPublicHealthOfficer.Size = new Size(139, 19);
+            checkBoxPublicHealthOfficer.TabIndex = 3;
+            checkBoxPublicHealthOfficer.Text = "Public Health Officer ";
+            checkBoxPublicHealthOfficer.UseVisualStyleBackColor = true;
+            checkBoxPublicHealthOfficer.CheckedChanged += checkBoxPublicHealthOfficer_CheckedChanged;
             // 
             // checkBoxHospitalAuthority
             // 
@@ -243,6 +247,7 @@
             checkBoxHospitalAuthority.TabIndex = 2;
             checkBoxHospitalAuthority.Text = "Hospital Authority";
             checkBoxHospitalAuthority.UseVisualStyleBackColor = true;
+            checkBoxHospitalAuthority.CheckedChanged += checkBoxHospitalAuthority_CheckedChanged;
             // 
             // checkboxPrivatePhysiscian
             // 
@@ -253,6 +258,7 @@
             checkboxPrivatePhysiscian.TabIndex = 1;
             checkboxPrivatePhysiscian.Text = "Private Physician";
             checkboxPrivatePhysiscian.UseVisualStyleBackColor = true;
+            checkboxPrivatePhysiscian.CheckedChanged += checkboxPrivatePhysiscian_CheckedChanged;
             // 
             // label3
             // 
@@ -262,7 +268,7 @@
             label3.Name = "label3";
             label3.Size = new Size(237, 23);
             label3.TabIndex = 0;
-            label3.Text = "Death Certificate issued by:";
+            label3.Text = "Death Certificate issued by";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tbCasketCode
@@ -298,26 +304,26 @@
             tbCasketCode.Modified = false;
             tbCasketCode.Multiline = false;
             tbCasketCode.Name = "tbCasketCode";
-            stateProperties5.BorderColor = Color.DodgerBlue;
-            stateProperties5.FillColor = Color.Empty;
-            stateProperties5.ForeColor = Color.Empty;
-            stateProperties5.PlaceholderForeColor = Color.Empty;
-            tbCasketCode.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = Color.FromArgb(204, 204, 204);
-            stateProperties6.FillColor = Color.FromArgb(240, 240, 240);
-            stateProperties6.ForeColor = Color.FromArgb(109, 109, 109);
-            stateProperties6.PlaceholderForeColor = Color.DarkGray;
-            tbCasketCode.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = Color.FromArgb(105, 181, 255);
-            stateProperties7.FillColor = Color.Empty;
-            stateProperties7.ForeColor = Color.Empty;
-            stateProperties7.PlaceholderForeColor = Color.Empty;
-            tbCasketCode.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = Color.Silver;
-            stateProperties8.FillColor = Color.White;
-            stateProperties8.ForeColor = Color.Empty;
-            stateProperties8.PlaceholderForeColor = Color.Empty;
-            tbCasketCode.OnIdleState = stateProperties8;
+            stateProperties77.BorderColor = Color.DodgerBlue;
+            stateProperties77.FillColor = Color.Empty;
+            stateProperties77.ForeColor = Color.Empty;
+            stateProperties77.PlaceholderForeColor = Color.Empty;
+            tbCasketCode.OnActiveState = stateProperties77;
+            stateProperties78.BorderColor = Color.FromArgb(204, 204, 204);
+            stateProperties78.FillColor = Color.FromArgb(240, 240, 240);
+            stateProperties78.ForeColor = Color.FromArgb(109, 109, 109);
+            stateProperties78.PlaceholderForeColor = Color.DarkGray;
+            tbCasketCode.OnDisabledState = stateProperties78;
+            stateProperties79.BorderColor = Color.FromArgb(105, 181, 255);
+            stateProperties79.FillColor = Color.Empty;
+            stateProperties79.ForeColor = Color.Empty;
+            stateProperties79.PlaceholderForeColor = Color.Empty;
+            tbCasketCode.OnHoverState = stateProperties79;
+            stateProperties80.BorderColor = Color.Silver;
+            stateProperties80.FillColor = Color.White;
+            stateProperties80.ForeColor = Color.Empty;
+            stateProperties80.PlaceholderForeColor = Color.Empty;
+            tbCasketCode.OnIdleState = stateProperties80;
             tbCasketCode.Padding = new Padding(3);
             tbCasketCode.PasswordChar = '\0';
             tbCasketCode.PlaceholderForeColor = Color.Silver;
@@ -338,6 +344,7 @@
             tbCasketCode.TextPlaceholder = "Enter Casket Code";
             tbCasketCode.UseSystemPasswordChar = false;
             tbCasketCode.WordWrap = true;
+            tbCasketCode.TextChanged += tbCasketCode_TextChanged;
             // 
             // tbUrnCode
             // 
@@ -372,26 +379,26 @@
             tbUrnCode.Modified = false;
             tbUrnCode.Multiline = false;
             tbUrnCode.Name = "tbUrnCode";
-            stateProperties9.BorderColor = Color.DodgerBlue;
-            stateProperties9.FillColor = Color.Empty;
-            stateProperties9.ForeColor = Color.Empty;
-            stateProperties9.PlaceholderForeColor = Color.Empty;
-            tbUrnCode.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = Color.FromArgb(204, 204, 204);
-            stateProperties10.FillColor = Color.FromArgb(240, 240, 240);
-            stateProperties10.ForeColor = Color.FromArgb(109, 109, 109);
-            stateProperties10.PlaceholderForeColor = Color.DarkGray;
-            tbUrnCode.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = Color.FromArgb(105, 181, 255);
-            stateProperties11.FillColor = Color.Empty;
-            stateProperties11.ForeColor = Color.Empty;
-            stateProperties11.PlaceholderForeColor = Color.Empty;
-            tbUrnCode.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = Color.Silver;
-            stateProperties12.FillColor = Color.White;
-            stateProperties12.ForeColor = Color.Empty;
-            stateProperties12.PlaceholderForeColor = Color.Empty;
-            tbUrnCode.OnIdleState = stateProperties12;
+            stateProperties81.BorderColor = Color.DodgerBlue;
+            stateProperties81.FillColor = Color.Empty;
+            stateProperties81.ForeColor = Color.Empty;
+            stateProperties81.PlaceholderForeColor = Color.Empty;
+            tbUrnCode.OnActiveState = stateProperties81;
+            stateProperties82.BorderColor = Color.FromArgb(204, 204, 204);
+            stateProperties82.FillColor = Color.FromArgb(240, 240, 240);
+            stateProperties82.ForeColor = Color.FromArgb(109, 109, 109);
+            stateProperties82.PlaceholderForeColor = Color.DarkGray;
+            tbUrnCode.OnDisabledState = stateProperties82;
+            stateProperties83.BorderColor = Color.FromArgb(105, 181, 255);
+            stateProperties83.FillColor = Color.Empty;
+            stateProperties83.ForeColor = Color.Empty;
+            stateProperties83.PlaceholderForeColor = Color.Empty;
+            tbUrnCode.OnHoverState = stateProperties83;
+            stateProperties84.BorderColor = Color.Silver;
+            stateProperties84.FillColor = Color.White;
+            stateProperties84.ForeColor = Color.Empty;
+            stateProperties84.PlaceholderForeColor = Color.Empty;
+            tbUrnCode.OnIdleState = stateProperties84;
             tbUrnCode.Padding = new Padding(3);
             tbUrnCode.PasswordChar = '\0';
             tbUrnCode.PlaceholderForeColor = Color.Silver;
@@ -412,6 +419,7 @@
             tbUrnCode.TextPlaceholder = "Enter Urn Code";
             tbUrnCode.UseSystemPasswordChar = false;
             tbUrnCode.WordWrap = true;
+            tbUrnCode.TextChanged += tbUrnCode_TextChanged;
             // 
             // tbEmbalmingDays
             // 
@@ -446,26 +454,26 @@
             tbEmbalmingDays.Modified = false;
             tbEmbalmingDays.Multiline = false;
             tbEmbalmingDays.Name = "tbEmbalmingDays";
-            stateProperties13.BorderColor = Color.DodgerBlue;
-            stateProperties13.FillColor = Color.Empty;
-            stateProperties13.ForeColor = Color.Empty;
-            stateProperties13.PlaceholderForeColor = Color.Empty;
-            tbEmbalmingDays.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = Color.FromArgb(204, 204, 204);
-            stateProperties14.FillColor = Color.FromArgb(240, 240, 240);
-            stateProperties14.ForeColor = Color.FromArgb(109, 109, 109);
-            stateProperties14.PlaceholderForeColor = Color.DarkGray;
-            tbEmbalmingDays.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = Color.FromArgb(105, 181, 255);
-            stateProperties15.FillColor = Color.Empty;
-            stateProperties15.ForeColor = Color.Empty;
-            stateProperties15.PlaceholderForeColor = Color.Empty;
-            tbEmbalmingDays.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = Color.Silver;
-            stateProperties16.FillColor = Color.White;
-            stateProperties16.ForeColor = Color.Empty;
-            stateProperties16.PlaceholderForeColor = Color.Empty;
-            tbEmbalmingDays.OnIdleState = stateProperties16;
+            stateProperties85.BorderColor = Color.DodgerBlue;
+            stateProperties85.FillColor = Color.Empty;
+            stateProperties85.ForeColor = Color.Empty;
+            stateProperties85.PlaceholderForeColor = Color.Empty;
+            tbEmbalmingDays.OnActiveState = stateProperties85;
+            stateProperties86.BorderColor = Color.FromArgb(204, 204, 204);
+            stateProperties86.FillColor = Color.FromArgb(240, 240, 240);
+            stateProperties86.ForeColor = Color.FromArgb(109, 109, 109);
+            stateProperties86.PlaceholderForeColor = Color.DarkGray;
+            tbEmbalmingDays.OnDisabledState = stateProperties86;
+            stateProperties87.BorderColor = Color.FromArgb(105, 181, 255);
+            stateProperties87.FillColor = Color.Empty;
+            stateProperties87.ForeColor = Color.Empty;
+            stateProperties87.PlaceholderForeColor = Color.Empty;
+            tbEmbalmingDays.OnHoverState = stateProperties87;
+            stateProperties88.BorderColor = Color.Silver;
+            stateProperties88.FillColor = Color.White;
+            stateProperties88.ForeColor = Color.Empty;
+            stateProperties88.PlaceholderForeColor = Color.Empty;
+            tbEmbalmingDays.OnIdleState = stateProperties88;
             tbEmbalmingDays.Padding = new Padding(3);
             tbEmbalmingDays.PasswordChar = '\0';
             tbEmbalmingDays.PlaceholderForeColor = Color.Silver;
@@ -486,6 +494,7 @@
             tbEmbalmingDays.TextPlaceholder = "Enter Embalming Days ";
             tbEmbalmingDays.UseSystemPasswordChar = false;
             tbEmbalmingDays.WordWrap = true;
+            tbEmbalmingDays.TextChanged += tbEmbalmingDays_TextChanged;
             // 
             // label2
             // 
@@ -505,6 +514,7 @@
             checkBoxAutopsyYes.TabIndex = 4;
             checkBoxAutopsyYes.Text = "Yes";
             checkBoxAutopsyYes.UseVisualStyleBackColor = true;
+            checkBoxAutopsyYes.CheckedChanged += checkBoxAutopsyYes_CheckedChanged;
             // 
             // checkBoxAutopsyNo
             // 
@@ -515,11 +525,13 @@
             checkBoxAutopsyNo.TabIndex = 4;
             checkBoxAutopsyNo.Text = "No";
             checkBoxAutopsyNo.UseVisualStyleBackColor = true;
+            checkBoxAutopsyNo.CheckedChanged += checkBoxAutopsyNo_CheckedChanged;
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(bunifuDatePicker1);
+            panel1.Controls.Add(btnProceed);
+            panel1.Controls.Add(dpDateRecievedByRep);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(checkBoxAutopsyNo);
             panel1.Controls.Add(checkBoxAutopsyYes);
@@ -539,30 +551,51 @@
             panel1.Size = new Size(1016, 450);
             panel1.TabIndex = 0;
             // 
-            // bunifuDatePicker1
+            // btnProceed
             // 
-            bunifuDatePicker1.BackColor = Color.Transparent;
-            bunifuDatePicker1.BorderColor = Color.Silver;
-            bunifuDatePicker1.BorderRadius = 1;
-            bunifuDatePicker1.Color = Color.Silver;
-            bunifuDatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            bunifuDatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            bunifuDatePicker1.DisabledColor = Color.Gray;
-            bunifuDatePicker1.DisplayWeekNumbers = false;
-            bunifuDatePicker1.DPHeight = 0;
-            bunifuDatePicker1.DropDownAlign = LeftRightAlignment.Right;
-            bunifuDatePicker1.FillDatePicker = false;
-            bunifuDatePicker1.Font = new Font("Segoe UI", 9F);
-            bunifuDatePicker1.ForeColor = Color.Black;
-            bunifuDatePicker1.Icon = (Image)resources.GetObject("bunifuDatePicker1.Icon");
-            bunifuDatePicker1.IconColor = Color.Gray;
-            bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            bunifuDatePicker1.LeftTextMargin = 5;
-            bunifuDatePicker1.Location = new Point(814, 89);
-            bunifuDatePicker1.MinimumSize = new Size(0, 32);
-            bunifuDatePicker1.Name = "bunifuDatePicker1";
-            bunifuDatePicker1.Size = new Size(189, 32);
-            bunifuDatePicker1.TabIndex = 6;
+            btnProceed.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnProceed.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnProceed.Depth = 0;
+            btnProceed.HighEmphasis = true;
+            btnProceed.Icon = null;
+            btnProceed.Location = new Point(917, 409);
+            btnProceed.Margin = new Padding(4, 6, 4, 6);
+            btnProceed.MouseState = MaterialSkin.MouseState.HOVER;
+            btnProceed.Name = "btnProceed";
+            btnProceed.NoAccentTextColor = Color.Empty;
+            btnProceed.Size = new Size(86, 36);
+            btnProceed.TabIndex = 23;
+            btnProceed.Text = "Proceed";
+            btnProceed.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnProceed.UseAccentColor = false;
+            btnProceed.UseVisualStyleBackColor = true;
+            btnProceed.Click += btnProceed_Click;
+            // 
+            // dpDateRecievedByRep
+            // 
+            dpDateRecievedByRep.BackColor = Color.Transparent;
+            dpDateRecievedByRep.BorderColor = Color.Silver;
+            dpDateRecievedByRep.BorderRadius = 1;
+            dpDateRecievedByRep.Color = Color.Silver;
+            dpDateRecievedByRep.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            dpDateRecievedByRep.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            dpDateRecievedByRep.DisabledColor = Color.Gray;
+            dpDateRecievedByRep.DisplayWeekNumbers = false;
+            dpDateRecievedByRep.DPHeight = 0;
+            dpDateRecievedByRep.DropDownAlign = LeftRightAlignment.Right;
+            dpDateRecievedByRep.FillDatePicker = false;
+            dpDateRecievedByRep.Font = new Font("Segoe UI", 9F);
+            dpDateRecievedByRep.ForeColor = Color.Black;
+            dpDateRecievedByRep.Icon = (Image)resources.GetObject("dpDateRecievedByRep.Icon");
+            dpDateRecievedByRep.IconColor = Color.Gray;
+            dpDateRecievedByRep.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            dpDateRecievedByRep.LeftTextMargin = 5;
+            dpDateRecievedByRep.Location = new Point(814, 89);
+            dpDateRecievedByRep.MinimumSize = new Size(0, 32);
+            dpDateRecievedByRep.Name = "dpDateRecievedByRep";
+            dpDateRecievedByRep.Size = new Size(189, 32);
+            dpDateRecievedByRep.TabIndex = 6;
+            dpDateRecievedByRep.ValueChanged += dpDateRecievedByRep_ValueChanged;
             // 
             // label6
             // 
@@ -605,26 +638,26 @@
             tbViewingPlace.Modified = false;
             tbViewingPlace.Multiline = false;
             tbViewingPlace.Name = "tbViewingPlace";
-            stateProperties17.BorderColor = Color.DodgerBlue;
-            stateProperties17.FillColor = Color.Empty;
-            stateProperties17.ForeColor = Color.Empty;
-            stateProperties17.PlaceholderForeColor = Color.Empty;
-            tbViewingPlace.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = Color.FromArgb(204, 204, 204);
-            stateProperties18.FillColor = Color.FromArgb(240, 240, 240);
-            stateProperties18.ForeColor = Color.FromArgb(109, 109, 109);
-            stateProperties18.PlaceholderForeColor = Color.DarkGray;
-            tbViewingPlace.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = Color.FromArgb(105, 181, 255);
-            stateProperties19.FillColor = Color.Empty;
-            stateProperties19.ForeColor = Color.Empty;
-            stateProperties19.PlaceholderForeColor = Color.Empty;
-            tbViewingPlace.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = Color.Silver;
-            stateProperties20.FillColor = Color.White;
-            stateProperties20.ForeColor = Color.Empty;
-            stateProperties20.PlaceholderForeColor = Color.Empty;
-            tbViewingPlace.OnIdleState = stateProperties20;
+            stateProperties89.BorderColor = Color.DodgerBlue;
+            stateProperties89.FillColor = Color.Empty;
+            stateProperties89.ForeColor = Color.Empty;
+            stateProperties89.PlaceholderForeColor = Color.Empty;
+            tbViewingPlace.OnActiveState = stateProperties89;
+            stateProperties90.BorderColor = Color.FromArgb(204, 204, 204);
+            stateProperties90.FillColor = Color.FromArgb(240, 240, 240);
+            stateProperties90.ForeColor = Color.FromArgb(109, 109, 109);
+            stateProperties90.PlaceholderForeColor = Color.DarkGray;
+            tbViewingPlace.OnDisabledState = stateProperties90;
+            stateProperties91.BorderColor = Color.FromArgb(105, 181, 255);
+            stateProperties91.FillColor = Color.Empty;
+            stateProperties91.ForeColor = Color.Empty;
+            stateProperties91.PlaceholderForeColor = Color.Empty;
+            tbViewingPlace.OnHoverState = stateProperties91;
+            stateProperties92.BorderColor = Color.Silver;
+            stateProperties92.FillColor = Color.White;
+            stateProperties92.ForeColor = Color.Empty;
+            stateProperties92.PlaceholderForeColor = Color.Empty;
+            tbViewingPlace.OnIdleState = stateProperties92;
             tbViewingPlace.Padding = new Padding(3);
             tbViewingPlace.PasswordChar = '\0';
             tbViewingPlace.PlaceholderForeColor = Color.Silver;
@@ -645,6 +678,7 @@
             tbViewingPlace.TextPlaceholder = "Enter Viewing Place";
             tbViewingPlace.UseSystemPasswordChar = false;
             tbViewingPlace.WordWrap = true;
+            tbViewingPlace.TextChanged += tbViewingPlace_TextChanged;
             // 
             // panel5
             // 
@@ -691,6 +725,7 @@
             dDpPickDate.Name = "dDpPickDate";
             dDpPickDate.Size = new Size(231, 32);
             dDpPickDate.TabIndex = 7;
+            dDpPickDate.ValueChanged += dDpPickDate_ValueChanged;
             // 
             // tbDpAddress
             // 
@@ -725,26 +760,26 @@
             tbDpAddress.Modified = false;
             tbDpAddress.Multiline = false;
             tbDpAddress.Name = "tbDpAddress";
-            stateProperties21.BorderColor = Color.DodgerBlue;
-            stateProperties21.FillColor = Color.Empty;
-            stateProperties21.ForeColor = Color.Empty;
-            stateProperties21.PlaceholderForeColor = Color.Empty;
-            tbDpAddress.OnActiveState = stateProperties21;
-            stateProperties22.BorderColor = Color.FromArgb(204, 204, 204);
-            stateProperties22.FillColor = Color.FromArgb(240, 240, 240);
-            stateProperties22.ForeColor = Color.FromArgb(109, 109, 109);
-            stateProperties22.PlaceholderForeColor = Color.DarkGray;
-            tbDpAddress.OnDisabledState = stateProperties22;
-            stateProperties23.BorderColor = Color.FromArgb(105, 181, 255);
-            stateProperties23.FillColor = Color.Empty;
-            stateProperties23.ForeColor = Color.Empty;
-            stateProperties23.PlaceholderForeColor = Color.Empty;
-            tbDpAddress.OnHoverState = stateProperties23;
-            stateProperties24.BorderColor = Color.Silver;
-            stateProperties24.FillColor = Color.White;
-            stateProperties24.ForeColor = Color.Empty;
-            stateProperties24.PlaceholderForeColor = Color.Empty;
-            tbDpAddress.OnIdleState = stateProperties24;
+            stateProperties93.BorderColor = Color.DodgerBlue;
+            stateProperties93.FillColor = Color.Empty;
+            stateProperties93.ForeColor = Color.Empty;
+            stateProperties93.PlaceholderForeColor = Color.Empty;
+            tbDpAddress.OnActiveState = stateProperties93;
+            stateProperties94.BorderColor = Color.FromArgb(204, 204, 204);
+            stateProperties94.FillColor = Color.FromArgb(240, 240, 240);
+            stateProperties94.ForeColor = Color.FromArgb(109, 109, 109);
+            stateProperties94.PlaceholderForeColor = Color.DarkGray;
+            tbDpAddress.OnDisabledState = stateProperties94;
+            stateProperties95.BorderColor = Color.FromArgb(105, 181, 255);
+            stateProperties95.FillColor = Color.Empty;
+            stateProperties95.ForeColor = Color.Empty;
+            stateProperties95.PlaceholderForeColor = Color.Empty;
+            tbDpAddress.OnHoverState = stateProperties95;
+            stateProperties96.BorderColor = Color.Silver;
+            stateProperties96.FillColor = Color.White;
+            stateProperties96.ForeColor = Color.Empty;
+            stateProperties96.PlaceholderForeColor = Color.Empty;
+            tbDpAddress.OnIdleState = stateProperties96;
             tbDpAddress.Padding = new Padding(3);
             tbDpAddress.PasswordChar = '\0';
             tbDpAddress.PlaceholderForeColor = Color.Silver;
@@ -765,6 +800,7 @@
             tbDpAddress.TextPlaceholder = "Enter  Address";
             tbDpAddress.UseSystemPasswordChar = false;
             tbDpAddress.WordWrap = true;
+            tbDpAddress.TextChanged += tbDpAddress_TextChanged;
             // 
             // tbDpTime
             // 
@@ -799,26 +835,26 @@
             tbDpTime.Modified = false;
             tbDpTime.Multiline = false;
             tbDpTime.Name = "tbDpTime";
-            stateProperties25.BorderColor = Color.DodgerBlue;
-            stateProperties25.FillColor = Color.Empty;
-            stateProperties25.ForeColor = Color.Empty;
-            stateProperties25.PlaceholderForeColor = Color.Empty;
-            tbDpTime.OnActiveState = stateProperties25;
-            stateProperties26.BorderColor = Color.FromArgb(204, 204, 204);
-            stateProperties26.FillColor = Color.FromArgb(240, 240, 240);
-            stateProperties26.ForeColor = Color.FromArgb(109, 109, 109);
-            stateProperties26.PlaceholderForeColor = Color.DarkGray;
-            tbDpTime.OnDisabledState = stateProperties26;
-            stateProperties27.BorderColor = Color.FromArgb(105, 181, 255);
-            stateProperties27.FillColor = Color.Empty;
-            stateProperties27.ForeColor = Color.Empty;
-            stateProperties27.PlaceholderForeColor = Color.Empty;
-            tbDpTime.OnHoverState = stateProperties27;
-            stateProperties28.BorderColor = Color.Silver;
-            stateProperties28.FillColor = Color.White;
-            stateProperties28.ForeColor = Color.Empty;
-            stateProperties28.PlaceholderForeColor = Color.Empty;
-            tbDpTime.OnIdleState = stateProperties28;
+            stateProperties97.BorderColor = Color.DodgerBlue;
+            stateProperties97.FillColor = Color.Empty;
+            stateProperties97.ForeColor = Color.Empty;
+            stateProperties97.PlaceholderForeColor = Color.Empty;
+            tbDpTime.OnActiveState = stateProperties97;
+            stateProperties98.BorderColor = Color.FromArgb(204, 204, 204);
+            stateProperties98.FillColor = Color.FromArgb(240, 240, 240);
+            stateProperties98.ForeColor = Color.FromArgb(109, 109, 109);
+            stateProperties98.PlaceholderForeColor = Color.DarkGray;
+            tbDpTime.OnDisabledState = stateProperties98;
+            stateProperties99.BorderColor = Color.FromArgb(105, 181, 255);
+            stateProperties99.FillColor = Color.Empty;
+            stateProperties99.ForeColor = Color.Empty;
+            stateProperties99.PlaceholderForeColor = Color.Empty;
+            tbDpTime.OnHoverState = stateProperties99;
+            stateProperties100.BorderColor = Color.Silver;
+            stateProperties100.FillColor = Color.White;
+            stateProperties100.ForeColor = Color.Empty;
+            stateProperties100.PlaceholderForeColor = Color.Empty;
+            tbDpTime.OnIdleState = stateProperties100;
             tbDpTime.Padding = new Padding(3);
             tbDpTime.PasswordChar = '\0';
             tbDpTime.PlaceholderForeColor = Color.Silver;
@@ -839,6 +875,7 @@
             tbDpTime.TextPlaceholder = "Enter Time (HH:MM)";
             tbDpTime.UseSystemPasswordChar = false;
             tbDpTime.WordWrap = true;
+            tbDpTime.TextChanged += tbDpTime_TextChanged;
             // 
             // label7
             // 
@@ -897,26 +934,26 @@
             tbAvOthers.Modified = false;
             tbAvOthers.Multiline = false;
             tbAvOthers.Name = "tbAvOthers";
-            stateProperties29.BorderColor = Color.DodgerBlue;
-            stateProperties29.FillColor = Color.Empty;
-            stateProperties29.ForeColor = Color.Empty;
-            stateProperties29.PlaceholderForeColor = Color.Empty;
-            tbAvOthers.OnActiveState = stateProperties29;
-            stateProperties30.BorderColor = Color.FromArgb(204, 204, 204);
-            stateProperties30.FillColor = Color.FromArgb(240, 240, 240);
-            stateProperties30.ForeColor = Color.FromArgb(109, 109, 109);
-            stateProperties30.PlaceholderForeColor = Color.DarkGray;
-            tbAvOthers.OnDisabledState = stateProperties30;
-            stateProperties31.BorderColor = Color.FromArgb(105, 181, 255);
-            stateProperties31.FillColor = Color.Empty;
-            stateProperties31.ForeColor = Color.Empty;
-            stateProperties31.PlaceholderForeColor = Color.Empty;
-            tbAvOthers.OnHoverState = stateProperties31;
-            stateProperties32.BorderColor = Color.Silver;
-            stateProperties32.FillColor = Color.White;
-            stateProperties32.ForeColor = Color.Empty;
-            stateProperties32.PlaceholderForeColor = Color.Empty;
-            tbAvOthers.OnIdleState = stateProperties32;
+            stateProperties101.BorderColor = Color.DodgerBlue;
+            stateProperties101.FillColor = Color.Empty;
+            stateProperties101.ForeColor = Color.Empty;
+            stateProperties101.PlaceholderForeColor = Color.Empty;
+            tbAvOthers.OnActiveState = stateProperties101;
+            stateProperties102.BorderColor = Color.FromArgb(204, 204, 204);
+            stateProperties102.FillColor = Color.FromArgb(240, 240, 240);
+            stateProperties102.ForeColor = Color.FromArgb(109, 109, 109);
+            stateProperties102.PlaceholderForeColor = Color.DarkGray;
+            tbAvOthers.OnDisabledState = stateProperties102;
+            stateProperties103.BorderColor = Color.FromArgb(105, 181, 255);
+            stateProperties103.FillColor = Color.Empty;
+            stateProperties103.ForeColor = Color.Empty;
+            stateProperties103.PlaceholderForeColor = Color.Empty;
+            tbAvOthers.OnHoverState = stateProperties103;
+            stateProperties104.BorderColor = Color.Silver;
+            stateProperties104.FillColor = Color.White;
+            stateProperties104.ForeColor = Color.Empty;
+            stateProperties104.PlaceholderForeColor = Color.Empty;
+            tbAvOthers.OnIdleState = stateProperties104;
             tbAvOthers.Padding = new Padding(3);
             tbAvOthers.PasswordChar = '\0';
             tbAvOthers.PlaceholderForeColor = Color.Silver;
@@ -937,6 +974,7 @@
             tbAvOthers.TextPlaceholder = "Enter text";
             tbAvOthers.UseSystemPasswordChar = false;
             tbAvOthers.WordWrap = true;
+            tbAvOthers.TextChanged += tbAvOthers_TextChanged;
             // 
             // checkBoxAvOthers
             // 
@@ -947,6 +985,7 @@
             checkBoxAvOthers.TabIndex = 4;
             checkBoxAvOthers.Text = "Others";
             checkBoxAvOthers.UseVisualStyleBackColor = true;
+            checkBoxAvOthers.CheckedChanged += checkBoxAvOthers_CheckedChanged;
             // 
             // checkBoxFlowerCar
             // 
@@ -957,6 +996,7 @@
             checkBoxFlowerCar.TabIndex = 3;
             checkBoxFlowerCar.Text = "Flower Car";
             checkBoxFlowerCar.UseVisualStyleBackColor = true;
+            checkBoxFlowerCar.CheckedChanged += checkBoxFlowerCar_CheckedChanged;
             // 
             // checkBoxFamilyCar
             // 
@@ -967,6 +1007,7 @@
             checkBoxFamilyCar.TabIndex = 2;
             checkBoxFamilyCar.Text = "Family Car";
             checkBoxFamilyCar.UseVisualStyleBackColor = true;
+            checkBoxFamilyCar.CheckedChanged += checkBoxFamilyCar_CheckedChanged;
             // 
             // checkBoxHearse
             // 
@@ -977,6 +1018,7 @@
             checkBoxHearse.TabIndex = 1;
             checkBoxHearse.Text = "Hearse";
             checkBoxHearse.UseVisualStyleBackColor = true;
+            checkBoxHearse.CheckedChanged += checkBoxHearse_CheckedChanged;
             // 
             // label5
             // 
@@ -1035,26 +1077,26 @@
             tbDmOthers.Modified = false;
             tbDmOthers.Multiline = false;
             tbDmOthers.Name = "tbDmOthers";
-            stateProperties33.BorderColor = Color.DodgerBlue;
-            stateProperties33.FillColor = Color.Empty;
-            stateProperties33.ForeColor = Color.Empty;
-            stateProperties33.PlaceholderForeColor = Color.Empty;
-            tbDmOthers.OnActiveState = stateProperties33;
-            stateProperties34.BorderColor = Color.FromArgb(204, 204, 204);
-            stateProperties34.FillColor = Color.FromArgb(240, 240, 240);
-            stateProperties34.ForeColor = Color.FromArgb(109, 109, 109);
-            stateProperties34.PlaceholderForeColor = Color.DarkGray;
-            tbDmOthers.OnDisabledState = stateProperties34;
-            stateProperties35.BorderColor = Color.FromArgb(105, 181, 255);
-            stateProperties35.FillColor = Color.Empty;
-            stateProperties35.ForeColor = Color.Empty;
-            stateProperties35.PlaceholderForeColor = Color.Empty;
-            tbDmOthers.OnHoverState = stateProperties35;
-            stateProperties36.BorderColor = Color.Silver;
-            stateProperties36.FillColor = Color.White;
-            stateProperties36.ForeColor = Color.Empty;
-            stateProperties36.PlaceholderForeColor = Color.Empty;
-            tbDmOthers.OnIdleState = stateProperties36;
+            stateProperties105.BorderColor = Color.DodgerBlue;
+            stateProperties105.FillColor = Color.Empty;
+            stateProperties105.ForeColor = Color.Empty;
+            stateProperties105.PlaceholderForeColor = Color.Empty;
+            tbDmOthers.OnActiveState = stateProperties105;
+            stateProperties106.BorderColor = Color.FromArgb(204, 204, 204);
+            stateProperties106.FillColor = Color.FromArgb(240, 240, 240);
+            stateProperties106.ForeColor = Color.FromArgb(109, 109, 109);
+            stateProperties106.PlaceholderForeColor = Color.DarkGray;
+            tbDmOthers.OnDisabledState = stateProperties106;
+            stateProperties107.BorderColor = Color.FromArgb(105, 181, 255);
+            stateProperties107.FillColor = Color.Empty;
+            stateProperties107.ForeColor = Color.Empty;
+            stateProperties107.PlaceholderForeColor = Color.Empty;
+            tbDmOthers.OnHoverState = stateProperties107;
+            stateProperties108.BorderColor = Color.Silver;
+            stateProperties108.FillColor = Color.White;
+            stateProperties108.ForeColor = Color.Empty;
+            stateProperties108.PlaceholderForeColor = Color.Empty;
+            tbDmOthers.OnIdleState = stateProperties108;
             tbDmOthers.Padding = new Padding(3);
             tbDmOthers.PasswordChar = '\0';
             tbDmOthers.PlaceholderForeColor = Color.Silver;
@@ -1075,6 +1117,7 @@
             tbDmOthers.TextPlaceholder = "Enter text";
             tbDmOthers.UseSystemPasswordChar = false;
             tbDmOthers.WordWrap = true;
+            tbDmOthers.TextChanged += tbDmOthers_TextChanged;
             // 
             // checkBoxDmOthers
             // 
@@ -1085,6 +1128,7 @@
             checkBoxDmOthers.TabIndex = 4;
             checkBoxDmOthers.Text = "Others";
             checkBoxDmOthers.UseVisualStyleBackColor = true;
+            checkBoxDmOthers.CheckedChanged += checkBoxDmOthers_CheckedChanged;
             // 
             // checkBoxTransfer
             // 
@@ -1095,6 +1139,7 @@
             checkBoxTransfer.TabIndex = 3;
             checkBoxTransfer.Text = "Transfer";
             checkBoxTransfer.UseVisualStyleBackColor = true;
+            checkBoxTransfer.CheckedChanged += checkBoxTransfer_CheckedChanged;
             // 
             // checkBoxCremation
             // 
@@ -1105,6 +1150,7 @@
             checkBoxCremation.TabIndex = 2;
             checkBoxCremation.Text = "Cremation";
             checkBoxCremation.UseVisualStyleBackColor = true;
+            checkBoxCremation.CheckedChanged += checkBoxCremation_CheckedChanged;
             // 
             // checkBoxBurial
             // 
@@ -1115,6 +1161,7 @@
             checkBoxBurial.TabIndex = 1;
             checkBoxBurial.Text = "Burial";
             checkBoxBurial.UseVisualStyleBackColor = true;
+            checkBoxBurial.CheckedChanged += checkBoxBurial_CheckedChanged;
             // 
             // label4
             // 
@@ -1166,7 +1213,7 @@
         private CheckBox checkBoxHospitalAuthority;
         private CheckBox checkboxPrivatePhysiscian;
         private CheckBox checkBoxDcOthers;
-        private CheckBox checkBox3;
+        private CheckBox checkBoxPublicHealthOfficer;
         private Bunifu.UI.WinForms.BunifuTextBox tbDcOthers;
         private Panel panel4;
         private Bunifu.UI.WinForms.BunifuTextBox tbAvOthers;
@@ -1183,12 +1230,13 @@
         private Label label4;
         private CheckBox checkBoxCremation;
         private Label label6;
-        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
+        private Bunifu.UI.WinForms.BunifuDatePicker dpDateRecievedByRep;
         private Panel panel5;
         private Bunifu.UI.WinForms.BunifuTextBox tbDpTime;
         private Label label7;
         private Bunifu.UI.WinForms.BunifuTextBox tbDpAddress;
         private Label label8;
         private Bunifu.UI.WinForms.BunifuDatePicker dDpPickDate;
+        private MaterialSkin.Controls.MaterialButton btnProceed;
     }
 }

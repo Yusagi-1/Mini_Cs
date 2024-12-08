@@ -215,7 +215,7 @@
             btnProceed.Depth = 0;
             btnProceed.HighEmphasis = true;
             btnProceed.Icon = null;
-            btnProceed.Location = new Point(799, 342);
+            btnProceed.Location = new Point(917, 409);
             btnProceed.Margin = new Padding(4, 6, 4, 6);
             btnProceed.MouseState = MaterialSkin.MouseState.HOVER;
             btnProceed.Name = "btnProceed";

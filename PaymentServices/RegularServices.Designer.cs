@@ -36,6 +36,7 @@
             txtVAT = new MaterialSkin.Controls.MaterialMaskedTextBox();
             txtVatableSales = new MaterialSkin.Controls.MaterialMaskedTextBox();
             btnSave = new MaterialSkin.Controls.MaterialButton();
+            btnProceed = new MaterialSkin.Controls.MaterialButton();
             SuspendLayout();
             // 
             // txtGrossPrice
@@ -53,7 +54,7 @@
             txtGrossPrice.Hint = "Gross Price";
             txtGrossPrice.InsertKeyMode = InsertKeyMode.Default;
             txtGrossPrice.LeadingIcon = null;
-            txtGrossPrice.Location = new Point(102, 57);
+            txtGrossPrice.Location = new Point(79, 53);
             txtGrossPrice.Mask = "";
             txtGrossPrice.MaxLength = 32767;
             txtGrossPrice.MouseState = MaterialSkin.MouseState.OUT;
@@ -96,7 +97,7 @@
             txtPlanValue.Hint = "Plan Value";
             txtPlanValue.InsertKeyMode = InsertKeyMode.Default;
             txtPlanValue.LeadingIcon = null;
-            txtPlanValue.Location = new Point(102, 139);
+            txtPlanValue.Location = new Point(79, 125);
             txtPlanValue.Mask = "";
             txtPlanValue.MaxLength = 32767;
             txtPlanValue.MouseState = MaterialSkin.MouseState.OUT;
@@ -139,7 +140,7 @@
             txtExtraCharges.Hint = "Extra Charges";
             txtExtraCharges.InsertKeyMode = InsertKeyMode.Default;
             txtExtraCharges.LeadingIcon = null;
-            txtExtraCharges.Location = new Point(102, 212);
+            txtExtraCharges.Location = new Point(363, 53);
             txtExtraCharges.Mask = "";
             txtExtraCharges.MaxLength = 32767;
             txtExtraCharges.MouseState = MaterialSkin.MouseState.OUT;
@@ -182,7 +183,7 @@
             txtDiscount.Hint = "Discount";
             txtDiscount.InsertKeyMode = InsertKeyMode.Default;
             txtDiscount.LeadingIcon = null;
-            txtDiscount.Location = new Point(409, 57);
+            txtDiscount.Location = new Point(363, 125);
             txtDiscount.Mask = "";
             txtDiscount.MaxLength = 32767;
             txtDiscount.MouseState = MaterialSkin.MouseState.OUT;
@@ -225,7 +226,7 @@
             txtContractPrice.Hint = "Contract Price";
             txtContractPrice.InsertKeyMode = InsertKeyMode.Default;
             txtContractPrice.LeadingIcon = null;
-            txtContractPrice.Location = new Point(409, 139);
+            txtContractPrice.Location = new Point(656, 53);
             txtContractPrice.Mask = "";
             txtContractPrice.MaxLength = 32767;
             txtContractPrice.MouseState = MaterialSkin.MouseState.OUT;
@@ -268,7 +269,7 @@
             txtVAT.Hint = "12% VAT";
             txtVAT.InsertKeyMode = InsertKeyMode.Default;
             txtVAT.LeadingIcon = null;
-            txtVAT.Location = new Point(409, 212);
+            txtVAT.Location = new Point(656, 125);
             txtVAT.Mask = "";
             txtVAT.MaxLength = 32767;
             txtVAT.MouseState = MaterialSkin.MouseState.OUT;
@@ -311,7 +312,7 @@
             txtVatableSales.Hint = "VATABLE Sales";
             txtVatableSales.InsertKeyMode = InsertKeyMode.Default;
             txtVatableSales.LeadingIcon = null;
-            txtVatableSales.Location = new Point(261, 287);
+            txtVatableSales.Location = new Point(656, 195);
             txtVatableSales.Mask = "";
             txtVatableSales.MaxLength = 32767;
             txtVatableSales.MouseState = MaterialSkin.MouseState.OUT;
@@ -346,7 +347,7 @@
             btnSave.Depth = 0;
             btnSave.HighEmphasis = true;
             btnSave.Icon = null;
-            btnSave.Location = new Point(356, 386);
+            btnSave.Location = new Point(356, 344);
             btnSave.Margin = new Padding(4, 6, 4, 6);
             btnSave.MouseState = MaterialSkin.MouseState.HOVER;
             btnSave.Name = "btnSave";
@@ -359,11 +360,32 @@
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
             // 
+            // btnProceed
+            // 
+            btnProceed.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnProceed.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnProceed.Depth = 0;
+            btnProceed.HighEmphasis = true;
+            btnProceed.Icon = null;
+            btnProceed.Location = new Point(917, 340);
+            btnProceed.Margin = new Padding(4, 6, 4, 6);
+            btnProceed.MouseState = MaterialSkin.MouseState.HOVER;
+            btnProceed.Name = "btnProceed";
+            btnProceed.NoAccentTextColor = Color.Empty;
+            btnProceed.Size = new Size(86, 36);
+            btnProceed.TabIndex = 22;
+            btnProceed.Text = "Proceed";
+            btnProceed.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnProceed.UseAccentColor = false;
+            btnProceed.UseVisualStyleBackColor = true;
+            // 
             // RegularServices
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.White;
+            ClientSize = new Size(1010, 493);
+            Controls.Add(btnProceed);
             Controls.Add(btnSave);
             Controls.Add(txtVatableSales);
             Controls.Add(txtVAT);
@@ -389,5 +411,6 @@
         private MaterialSkin.Controls.MaterialMaskedTextBox txtVAT;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtVatableSales;
         private MaterialSkin.Controls.MaterialButton btnSave;
+        private MaterialSkin.Controls.MaterialButton btnProceed;
     }
 }

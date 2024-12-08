@@ -16,7 +16,8 @@ namespace Mini_Cs
         public ServiceDetailsData ServiceDetails { get; set; }
         public DeathCertificationData DeathCertification { get; set; }
         public DispositionDetailsData DispositionDetails { get; set; }
-        public List<VehiclesAssignedData> VehiclesAssigned { get; set; }
+        public VehiclesAssignedData VehiclesAssigned { get; set; } // Changed from List to single object
+
         public PlanDetailsData PlanDetails { get; set; }
         public PaymentDetailsData PaymentDetails { get; set; }
         public SeniorPaymentDetailsData SeniorPaymentDetails { get; set; }
@@ -28,7 +29,7 @@ namespace Mini_Cs
             ServiceDetails = new ServiceDetailsData();
             DeathCertification = new DeathCertificationData();
             DispositionDetails = new DispositionDetailsData();
-            VehiclesAssigned = new List<VehiclesAssignedData>();
+            VehiclesAssigned = new VehiclesAssignedData();
             PlanDetails = new PlanDetailsData();
             PaymentDetails = new PaymentDetailsData();
             SeniorPaymentDetails = new SeniorPaymentDetailsData();

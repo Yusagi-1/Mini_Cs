@@ -303,7 +303,7 @@
             btnProceed.Depth = 0;
             btnProceed.HighEmphasis = true;
             btnProceed.Icon = null;
-            btnProceed.Location = new Point(683, 385);
+            btnProceed.Location = new Point(917, 409);
             btnProceed.Margin = new Padding(4, 6, 4, 6);
             btnProceed.MouseState = MaterialSkin.MouseState.HOVER;
             btnProceed.Name = "btnProceed";
@@ -321,7 +321,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1047, 450);
             Controls.Add(btnProceed);
             Controls.Add(materialLabel2);
             Controls.Add(materialLabel1);

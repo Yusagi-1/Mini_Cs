@@ -23,6 +23,7 @@ namespace Mini_Cs
             parentForm = parent;
             deceasedData = data ?? new DeceasedInfoData();
             BindDataToControls();
+
         }
 
         private void txtName_Click(object sender, EventArgs e)
@@ -79,7 +80,7 @@ namespace Mini_Cs
                 return;
             }
 
-            // Populate deceased data
+            // Populate deceased data from form fields
             deceasedData.Name = txtName.Text;
             deceasedData.Address = txtAddress.Text;
             deceasedData.CivilStatus = cbCivilStatus.SelectedItem?.ToString();
@@ -88,8 +89,21 @@ namespace Mini_Cs
             deceasedData.DateOfDeath = dpDateofDeath.Value;
             deceasedData.OSCAPWDID = txtPwd.Text;
 
-            // Navigate to Service form
-            Service serviceForm = new Service(parentForm, deceasedData);
+            // Ensure ServiceDetails is initialized in sharedData if it's null
+            if (parentForm.sharedData.ServiceDetails == null)
+            {
+                parentForm.sharedData.ServiceDetails = new ServiceDetailsData();
+            }
+
+            // Now pass the ServiceDetailsData to the Service form
+            Service serviceForm = new Service(
+                                    parentForm,
+                                    parentForm.sharedData.ServiceDetails,
+                                    parentForm.sharedData.DeathCertification,
+                                    parentForm.sharedData.DispositionDetails,
+                                    parentForm.sharedData.VehiclesAssigned
+                                );
+
             parentForm.OpenFormInPanel(serviceForm);
         }
 

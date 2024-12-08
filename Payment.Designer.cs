@@ -75,9 +75,9 @@
             // 
             // panelChildForm
             // 
-            panelChildForm.Location = new Point(13, 69);
+            panelChildForm.Location = new Point(0, 69);
             panelChildForm.Name = "panelChildForm";
-            panelChildForm.Size = new Size(775, 460);
+            panelChildForm.Size = new Size(1016, 381);
             panelChildForm.TabIndex = 3;
             panelChildForm.Paint += panelChildForm_Paint;
             // 
@@ -85,7 +85,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 580);
+            BackColor = Color.White;
+            ClientSize = new Size(1016, 450);
             Controls.Add(panelChildForm);
             Controls.Add(btnSeniorCitizen);
             Controls.Add(btnRegularServices);

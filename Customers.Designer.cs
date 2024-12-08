@@ -42,7 +42,7 @@
             // 
             panelChildForm.Location = new Point(52, 80);
             panelChildForm.Name = "panelChildForm";
-            panelChildForm.Size = new Size(1034, 415);
+            panelChildForm.Size = new Size(1047, 450);
             panelChildForm.TabIndex = 11;
             panelChildForm.Paint += panelChildForm_Paint;
             // 
@@ -191,7 +191,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1136, 544);
+            ClientSize = new Size(1136, 606);
             Controls.Add(btnSaveAll);
             Controls.Add(btnRepresentative);
             Controls.Add(btnPayment);
