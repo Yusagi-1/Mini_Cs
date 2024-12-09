@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddService02));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             cbServiceList = new Bunifu.UI.WinForms.BunifuDropdown();
             materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
             materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
@@ -340,17 +340,17 @@
             btnProceed.ButtonTextMarginLeft = 0;
             btnProceed.ColorContrastOnClick = 45;
             btnProceed.ColorContrastOnHover = 45;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            btnProceed.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            btnProceed.CustomizableEdges = borderEdges1;
             btnProceed.DialogResult = DialogResult.None;
             btnProceed.DisabledBorderColor = Color.FromArgb(191, 191, 191);
             btnProceed.DisabledFillColor = Color.Empty;
             btnProceed.DisabledForecolor = Color.Empty;
             btnProceed.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            btnProceed.Font = new Font("Segoe UI", 24.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnProceed.Font = new Font("Segoe UI", 24.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnProceed.ForeColor = Color.White;
             btnProceed.IconLeft = null;
             btnProceed.IconLeftAlign = ContentAlignment.MiddleLeft;
