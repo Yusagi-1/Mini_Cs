@@ -21,10 +21,18 @@ namespace Mini_Cs
         {
             if (data != null)
             {
+                // Prevent duplicates based on CustomerID
+                if (customerDataList.Any(c => c.CustomerID == data.CustomerID))
+                {
+                    Console.WriteLine($"Duplicate CustomerID: {data.CustomerID} - Skipping.");
+                    return;
+                }
+
                 customerDataList.Add(data);
                 Console.WriteLine($"Added CustomerID: {data.CustomerID}");
             }
         }
+
         private void ClearAllControls(Control parent)
         {
             foreach (Control control in parent.Controls)
@@ -163,7 +171,7 @@ namespace Mini_Cs
                         dbManager.SaveSeniorPaymentDetails(customerData.SeniorPaymentDetails);
                     }
                 }
-
+                customerDataList.Clear();
                 MessageBox.Show("All data saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -171,6 +179,7 @@ namespace Mini_Cs
                 Console.WriteLine($"Error in SaveAllData: {ex.Message}");
                 MessageBox.Show($"An error occurred while saving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
            
         }
 
@@ -365,6 +374,7 @@ namespace Mini_Cs
             ClearChildForms();
             ResetDataClasses();
             ResetCustomerInfoData();
+            customerDataList.Clear();
 
             MessageBox.Show("Form cleared and data reset successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
