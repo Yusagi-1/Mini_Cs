@@ -133,7 +133,7 @@
             btnUserManagement.FlatStyle = FlatStyle.Flat;
             btnUserManagement.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUserManagement.ForeColor = Color.White;
-            btnUserManagement.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            btnUserManagement.IconChar = FontAwesome.Sharp.IconChar.BarChart;
             btnUserManagement.IconColor = Color.Black;
             btnUserManagement.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnUserManagement.IconSize = 30;
@@ -142,7 +142,7 @@
             btnUserManagement.Name = "btnUserManagement";
             btnUserManagement.Size = new Size(219, 60);
             btnUserManagement.TabIndex = 14;
-            btnUserManagement.Text = "User ";
+            btnUserManagement.Text = "Reports";
             btnUserManagement.TextAlign = ContentAlignment.MiddleLeft;
             btnUserManagement.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnUserManagement.UseVisualStyleBackColor = false;
@@ -154,7 +154,7 @@
             btnReports.FlatStyle = FlatStyle.Flat;
             btnReports.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnReports.ForeColor = Color.White;
-            btnReports.IconChar = FontAwesome.Sharp.IconChar.BarChart;
+            btnReports.IconChar = FontAwesome.Sharp.IconChar.CreditCard;
             btnReports.IconColor = Color.Black;
             btnReports.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnReports.IconSize = 30;
@@ -163,10 +163,11 @@
             btnReports.Name = "btnReports";
             btnReports.Size = new Size(219, 60);
             btnReports.TabIndex = 13;
-            btnReports.Text = "Reports";
+            btnReports.Text = "Transaction";
             btnReports.TextAlign = ContentAlignment.MiddleLeft;
             btnReports.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnReports.UseVisualStyleBackColor = false;
+            btnReports.Click += btnReports_Click;
             // 
             // btnTransaction
             // 
@@ -175,7 +176,7 @@
             btnTransaction.FlatStyle = FlatStyle.Flat;
             btnTransaction.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTransaction.ForeColor = Color.White;
-            btnTransaction.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            btnTransaction.IconChar = FontAwesome.Sharp.IconChar.Search;
             btnTransaction.IconColor = Color.Black;
             btnTransaction.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnTransaction.IconSize = 30;

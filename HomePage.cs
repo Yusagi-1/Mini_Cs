@@ -112,5 +112,17 @@ namespace Mini_Cs
         {
 
         }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            ActivatedButton(sender, RGBColors.color1);
+            Transaction transaction = new Transaction();
+            transaction.TopLevel = false;
+            transaction.FormBorderStyle = FormBorderStyle.None;
+            transaction.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(transaction);
+            transaction.Show();
+        }
     }
 }
