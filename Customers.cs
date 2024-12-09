@@ -8,7 +8,6 @@ namespace Mini_Cs
     {
         private List<CustomerData> customerDataList = new List<CustomerData>();
         private CustomerInfo customerInfoForm;
-        private Deceased deceasedForm;
         public CustomerData sharedData = new CustomerData();
 
         public Customers()
@@ -70,27 +69,27 @@ namespace Mini_Cs
             {
                 ClearAllControls(customerInfoForm);
             }
+
         }
 
         private void ResetDataClasses()
         {
-            // Reset the shared data
-            sharedData = new CustomerData();
+            sharedData = new CustomerData
+            {
+                DeceasedInfo = new DeceasedInfoData(),
+                ServiceDetails = new ServiceDetailsData(),
+                DeathCertification = new DeathCertificationData(),
+                VehiclesAssigned = new VehiclesAssignedData(),
+                DispositionDetails = new DispositionDetailsData(),
+                PlanDetails = new PlanDetailsData(),
+                RepresentativeInfo = new RepresentativeInfoData(),
+                PaymentDetails = new PaymentDetailsData(),
+                SeniorPaymentDetails = new SeniorPaymentDetailsData()
+            };
 
-            // Reset specific sub-objects in sharedData if needed
-            sharedData.DeceasedInfo = new DeceasedInfoData();
-            sharedData.ServiceDetails = new ServiceDetailsData();
-            sharedData.DeathCertification = new DeathCertificationData();
-            sharedData.VehiclesAssigned = new VehiclesAssignedData();
-            sharedData.DispositionDetails = new DispositionDetailsData();
-            sharedData.PlanDetails = new PlanDetailsData();
-            sharedData.RepresentativeInfo = new RepresentativeInfoData();
-            sharedData.PaymentDetails = new PaymentDetailsData();
-            sharedData.SeniorPaymentDetails = new SeniorPaymentDetailsData();
-
-            // Clear the list of customers if needed
-            customerDataList.Clear();
+            customerDataList.Clear(); // Ensure the customer list is also cleared
         }
+
         private void ResetCustomerInfoData()
         {
             sharedData.ServiceType = string.Empty;
@@ -289,18 +288,12 @@ namespace Mini_Cs
 
         private void btnDeceasedInfo_Click(object sender, EventArgs e)
         {
-            if (deceasedForm == null)
+            if (sharedData.DeceasedInfo == null)
             {
-                
-                if (sharedData.DeceasedInfo == null)
-                {
-                    sharedData.DeceasedInfo = new DeceasedInfoData();
-                }
-                deceasedForm = new Deceased(this, sharedData.DeceasedInfo); // Pass the DeceasedInfoData object
+                sharedData.DeceasedInfo = new DeceasedInfoData();
             }
-            OpenFormInPanel(deceasedForm);
+            OpenFormInPanel(new Deceased(this, sharedData.DeceasedInfo));
         }
-
         private void btnService_Click(object sender, EventArgs e)
         {
             if (sharedData.ServiceDetails == null)
@@ -374,7 +367,7 @@ namespace Mini_Cs
             ClearChildForms();
             ResetDataClasses();
             ResetCustomerInfoData();
-            customerDataList.Clear();
+            //customerDataList.Clear();
 
             MessageBox.Show("Form cleared and data reset successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

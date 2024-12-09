@@ -175,7 +175,7 @@
             btnTransaction.FlatStyle = FlatStyle.Flat;
             btnTransaction.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTransaction.ForeColor = Color.White;
-            btnTransaction.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
+            btnTransaction.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             btnTransaction.IconColor = Color.Black;
             btnTransaction.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnTransaction.IconSize = 30;
@@ -184,7 +184,7 @@
             btnTransaction.Name = "btnTransaction";
             btnTransaction.Size = new Size(219, 60);
             btnTransaction.TabIndex = 12;
-            btnTransaction.Text = "Appointment";
+            btnTransaction.Text = "Search";
             btnTransaction.TextAlign = ContentAlignment.MiddleLeft;
             btnTransaction.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnTransaction.UseVisualStyleBackColor = false;
@@ -196,7 +196,7 @@
             btnCustomer.FlatStyle = FlatStyle.Flat;
             btnCustomer.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCustomer.ForeColor = Color.White;
-            btnCustomer.IconChar = FontAwesome.Sharp.IconChar.Male;
+            btnCustomer.IconChar = FontAwesome.Sharp.IconChar.Ticket;
             btnCustomer.IconColor = Color.Black;
             btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCustomer.IconSize = 30;
@@ -205,7 +205,7 @@
             btnCustomer.Name = "btnCustomer";
             btnCustomer.Size = new Size(219, 60);
             btnCustomer.TabIndex = 10;
-            btnCustomer.Text = "Customer";
+            btnCustomer.Text = "Reservation";
             btnCustomer.TextAlign = ContentAlignment.MiddleLeft;
             btnCustomer.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCustomer.UseVisualStyleBackColor = false;

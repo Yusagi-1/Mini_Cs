@@ -14,6 +14,8 @@ namespace Mini_Cs
             InitializeComponent();
             parentForm = parent;
             customerData = sharedData;
+            dpDate.Value = DateTime.Today;
+            customerData.ServiceDate = dpDate.Value;
         }
 
         private void UpdateServiceType()

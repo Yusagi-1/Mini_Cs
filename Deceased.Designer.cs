@@ -83,6 +83,7 @@
             txtName.UseSystemPasswordChar = false;
             txtName.ValidatingType = null;
             txtName.Click += txtName_Click;
+
             // 
             // txtAddress
             // 
