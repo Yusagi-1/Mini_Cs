@@ -274,8 +274,54 @@ namespace Mini_Cs
 
         private void btnProceed_Click(object sender, EventArgs e)
         {
-            SaveFormData(); // Ensure latest changes are saved
-            MessageBox.Show("Data saved temporarily in memory!");
+            // Check if required fields are filled
+            if (string.IsNullOrEmpty(tbCasketCode.Text) ||
+                string.IsNullOrEmpty(tbUrnCode.Text) ||
+                string.IsNullOrEmpty(tbViewingPlace.Text) ||
+                string.IsNullOrEmpty(tbEmbalmingDays.Text) ||
+                string.IsNullOrEmpty(tbDpAddress.Text) ||
+                string.IsNullOrEmpty(tbDpTime.Text) ||
+                string.IsNullOrEmpty(tbAvOthers.Text) && checkBoxAvOthers.Checked)
+            {
+                MessageBox.Show("Please fill out all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Confirmation Message before proceeding
+            DialogResult result = MessageBox.Show("Are you sure you want to proceed with saving the service details and move to the next step?",
+                                                  "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    SaveFormData(); // Save form data to respective objects
+
+                    // Ensure PlanDetails is initialized in sharedData if it's null
+                    if (parentForm.sharedData.PlanDetails == null)
+                    {
+                        parentForm.sharedData.PlanDetails = new PlanDetailsData();
+                    }
+
+                    // Create an instance of the Plan form
+                    Plan planForm = new Plan(parentForm, parentForm.sharedData.PlanDetails);
+
+                    // Open the Plan form in the parent form's panel
+                    parentForm.OpenFormInPanel(planForm);
+
+                    MessageBox.Show("Service details saved successfully. Proceeding to the Plan form...", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred while saving service data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                // User canceled the action
+                MessageBox.Show("Proceeding has been canceled.", "Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
     }
 }

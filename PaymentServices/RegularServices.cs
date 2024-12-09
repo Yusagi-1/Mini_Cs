@@ -9,16 +9,48 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Mini_Cs.PaymentServices
 {
     public partial class RegularServices : Form
-    {   private Payment parentForm;
-        public RegularServices(Payment parent)
+    {
+        private Payment parentForm;
+        private PaymentDetailsData paymentDetails;
+        private CustomerData sharedData;
+
+        public RegularServices(Payment parent, PaymentDetailsData details, CustomerData data)
         {
             InitializeComponent();
             parentForm = parent;
+            sharedData = data ?? new CustomerData();
+            paymentDetails = details ?? new PaymentDetailsData();
+            InitializePaymentDetails();
         }
+        private void InitializePaymentDetails()
+        {
+            if (paymentDetails != null)
+            {
+                txtGrossPrice.Text = paymentDetails.GrossPrice > 0 ? paymentDetails.GrossPrice.ToString("0.00") : string.Empty;
+                txtPlanValue.Text = paymentDetails.PlanValue > 0 ? paymentDetails.PlanValue.ToString("0.00") : string.Empty;
+                txtExtraCharges.Text = paymentDetails.ExtraCharges > 0 ? paymentDetails.ExtraCharges.ToString("0.00") : string.Empty;
+                txtDiscount.Text = paymentDetails.Discount.ToString("0.00");
+                txtVatableSales.Text = paymentDetails.VATableSales.ToString("0.00");
+                txtVAT.Text = paymentDetails.VAT.ToString("0.00");
+                txtContractPrice.Text = paymentDetails.ContractPrice.ToString("0.00");
+            }
+        }
+        private void UpdatePaymentDetails()
+        {
+            paymentDetails.GrossPrice = decimal.TryParse(txtGrossPrice.Text, out var grossPrice) ? grossPrice : 0;
+            paymentDetails.PlanValue = decimal.TryParse(txtPlanValue.Text, out var planValue) ? planValue : 0;
+            paymentDetails.ExtraCharges = decimal.TryParse(txtExtraCharges.Text, out var extraCharges) ? extraCharges : 0;
+            paymentDetails.Discount = decimal.TryParse(txtDiscount.Text, out var discount) ? discount : 0;
+            paymentDetails.VATableSales = decimal.TryParse(txtVatableSales.Text, out var vatableSales) ? vatableSales : 0;
+            paymentDetails.VAT = decimal.TryParse(txtVAT.Text, out var vat) ? vat : 0;
+            paymentDetails.ContractPrice = decimal.TryParse(txtContractPrice.Text, out var contractPrice) ? contractPrice : 0;
+        }
+
         private void CalculateTotals()
         {
             decimal grossPrice = decimal.TryParse(txtGrossPrice.Text, out grossPrice) ? grossPrice : 0;
@@ -26,14 +58,11 @@ namespace Mini_Cs.PaymentServices
             decimal extraCharges = decimal.TryParse(txtExtraCharges.Text, out extraCharges) ? extraCharges : 0;
             decimal discount = decimal.TryParse(txtDiscount.Text, out discount) ? discount : 0;
 
-            // Calculate the Vatable Sales
             decimal vatExemptTotal = grossPrice - planValue + extraCharges - discount;
-            decimal vatAmount = vatExemptTotal * 0.12m; // 12% VAT
+            decimal vatAmount = vatExemptTotal * 0.12m; 
 
-            // Calculate the Contract Price
             decimal contractPrice = vatExemptTotal + vatAmount;
 
-            // Display calculated values
             txtVatableSales.Text = vatExemptTotal.ToString("0.00");
             txtVAT.Text = vatAmount.ToString("0.00");
             txtContractPrice.Text = contractPrice.ToString("0.00");
@@ -41,55 +70,7 @@ namespace Mini_Cs.PaymentServices
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // Retrieve input values from the form
-            decimal grossPrice = decimal.TryParse(txtGrossPrice.Text, out grossPrice) ? grossPrice : 0;
-            decimal planValue = decimal.TryParse(txtPlanValue.Text, out planValue) ? planValue : 0;
-            decimal extraCharges = decimal.TryParse(txtExtraCharges.Text, out extraCharges) ? extraCharges : 0;
-            decimal discount = decimal.TryParse(txtDiscount.Text, out discount) ? discount : 0;
-            decimal vat = decimal.TryParse(txtVAT.Text, out vat) ? vat : 0;
-            decimal vatableSales = decimal.TryParse(txtVatableSales.Text, out vatableSales) ? vatableSales : 0;
-            decimal contractPrice = decimal.TryParse(txtContractPrice.Text, out contractPrice) ? contractPrice : 0;
 
-            // Connection string from app.config
-            string connectionString = ConfigurationManager.ConnectionStrings["RecordKeepingConnection"].ConnectionString;
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    string query = @"
-                        INSERT INTO RegularPaymentDetails (CustomerID, GrossPrice, PlanValue, ExtraCharges, Discount, VAT, VatableSales, ContractPrice)
-                        VALUES (@CustomerID, @GrossPrice, @PlanValue, @ExtraCharges, @Discount, @VAT, @VatableSales, @ContractPrice)";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        // Add parameters to the command
-                        command.Parameters.AddWithValue("@CustomerID", 1); // Modify as needed to get the actual CustomerID
-                        command.Parameters.AddWithValue("@GrossPrice", grossPrice);
-                        command.Parameters.AddWithValue("@PlanValue", planValue);
-                        command.Parameters.AddWithValue("@ExtraCharges", extraCharges);
-                        command.Parameters.AddWithValue("@Discount", discount);
-                        command.Parameters.AddWithValue("@VAT", vat);
-                        command.Parameters.AddWithValue("@VatableSales", vatableSales);
-                        command.Parameters.AddWithValue("@ContractPrice", contractPrice);
-
-                        int rowsAffected = command.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Record saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("No records were inserted.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
         }
         private void txtGrossPrice_Click(object sender, EventArgs e)
         {
@@ -126,6 +107,45 @@ namespace Mini_Cs.PaymentServices
 
         }
 
+        private void btnProceed_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtGrossPrice.Text) ||
+                string.IsNullOrEmpty(txtPlanValue.Text) ||
+                string.IsNullOrEmpty(txtContractPrice.Text))
+            {
+                MessageBox.Show("Please fill out all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to proceed with saving the payment details and move to the next step?",
+                                                  "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    UpdatePaymentDetails();
+                    parentForm.sharedData.PaymentDetails = paymentDetails;
+
+                    MessageBox.Show("Payment details saved successfully. Proceeding to the Representative form...", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Correct parameter passing
+                    Representative representativeForm = new Representative(parentForm, parentForm.sharedData.RepresentativeInfo);
+
+
+
+                    parentForm.OpenFormInPanel(representativeForm);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred while saving payment details: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Proceeding has been canceled.", "Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
 
     }
 }

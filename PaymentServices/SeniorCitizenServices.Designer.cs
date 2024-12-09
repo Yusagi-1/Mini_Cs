@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnSave = new MaterialSkin.Controls.MaterialButton();
             txtVatableSales = new MaterialSkin.Controls.MaterialMaskedTextBox();
             txtAddDiscount = new MaterialSkin.Controls.MaterialMaskedTextBox();
             txt20Discount = new MaterialSkin.Controls.MaterialMaskedTextBox();
@@ -38,26 +37,6 @@
             txtGrossPrice = new MaterialSkin.Controls.MaterialMaskedTextBox();
             btnProceed = new MaterialSkin.Controls.MaterialButton();
             SuspendLayout();
-            // 
-            // btnSave
-            // 
-            btnSave.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnSave.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnSave.Depth = 0;
-            btnSave.HighEmphasis = true;
-            btnSave.Icon = null;
-            btnSave.Location = new Point(376, 372);
-            btnSave.Margin = new Padding(4, 6, 4, 6);
-            btnSave.MouseState = MaterialSkin.MouseState.HOVER;
-            btnSave.Name = "btnSave";
-            btnSave.NoAccentTextColor = Color.Empty;
-            btnSave.Size = new Size(64, 36);
-            btnSave.TabIndex = 15;
-            btnSave.Text = "SAVE";
-            btnSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnSave.UseAccentColor = false;
-            btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += btnSave_Click;
             // 
             // txtVatableSales
             // 
@@ -378,6 +357,7 @@
             btnProceed.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             btnProceed.UseAccentColor = false;
             btnProceed.UseVisualStyleBackColor = true;
+            btnProceed.Click += btnProceed_Click;
             // 
             // SeniorCitizenServices
             // 
@@ -386,7 +366,6 @@
             BackColor = Color.White;
             ClientSize = new Size(1047, 450);
             Controls.Add(btnProceed);
-            Controls.Add(btnSave);
             Controls.Add(txtVatableSales);
             Controls.Add(txtAddDiscount);
             Controls.Add(txt20Discount);
@@ -402,8 +381,6 @@
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialButton btnSave;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtVatableSales;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtAddDiscount;
         private MaterialSkin.Controls.MaterialMaskedTextBox txt20Discount;

@@ -35,7 +35,6 @@
             txtContractPrice = new MaterialSkin.Controls.MaterialMaskedTextBox();
             txtVAT = new MaterialSkin.Controls.MaterialMaskedTextBox();
             txtVatableSales = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            btnSave = new MaterialSkin.Controls.MaterialButton();
             btnProceed = new MaterialSkin.Controls.MaterialButton();
             SuspendLayout();
             // 
@@ -340,26 +339,6 @@
             txtVatableSales.ValidatingType = null;
             txtVatableSales.Click += txtVatableSales_Click;
             // 
-            // btnSave
-            // 
-            btnSave.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnSave.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnSave.Depth = 0;
-            btnSave.HighEmphasis = true;
-            btnSave.Icon = null;
-            btnSave.Location = new Point(356, 344);
-            btnSave.Margin = new Padding(4, 6, 4, 6);
-            btnSave.MouseState = MaterialSkin.MouseState.HOVER;
-            btnSave.Name = "btnSave";
-            btnSave.NoAccentTextColor = Color.Empty;
-            btnSave.Size = new Size(64, 36);
-            btnSave.TabIndex = 7;
-            btnSave.Text = "SAVE";
-            btnSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnSave.UseAccentColor = false;
-            btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += btnSave_Click;
-            // 
             // btnProceed
             // 
             btnProceed.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -378,6 +357,7 @@
             btnProceed.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             btnProceed.UseAccentColor = false;
             btnProceed.UseVisualStyleBackColor = true;
+            btnProceed.Click += btnProceed_Click;
             // 
             // RegularServices
             // 
@@ -386,7 +366,6 @@
             BackColor = Color.White;
             ClientSize = new Size(1010, 493);
             Controls.Add(btnProceed);
-            Controls.Add(btnSave);
             Controls.Add(txtVatableSales);
             Controls.Add(txtVAT);
             Controls.Add(txtContractPrice);
@@ -410,7 +389,6 @@
         private MaterialSkin.Controls.MaterialMaskedTextBox txtContractPrice;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtVAT;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtVatableSales;
-        private MaterialSkin.Controls.MaterialButton btnSave;
         private MaterialSkin.Controls.MaterialButton btnProceed;
     }
 }

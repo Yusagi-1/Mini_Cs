@@ -36,7 +36,7 @@
             txtPrimaryMobileNo = new MaterialSkin.Controls.MaterialMaskedTextBox();
             txtPrimaryAddress = new MaterialSkin.Controls.MaterialMaskedTextBox();
             txtPrimaryRelationship = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            btnProceed = new MaterialSkin.Controls.MaterialButton();
+            btnFinish = new MaterialSkin.Controls.MaterialButton();
             panel2 = new Panel();
             txtSecondaryName = new MaterialSkin.Controls.MaterialMaskedTextBox();
             dpSecondaryDate = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -104,6 +104,7 @@
             txtPrimaryName.TrailingIcon = null;
             txtPrimaryName.UseSystemPasswordChar = false;
             txtPrimaryName.ValidatingType = null;
+            txtPrimaryName.Click += txtPrimaryName_Click;
             // 
             // dpPrimaryDate
             // 
@@ -129,6 +130,7 @@
             dpPrimaryDate.Name = "dpPrimaryDate";
             dpPrimaryDate.Size = new Size(407, 32);
             dpPrimaryDate.TabIndex = 6;
+            dpPrimaryDate.ValueChanged += dpPrimaryDate_ValueChanged;
             // 
             // txtPrimaryEmail
             // 
@@ -171,6 +173,7 @@
             txtPrimaryEmail.TrailingIcon = null;
             txtPrimaryEmail.UseSystemPasswordChar = false;
             txtPrimaryEmail.ValidatingType = null;
+            txtPrimaryEmail.Click += txtPrimaryEmail_Click;
             // 
             // txtPrimaryMobileNo
             // 
@@ -213,6 +216,7 @@
             txtPrimaryMobileNo.TrailingIcon = null;
             txtPrimaryMobileNo.UseSystemPasswordChar = false;
             txtPrimaryMobileNo.ValidatingType = null;
+            txtPrimaryMobileNo.Click += txtPrimaryMobileNo_Click;
             // 
             // txtPrimaryAddress
             // 
@@ -255,6 +259,7 @@
             txtPrimaryAddress.TrailingIcon = null;
             txtPrimaryAddress.UseSystemPasswordChar = false;
             txtPrimaryAddress.ValidatingType = null;
+            txtPrimaryAddress.Click += txtPrimaryAddress_Click;
             // 
             // txtPrimaryRelationship
             // 
@@ -297,25 +302,27 @@
             txtPrimaryRelationship.TrailingIcon = null;
             txtPrimaryRelationship.UseSystemPasswordChar = false;
             txtPrimaryRelationship.ValidatingType = null;
+            txtPrimaryRelationship.Click += txtPrimaryRelationship_Click;
             // 
-            // btnProceed
+            // btnFinish
             // 
-            btnProceed.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnProceed.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnProceed.Depth = 0;
-            btnProceed.HighEmphasis = true;
-            btnProceed.Icon = null;
-            btnProceed.Location = new Point(917, 409);
-            btnProceed.Margin = new Padding(4, 6, 4, 6);
-            btnProceed.MouseState = MaterialSkin.MouseState.HOVER;
-            btnProceed.Name = "btnProceed";
-            btnProceed.NoAccentTextColor = Color.Empty;
-            btnProceed.Size = new Size(86, 36);
-            btnProceed.TabIndex = 23;
-            btnProceed.Text = "Proceed";
-            btnProceed.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnProceed.UseAccentColor = false;
-            btnProceed.UseVisualStyleBackColor = true;
+            btnFinish.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnFinish.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnFinish.Depth = 0;
+            btnFinish.HighEmphasis = true;
+            btnFinish.Icon = null;
+            btnFinish.Location = new Point(917, 409);
+            btnFinish.Margin = new Padding(4, 6, 4, 6);
+            btnFinish.MouseState = MaterialSkin.MouseState.HOVER;
+            btnFinish.Name = "btnFinish";
+            btnFinish.NoAccentTextColor = Color.Empty;
+            btnFinish.Size = new Size(86, 36);
+            btnFinish.TabIndex = 23;
+            btnFinish.Text = "Finish";
+            btnFinish.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnFinish.UseAccentColor = false;
+            btnFinish.UseVisualStyleBackColor = true;
+            btnFinish.Click += btnFinish_Click;
             // 
             // panel2
             // 
@@ -371,6 +378,7 @@
             txtSecondaryName.TrailingIcon = null;
             txtSecondaryName.UseSystemPasswordChar = false;
             txtSecondaryName.ValidatingType = null;
+            txtSecondaryName.Click += txtSecondaryName_Click;
             // 
             // dpSecondaryDate
             // 
@@ -396,6 +404,7 @@
             dpSecondaryDate.Name = "dpSecondaryDate";
             dpSecondaryDate.Size = new Size(407, 32);
             dpSecondaryDate.TabIndex = 11;
+            dpSecondaryDate.ValueChanged += dpSecondaryDate_ValueChanged;
             // 
             // txtSecondaryEmail
             // 
@@ -438,6 +447,7 @@
             txtSecondaryEmail.TrailingIcon = null;
             txtSecondaryEmail.UseSystemPasswordChar = false;
             txtSecondaryEmail.ValidatingType = null;
+            txtSecondaryEmail.Click += txtSecondaryEmail_Click;
             // 
             // txtSecondaryMobileNo
             // 
@@ -480,6 +490,7 @@
             txtSecondaryMobileNo.TrailingIcon = null;
             txtSecondaryMobileNo.UseSystemPasswordChar = false;
             txtSecondaryMobileNo.ValidatingType = null;
+            txtSecondaryMobileNo.Click += txtSecondaryMobileNo_Click;
             // 
             // txtSecondaryAddress
             // 
@@ -522,6 +533,7 @@
             txtSecondaryAddress.TrailingIcon = null;
             txtSecondaryAddress.UseSystemPasswordChar = false;
             txtSecondaryAddress.ValidatingType = null;
+            txtSecondaryAddress.Click += txtSecondaryAddress_Click;
             // 
             // txtSecondaryRelationship
             // 
@@ -564,6 +576,7 @@
             txtSecondaryRelationship.TrailingIcon = null;
             txtSecondaryRelationship.UseSystemPasswordChar = false;
             txtSecondaryRelationship.ValidatingType = null;
+            txtSecondaryRelationship.Click += txtSecondaryRelationship_Click;
             // 
             // materialLabel1
             // 
@@ -598,7 +611,7 @@
             Controls.Add(materialLabel2);
             Controls.Add(materialLabel1);
             Controls.Add(panel2);
-            Controls.Add(btnProceed);
+            Controls.Add(btnFinish);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Representative";
@@ -612,7 +625,7 @@
         #endregion
 
         private Panel panel1;
-        private MaterialSkin.Controls.MaterialButton btnProceed;
+        private MaterialSkin.Controls.MaterialButton btnFinish;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtPrimaryRelationship;
         private Panel panel2;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtDate;

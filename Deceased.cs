@@ -95,17 +95,41 @@ namespace Mini_Cs
                 parentForm.sharedData.ServiceDetails = new ServiceDetailsData();
             }
 
-            // Now pass the ServiceDetailsData to the Service form
-            Service serviceForm = new Service(
-                                    parentForm,
-                                    parentForm.sharedData.ServiceDetails,
-                                    parentForm.sharedData.DeathCertification,
-                                    parentForm.sharedData.DispositionDetails,
-                                    parentForm.sharedData.VehiclesAssigned
-                                );
+            // Confirmation Message
+            DialogResult result = MessageBox.Show("Are you sure you want to proceed with saving the deceased information and move to the next step?",
+                                                  "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            parentForm.OpenFormInPanel(serviceForm);
+            if (result == DialogResult.Yes)
+            {
+                // Proceed if user confirms
+                try
+                {
+                    // Add deceased data to shared data or other necessary processing
+                    parentForm.AddCustomerData(parentForm.sharedData); // Update sharedData with the current deceased data
+
+                    // Now pass the ServiceDetailsData to the Service form
+                    Service serviceForm = new Service(
+                        parentForm,
+                        parentForm.sharedData.ServiceDetails,
+                        parentForm.sharedData.DeathCertification,
+                        parentForm.sharedData.DispositionDetails,
+                        parentForm.sharedData.VehiclesAssigned
+                    );
+
+                    parentForm.OpenFormInPanel(serviceForm);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred while saving deceased data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                // User cancelled, do nothing or show a message if needed
+                MessageBox.Show("Proceeding has been canceled.", "Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
 
     }
 }

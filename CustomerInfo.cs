@@ -7,14 +7,13 @@ namespace Mini_Cs
     {
         private Customers parentForm;
         private CustomerData customerData;
-        private DatabaseManager dbManager;
+        
 
         public CustomerInfo(Customers parent, CustomerData sharedData)
         {
             InitializeComponent();
             parentForm = parent;
             customerData = sharedData;
-            dbManager = new DatabaseManager();
         }
 
         private void UpdateServiceType()
@@ -22,32 +21,81 @@ namespace Mini_Cs
             if (checkBoxFullService.Checked)
             {
                 customerData.ServiceType = "Full Service";
+                LockOtherCheckboxes(checkBoxFullService);
             }
             else if (checkBoxFullServiceCremation.Checked)
             {
                 customerData.ServiceType = "Full Service with Cremation";
+                LockOtherCheckboxes(checkBoxFullServiceCremation);
             }
             else if (checkBoxCremationOnly.Checked)
             {
                 customerData.ServiceType = "Cremation Only";
+                LockOtherCheckboxes(checkBoxCremationOnly);
+            }
+            else
+            {
+                UnlockAllCheckboxes();
             }
         }
-        private void ToggleLifePlanDetails()
+        private void UnlockAllCheckboxes()
         {
-            txtBoxOthers.Enabled = checkBoxOther.Checked;
-            if (!checkBoxOther.Checked)
+            checkBoxFullService.Enabled = true;
+            checkBoxFullServiceCremation.Enabled = true;
+            checkBoxCremationOnly.Enabled = true;
+        }
+        private void LockOtherCheckboxes(CheckBox selectedCheckbox)
+        {
+            checkBoxFullService.Enabled = selectedCheckbox == checkBoxFullService;
+            checkBoxFullServiceCremation.Enabled = selectedCheckbox == checkBoxFullServiceCremation;
+            checkBoxCremationOnly.Enabled = selectedCheckbox == checkBoxCremationOnly;
+        }
+        private void UpdateLifePlanSelection()
+        {
+            if (checkBoxYes.Checked)
             {
-                txtBoxOthers.Text = string.Empty; // Clear text if "Other" is not checked
-                customerData.LifePlanOtherDetails = string.Empty; // Clear shared data
+                customerData.WithLifePlan = "Yes";
+                LockLifePlanCheckboxes(checkBoxYes);
+                txtBoxOthers.Enabled = false; 
+            }
+            else if (checkBoxNo.Checked)
+            {
+                customerData.WithLifePlan = "No";
+                LockLifePlanCheckboxes(checkBoxNo);
+                txtBoxOthers.Enabled = false; 
+            }
+            else if (checkBoxOther.Checked)
+            {
+                customerData.WithLifePlan = "Others";
+                LockLifePlanCheckboxes(checkBoxOther);
+                txtBoxOthers.Enabled = true; 
+            }
+            else
+            {
+                UnlockAllLifePlanCheckboxes();
+                txtBoxOthers.Enabled = false;
             }
         }
 
+        private void LockLifePlanCheckboxes(CheckBox selectedCheckbox)
+        {
+            checkBoxYes.Enabled = selectedCheckbox == checkBoxYes;
+            checkBoxNo.Enabled = selectedCheckbox == checkBoxNo;
+            checkBoxOther.Enabled = selectedCheckbox == checkBoxOther;
+        }
+
+        private void UnlockAllLifePlanCheckboxes()
+        {
+            checkBoxYes.Enabled = true;
+            checkBoxNo.Enabled = true;
+            checkBoxOther.Enabled = true;
+        }
 
         private void btnProceed_Click_1(object sender, EventArgs e)
         {
             if (checkBoxOther.Checked)
             {
-                customerData.LifePlanOtherDetails = txtBoxOthers.Text; // Ensure latest value
+                customerData.LifePlanOtherDetails = txtBoxOthers.Text; 
             }
             Console.WriteLine($"Proceeding with CustomerID: {customerData.CustomerID}");
             parentForm.AddCustomerData(customerData);
@@ -56,16 +104,12 @@ namespace Mini_Cs
                 MessageBox.Show("Parent form is not set. Unable to proceed.");
                 return;
             }
-
             try
             {
-                //MessageBox.Show("Attempting to save customer data...");
-                //dbManager.SaveCustomer(customerData); // Save data
-
                 MessageBox.Show("Customer data saved successfully. Proceeding to Deceased form...");
                 Deceased deceasedForm = new Deceased(parentForm, customerData.DeceasedInfo); // Pass shared data
 
-                parentForm.OpenFormInPanel(deceasedForm); // Transition to Deceased form
+                parentForm.OpenFormInPanel(deceasedForm);
             }
             catch (Exception ex)
             {
@@ -90,27 +134,27 @@ namespace Mini_Cs
 
         private void checkBoxYes_CheckedChanged_1(object sender, EventArgs e)
         {
-            ToggleLifePlanDetails();
-            customerData.WithLifePlan = "Yes";
+            UpdateLifePlanSelection();
+            
         }
 
         private void checkBoxNo_CheckedChanged_1(object sender, EventArgs e)
         {
-            ToggleLifePlanDetails();
-            customerData.WithLifePlan = "No";
+            UpdateLifePlanSelection();
+            
         }
 
         private void checkBoxOther_CheckedChanged_1(object sender, EventArgs e)
         {
-            ToggleLifePlanDetails();
-            customerData.WithLifePlan = "Others";
+            UpdateLifePlanSelection();
+            
         }
 
         private void txtBoxOthers_Click_1(object sender, EventArgs e)
         {
             if (checkBoxOther.Checked)
             {
-                customerData.LifePlanOtherDetails = txtBoxOthers.Text; // Update shared data
+                customerData.LifePlanOtherDetails = txtBoxOthers.Text; 
             }
         }
 
@@ -123,7 +167,7 @@ namespace Mini_Cs
         {
             if (checkBoxOther.Checked)
             {
-                customerData.LifePlanOtherDetails = txtBoxOthers.Text; // Update shared data
+                customerData.LifePlanOtherDetails = txtBoxOthers.Text; 
             }
         }
     }

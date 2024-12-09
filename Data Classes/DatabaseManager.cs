@@ -197,6 +197,150 @@ namespace Mini_Cs
                 throw;
             }
         }
+        public void SavePlanDetails(PlanDetailsData data)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    string query = @"
+                INSERT INTO PlanDetails (CustomerID, PlanHolderName, PlanNo, Company, PlanType) 
+                VALUES (@CustomerID, @PlanHolderName, @PlanNo, @Company, @PlanType)";
+
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CustomerID", data.CustomerID);
+                        command.Parameters.AddWithValue("@PlanHolderName", data.PlanHolderName ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@PlanNo", data.PlanNo ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@Company", data.Company ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@PlanType", data.PlanType ?? (object)DBNull.Value);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        Console.WriteLine($"PlanDetails saved for CustomerID: {data.CustomerID}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in SavePlanDetails: {ex.Message}");
+                throw;
+            }
+        }
+        public void SaveRegularPaymentDetails(PaymentDetailsData data)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    string query = @"
+                    INSERT INTO RegularPaymentDetails 
+                    (CustomerID, GrossPrice, PlanValue, ExtraCharges, Discount, ContractPrice, VAT, VATableSales) 
+                    VALUES 
+                    (@CustomerID, @GrossPrice, @PlanValue, @ExtraCharges, @Discount, @ContractPrice, @VAT, @VATableSales)";
+
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CustomerID", data.CustomerID);
+                        command.Parameters.AddWithValue("@GrossPrice", data.GrossPrice);
+                        command.Parameters.AddWithValue("@PlanValue", data.PlanValue);
+                        command.Parameters.AddWithValue("@ExtraCharges", data.ExtraCharges);
+                        command.Parameters.AddWithValue("@Discount", data.Discount);
+                        command.Parameters.AddWithValue("@ContractPrice", data.ContractPrice);
+                        command.Parameters.AddWithValue("@VAT", data.VAT);
+                        command.Parameters.AddWithValue("@VATableSales", data.VATableSales);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+
+                        Console.WriteLine($"RegularPaymentDetails saved for CustomerID: {data.CustomerID}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in SaveRegularPaymentDetails: {ex.Message}");
+                throw;
+            }
+        }
+        public void SaveSeniorPaymentDetails(SeniorPaymentDetailsData data)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    string query = @"
+            INSERT INTO SeniorPaymentDetails 
+            (CustomerID, GrossPrice, PlanValue, ExtraCharges, SCDiscount, AdditionalDiscount, TotalVATExempt, ContractPrice) 
+            VALUES 
+            (@CustomerID, @GrossPrice, @PlanValue, @ExtraCharges, @SCDiscount, @AdditionalDiscount, @TotalVATExempt, @ContractPrice)";
+
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CustomerID", data.CustomerID);
+                        command.Parameters.AddWithValue("@GrossPrice", data.GrossPrice);
+                        command.Parameters.AddWithValue("@PlanValue", data.PlanValue);
+                        command.Parameters.AddWithValue("@ExtraCharges", data.ExtraCharges);
+                        command.Parameters.AddWithValue("@SCDiscount", data.SCDiscount);
+                        command.Parameters.AddWithValue("@AdditionalDiscount", data.AdditionalDiscount);
+                        command.Parameters.AddWithValue("@TotalVATExempt", data.TotalVATExempt);
+                        command.Parameters.AddWithValue("@ContractPrice", data.ContractPrice);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+
+                        Console.WriteLine($"SeniorPaymentDetails saved for CustomerID: {data.CustomerID}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in SaveSeniorPaymentDetails: {ex.Message}");
+                throw;
+            }
+        }
+        public void SaveRepresentativeInfo(RepresentativeInfoData data)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    string query = @"
+                    INSERT INTO RepresentativeInfo 
+                    (CustomerID, PrimaryName, PrimaryRelationship, PrimaryAddress, PrimaryTelMobile, PrimaryEmail, PrimaryDate,
+                    SecondaryName, SecondaryRelationship, SecondaryAddress, SecondaryTelMobile, SecondaryEmail, SecondaryDate) 
+                    VALUES 
+                    (@CustomerID, @PrimaryName, @PrimaryRelationship, @PrimaryAddress, @PrimaryTelMobile, @PrimaryEmail, @PrimaryDate,
+                    @SecondaryName, @SecondaryRelationship, @SecondaryAddress, @SecondaryTelMobile, @SecondaryEmail, @SecondaryDate)";
+
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CustomerID", data.CustomerID);
+                        command.Parameters.AddWithValue("@PrimaryName", data.PrimaryName ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@PrimaryRelationship", data.PrimaryRelationship ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@PrimaryAddress", data.PrimaryAddress ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@PrimaryTelMobile", data.PrimaryTelMobile ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@PrimaryEmail", data.PrimaryEmail ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@PrimaryDate", data.PrimaryDate ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@SecondaryName", data.SecondaryName ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@SecondaryRelationship", data.SecondaryRelationship ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@SecondaryAddress", data.SecondaryAddress ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@SecondaryTelMobile", data.SecondaryTelMobile ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@SecondaryEmail", data.SecondaryEmail ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@SecondaryDate", data.SecondaryDate ?? (object)DBNull.Value);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        Console.WriteLine($"RepresentativeInfo saved for CustomerID: {data.CustomerID}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in SaveRepresentativeInfo: {ex.Message}");
+                throw;
+            }
+        }
 
     }
 }

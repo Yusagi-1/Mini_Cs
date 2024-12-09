@@ -76,6 +76,7 @@
             txtPlanHolderName.TrailingIcon = null;
             txtPlanHolderName.UseSystemPasswordChar = false;
             txtPlanHolderName.ValidatingType = null;
+            txtPlanHolderName.Click += txtPlanHolderName_Click;
             // 
             // txtPlanNo
             // 
@@ -118,6 +119,7 @@
             txtPlanNo.TrailingIcon = null;
             txtPlanNo.UseSystemPasswordChar = false;
             txtPlanNo.ValidatingType = null;
+            txtPlanNo.Click += txtPlanNo_Click;
             // 
             // txtCompany
             // 
@@ -160,6 +162,7 @@
             txtCompany.TrailingIcon = null;
             txtCompany.UseSystemPasswordChar = false;
             txtCompany.ValidatingType = null;
+            txtCompany.Click += txtCompany_Click;
             // 
             // txtPlanType
             // 
@@ -202,6 +205,7 @@
             txtPlanType.TrailingIcon = null;
             txtPlanType.UseSystemPasswordChar = false;
             txtPlanType.ValidatingType = null;
+            txtPlanType.Click += txtPlanType_Click;
             // 
             // btnProceed
             // 
@@ -221,6 +225,7 @@
             btnProceed.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             btnProceed.UseAccentColor = false;
             btnProceed.UseVisualStyleBackColor = true;
+            btnProceed.Click += btnProceed_Click;
             // 
             // Plan
             // 
