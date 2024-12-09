@@ -18,6 +18,7 @@ namespace Mini_Cs
             customerData.ServiceDate = dpDate.Value;
         }
 
+        
         private void UpdateServiceType()
         {
             if (checkBoxFullService.Checked)
@@ -92,25 +93,47 @@ namespace Mini_Cs
             checkBoxNo.Enabled = true;
             checkBoxOther.Enabled = true;
         }
+        private void ResetDeceasedInfoData(DeceasedInfoData deceasedInfo)
+        {
+            deceasedInfo.Name = string.Empty;
+            deceasedInfo.Address = string.Empty;
+            deceasedInfo.CivilStatus = string.Empty;
+            deceasedInfo.Gender = string.Empty;
+            deceasedInfo.Birthdate = null;
+            deceasedInfo.DateOfDeath = null;
+            deceasedInfo.OSCAPWDID = string.Empty;
+        }
 
         private void btnProceed_Click_1(object sender, EventArgs e)
         {
             if (checkBoxOther.Checked)
             {
-                customerData.LifePlanOtherDetails = txtBoxOthers.Text; 
+                customerData.LifePlanOtherDetails = txtBoxOthers.Text;
             }
+
             Console.WriteLine($"Proceeding with CustomerID: {customerData.CustomerID}");
             parentForm.AddCustomerData(customerData);
+
             if (parentForm == null)
             {
                 MessageBox.Show("Parent form is not set. Unable to proceed.");
                 return;
             }
+
             try
             {
-                MessageBox.Show("Customer data saved successfully. Proceeding to Deceased form...");
-                Deceased deceasedForm = new Deceased(parentForm, customerData.DeceasedInfo); // Pass shared data
+                // Reset DeceasedInfo data before proceeding
+                if (parentForm.sharedData.DeceasedInfo == null)
+                {
+                    parentForm.sharedData.DeceasedInfo = new DeceasedInfoData();
+                }
+                else
+                {
+                    ResetDeceasedInfoData(parentForm.sharedData.DeceasedInfo);
+                }
 
+                MessageBox.Show("Customer data saved successfully. Proceeding to Deceased form...");
+                Deceased deceasedForm = new Deceased(parentForm, parentForm.sharedData.DeceasedInfo);
                 parentForm.OpenFormInPanel(deceasedForm);
             }
             catch (Exception ex)

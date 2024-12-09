@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
-//using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Mini_Cs
 {
@@ -48,44 +48,6 @@ namespace Mini_Cs
             deceasedData.DateOfDeath = dpDateofDeath.Value;
             deceasedData.OSCAPWDID = txtPwd.Text.Trim();
         }
-
-        private void txtName_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtAddress_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cbCivilStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtPwd_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void dpBirthdate_ValueChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void dpDateofDeath_ValueChanged(object sender, EventArgs e)
-        {
-           
-        }
-        
-        
-
         private void btnProceed_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtAddress.Text))
@@ -127,6 +89,45 @@ namespace Mini_Cs
                 MessageBox.Show("Proceeding has been canceled.", "Action Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void txtName_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtAddress_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbCivilStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtPwd_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dpBirthdate_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void dpDateofDeath_ValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+        
+        
+
+        
 
 
 

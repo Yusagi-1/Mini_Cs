@@ -158,12 +158,41 @@ namespace Mini_Cs
 
         private void checkBoxAutopsyYes_CheckedChanged(object sender, EventArgs e)
         {
-            serviceDetails.Autopsy = checkBoxAutopsyYes.Checked;
+            if (checkBoxAutopsyYes.Checked)
+                checkBoxAutopsyNo.Enabled = false;
+            else
+                checkBoxAutopsyNo.Enabled = true;
         }
-
         private void checkBoxAutopsyNo_CheckedChanged(object sender, EventArgs e)
         {
-            
+            if (checkBoxAutopsyNo.Checked)
+                checkBoxAutopsyYes.Enabled = false;
+            else
+                checkBoxAutopsyYes.Enabled = true;
+
+        }
+        private void HandleCheckboxSelection(CheckBox selectedCheckBox, Bunifu.UI.WinForms.BunifuTextBox othersTextBox, params CheckBox[] otherCheckBoxes)
+        {
+            if (selectedCheckBox.Checked)
+            {
+                // Disable all other checkboxes
+                foreach (var checkBox in otherCheckBoxes)
+                    checkBox.Enabled = false;
+
+                // Enable the corresponding text box if "Others" is selected
+                if (selectedCheckBox.Text.Contains("Others"))
+                    othersTextBox.Enabled = true;
+            }
+            else
+            {
+                // Enable all checkboxes when deselecting
+                foreach (var checkBox in otherCheckBoxes)
+                    checkBox.Enabled = true;
+
+                // Disable text box if "Others" is deselected
+                if (selectedCheckBox.Text.Contains("Others"))
+                    othersTextBox.Enabled = false;
+            }
         }
 
         private void tbViewingPlace_TextChanged(object sender, EventArgs e)
@@ -179,22 +208,22 @@ namespace Mini_Cs
 
         private void checkboxPrivatePhysiscian_CheckedChanged(object sender, EventArgs e)
         {
-
+            HandleCheckboxSelection(checkboxPrivatePhysiscian, tbDcOthers, checkBoxHospitalAuthority, checkBoxPublicHealthOfficer, checkBoxDcOthers);
         }
 
         private void checkBoxHospitalAuthority_CheckedChanged(object sender, EventArgs e)
         {
-
+            HandleCheckboxSelection(checkBoxHospitalAuthority, tbDcOthers, checkboxPrivatePhysiscian, checkBoxPublicHealthOfficer, checkBoxDcOthers);
         }
 
         private void checkBoxPublicHealthOfficer_CheckedChanged(object sender, EventArgs e)
         {
-
+            HandleCheckboxSelection(checkBoxPublicHealthOfficer, tbDcOthers, checkboxPrivatePhysiscian, checkBoxHospitalAuthority, checkBoxDcOthers);
         }
 
         private void checkBoxDcOthers_CheckedChanged(object sender, EventArgs e)
         {
-
+            HandleCheckboxSelection(checkBoxDcOthers, tbDcOthers, checkboxPrivatePhysiscian, checkBoxHospitalAuthority, checkBoxPublicHealthOfficer);
         }
 
         private void tbDcOthers_TextChanged(object sender, EventArgs e)
@@ -205,22 +234,22 @@ namespace Mini_Cs
 
         private void checkBoxBurial_CheckedChanged(object sender, EventArgs e)
         {
-
+            HandleCheckboxSelection(checkBoxBurial, tbDmOthers, checkBoxCremation, checkBoxTransfer, checkBoxDmOthers);
         }
 
         private void checkBoxCremation_CheckedChanged(object sender, EventArgs e)
         {
-
+            HandleCheckboxSelection(checkBoxCremation, tbDmOthers, checkBoxBurial, checkBoxTransfer, checkBoxDmOthers);
         }
 
         private void checkBoxTransfer_CheckedChanged(object sender, EventArgs e)
         {
-
+            HandleCheckboxSelection(checkBoxTransfer, tbDmOthers, checkBoxBurial, checkBoxCremation, checkBoxDmOthers);
         }
 
         private void checkBoxDmOthers_CheckedChanged(object sender, EventArgs e)
         {
-
+            HandleCheckboxSelection(checkBoxDmOthers, tbDmOthers, checkBoxBurial, checkBoxCremation, checkBoxTransfer);
         }
 
         private void tbDmOthers_TextChanged(object sender, EventArgs e)
@@ -230,24 +259,24 @@ namespace Mini_Cs
 
         }
 
-        private void checkBoxFamilyCar_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBoxHearse_CheckedChanged(object sender, EventArgs e)
         {
+            HandleCheckboxSelection(checkBoxHearse, tbAvOthers, checkBoxFamilyCar, checkBoxFlowerCar, checkBoxAvOthers);
+        }
 
+        private void checkBoxFamilyCar_CheckedChanged(object sender, EventArgs e)
+        {
+            HandleCheckboxSelection(checkBoxFamilyCar, tbAvOthers, checkBoxHearse, checkBoxFlowerCar, checkBoxAvOthers);
         }
 
         private void checkBoxFlowerCar_CheckedChanged(object sender, EventArgs e)
         {
-
+            HandleCheckboxSelection(checkBoxFlowerCar, tbAvOthers, checkBoxHearse, checkBoxFamilyCar, checkBoxAvOthers);
         }
 
         private void checkBoxAvOthers_CheckedChanged(object sender, EventArgs e)
         {
-
+            HandleCheckboxSelection(checkBoxAvOthers, tbAvOthers, checkBoxHearse, checkBoxFamilyCar, checkBoxFlowerCar);
         }
 
         private void tbAvOthers_TextChanged(object sender, EventArgs e)
@@ -295,9 +324,7 @@ namespace Mini_Cs
             {
                 try
                 {
-                    SaveFormData(); // Save form data to respective objects
-
-                    // Ensure PlanDetails is initialized in sharedData if it's null
+                    SaveFormData(); 
                     if (parentForm.sharedData.PlanDetails == null)
                     {
                         parentForm.sharedData.PlanDetails = new PlanDetailsData();
