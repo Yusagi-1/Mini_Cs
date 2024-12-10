@@ -15,6 +15,7 @@ using System.Configuration;
 using FontAwesome.Sharp;
 using Color = System.Drawing.Color;
 using Mini_Cs.Goite_Added_frmChildForms;
+using System.Windows.Media.Imaging;
 
 namespace Mini_Cs
 {
@@ -145,7 +146,7 @@ namespace Mini_Cs
 
         private void btnService_Click(object sender, EventArgs e)
         {
-            
+
             ActivatedButton(sender, RGBColors.color5); // Assuming this activates some visual state
             frmAddService02 servicefrm = new frmAddService02();
             servicefrm.TopLevel = false;
@@ -178,6 +179,22 @@ namespace Mini_Cs
             panelMain.Controls.Clear();
             panelMain.Controls.Add(deceasedForm);
             deceasedForm.Show();
+        }
+        private void HomePage2()
+        {
+            
+            Home home = new Home();
+            home.TopLevel = false;
+            home.FormBorderStyle = FormBorderStyle.None;
+            home.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(home);
+            home.Show();
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+            HomePage2();
         }
     }
 }

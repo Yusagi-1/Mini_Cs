@@ -67,15 +67,18 @@ namespace Mini_Cs
             dd.DispositionManner,
             dd.DispositionPlace,
             dd.DispositionDateTime,
-            pd.PlanType
-        FROM 
-            DeceasedInfo di
-        JOIN 
-            DispositionDetails dd ON di.DeceasedID = dd.DispositionID
-        JOIN 
-            PlanDetails pd ON di.DeceasedID = pd.PlanID
-        WHERE 
-            dd.DispositionDateTime = @DispositionDateTime;"; // Add WHERE clause
+            pd.PlanType,
+        td.Status  -- Added Status from TransactionDetails
+FROM 
+    DeceasedInfo di
+JOIN 
+    DispositionDetails dd ON di.DeceasedID = dd.CustomerID  -- Ensure correct foreign key relationship
+JOIN 
+    PlanDetails pd ON di.DeceasedID = pd.CustomerID  -- Ensure correct foreign key relationship
+JOIN 
+    TransactionDetails td ON di.DeceasedID = td.CustomerID  -- Join with TransactionDetails
+WHERE 
+    dd.DispositionDateTime = @DispositionDateTime;"; // Add WHERE clause
 
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -98,6 +101,7 @@ namespace Mini_Cs
                         label17.Text = reader["DispositionManner"].ToString();
                         label18.Text = reader["DispositionPlace"].ToString();
                         label19.Text = Convert.ToDateTime(reader["DispositionDateTime"]).ToString("g"); // General date/time pattern
+                        label21.Text = reader["Status"].ToString();
 
                     }
                     else

@@ -384,6 +384,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HomePage";
             WindowState = FormWindowState.Maximized;
+            Load += HomePage_Load;
             panelNavBar.ResumeLayout(false);
             picBoxPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

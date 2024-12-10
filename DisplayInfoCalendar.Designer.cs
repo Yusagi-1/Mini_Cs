@@ -49,6 +49,8 @@
             label18 = new Label();
             label19 = new Label();
             iconButton1 = new FontAwesome.Sharp.IconButton();
+            label20 = new Label();
+            label21 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -267,11 +269,33 @@
             iconButton1.UseVisualStyleBackColor = false;
             iconButton1.Click += iconButton1_Click;
             // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Poppins", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.Location = new Point(280, 153);
+            label20.Name = "label20";
+            label20.Size = new Size(148, 28);
+            label20.TabIndex = 21;
+            label20.Text = "Payment Status:";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new Font("Poppins Light", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label21.Location = new Point(434, 153);
+            label21.Name = "label21";
+            label21.Size = new Size(126, 26);
+            label21.TabIndex = 22;
+            label21.Text = "Payment Status";
+            // 
             // DisplayInfoCalendar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(621, 334);
+            Controls.Add(label21);
+            Controls.Add(label20);
             Controls.Add(iconButton1);
             Controls.Add(label19);
             Controls.Add(label18);
@@ -325,5 +349,7 @@
         private Label label18;
         private Label label19;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private Label label20;
+        private Label label21;
     }
 }

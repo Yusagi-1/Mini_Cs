@@ -67,7 +67,7 @@
             bunifuPanel1.BorderThickness = 1;
             bunifuPanel1.Controls.Add(label2);
             bunifuPanel1.Controls.Add(label1);
-            bunifuPanel1.Location = new Point(842, 7);
+            bunifuPanel1.Location = new Point(846, 7);
             bunifuPanel1.Name = "bunifuPanel1";
             bunifuPanel1.ShowBorders = true;
             bunifuPanel1.Size = new Size(125, 48);
@@ -330,7 +330,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1104, 524);
+            ClientSize = new Size(1112, 599);
             Controls.Add(label10);
             Controls.Add(iconButton2);
             Controls.Add(iconButton1);
