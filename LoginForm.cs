@@ -24,7 +24,7 @@ namespace Mini_Cs
             this.KeyPreview = true;
             lblDate.Text = DateTime.Now.ToLongDateString();
             lblTime.Text = DateTime.Now.ToLongTimeString();
-            AddUser("123", "123", "Manager");
+//AddUser("123", "123", "Manager");
             tbUsername.Focus();
             tbPassword.PasswordChar = '*';
         }
@@ -37,40 +37,6 @@ namespace Mini_Cs
         }
 
         //ADD USER METHOD USE ONLY IF NO USERS IN DATABASE
-        private void AddUser(string username, string password, string role)
-        {
-            string query = "INSERT INTO Users (Username, PasswordHash, Role) VALUES (@Username, @PasswordHash, @Role)";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Username", username);
-                        command.Parameters.AddWithValue("@PasswordHash", HashPassword(password));
-                        command.Parameters.AddWithValue("@Role", role); // Adding the Role parameter
-
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error adding user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
 
 
 
@@ -79,10 +45,12 @@ namespace Mini_Cs
             string username = tbUsername.Text;
             string password = tbPassword.Text;
 
-            if (IsValidUser(username, password))
+            var userRole = GetUserRole(username, password);
+
+            if (userRole != null)
             {
-                // If valid user, proceed to home page
-                HomePage homePage = new HomePage();
+                // If valid user, proceed to home page based on role
+                HomePage homePage = new HomePage(userRole);
                 this.Hide();
                 homePage.ShowDialog();
                 Application.Exit();
@@ -93,11 +61,11 @@ namespace Mini_Cs
             }
         }
 
-        // Function to check if the user exists in the database
-        private bool IsValidUser(string username, string password)
+        // Function to check if the user exists in the database and get their role
+        private string GetUserRole(string username, string password)
         {
-            bool isValid = false;
-            string query = "SELECT PasswordHash FROM Users WHERE Username = @Username";
+            string role = null;
+            string query = "SELECT PasswordHash, Role FROM Users WHERE Username = @Username";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -110,16 +78,18 @@ namespace Mini_Cs
                         // Use parameterized query to avoid SQL injection
                         command.Parameters.AddWithValue("@Username", username);
 
-                        var result = command.ExecuteScalar();
-
-                        if (result != null)
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            string storedPasswordHash = result.ToString();
-                            string enteredPasswordHash = HashPassword(password);
-
-                            if (storedPasswordHash == enteredPasswordHash)
+                            if (reader.Read())
                             {
-                                isValid = true;
+                                string storedPasswordHash = reader["PasswordHash"].ToString();
+                                string enteredPasswordHash = HashPassword(password);
+                                role = reader["Role"].ToString();
+
+                                if (storedPasswordHash == enteredPasswordHash)
+                                {
+                                    return role; // Return the role if the password matches
+                                }
                             }
                         }
                     }
@@ -130,7 +100,7 @@ namespace Mini_Cs
                 }
             }
 
-            return isValid;
+            return null; // Return null if not valid
         }
 
         // Hash the entered password using SHA256

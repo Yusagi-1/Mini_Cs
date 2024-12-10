@@ -129,12 +129,11 @@ namespace Mini_Cs.PaymentServices
 
                     MessageBox.Show("Payment details saved successfully. Proceeding to the Representative form...", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Correct parameter passing
-                    Representative representativeForm = new Representative(parentForm, parentForm.sharedData.RepresentativeInfo);
+                    
 
 
 
-                    parentForm.OpenFormInPanel(representativeForm);
+                    
                 }
                 catch (Exception ex)
                 {

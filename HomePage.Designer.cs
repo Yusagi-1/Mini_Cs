@@ -146,6 +146,7 @@
             btnUserManagement.TextAlign = ContentAlignment.MiddleLeft;
             btnUserManagement.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnUserManagement.UseVisualStyleBackColor = false;
+            btnUserManagement.Click += btnUserManagement_Click;
             // 
             // btnReports
             // 

@@ -20,15 +20,19 @@ namespace Mini_Cs
 {
     public partial class HomePage : Form
     {
+        private string userRole;
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         string connectionString = ConfigurationManager.ConnectionStrings["RecordKeepingConnection"].ConnectionString;
-        public HomePage()
+        public HomePage(string role)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelNavBar.Controls.Add(leftBorderBtn);
+            userRole = role;
+
+            SetFormVisibility();
 
         }
         private struct RGBColors
@@ -42,6 +46,17 @@ namespace Mini_Cs
             public static Color colorb = Color.FromArgb(0, 0, 0);
 
 
+        }
+
+        private void SetFormVisibility()
+        {
+            if (userRole == "Staff")
+            {
+                // Hide forms or controls that should not be visible to Staff
+                btnReports.Visible = false;
+                btnUserManagement.Visible = false;
+            }
+            // If role is Admin, everything remains visible
         }
         private void ActivatedButton(object senderBtn, Color color)
         {
@@ -111,6 +126,18 @@ namespace Mini_Cs
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+            ActivatedButton(sender, RGBColors.color1);
+            UserControl uc = new UserControl();
+            uc.TopLevel = false;
+            uc.FormBorderStyle = FormBorderStyle.None;
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(uc);
+            uc.Show();
         }
     }
 }
