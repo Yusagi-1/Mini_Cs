@@ -58,17 +58,19 @@ namespace Mini_Cs
             string connectionString = ConfigurationManager.ConnectionStrings["RecordKeepingConnection"].ConnectionString;
 
             string query = @"
-        SELECT 
-            di.Name,
-            di.Address,
-            di.Gender,
-            di.Birthdate,
-            di.DateOfDeath,
-            dd.DispositionManner,
-            dd.DispositionPlace,
-            dd.DispositionDateTime,
-            pd.PlanType,
-        td.Status  -- Added Status from TransactionDetails
+SELECT 
+    di.Name,
+    di.Address,
+    di.Gender,
+    di.Birthdate,
+    di.DateOfDeath,
+    dd.DispositionManner,
+    dd.DispositionPlace,
+    dd.DispositionDateTime,
+    pd.PlanType,
+    td.Status,
+    ri.PrimaryTelMobile,  -- Added PrimaryTelMobile
+    ri.SecondaryTelMobile  -- Added SecondaryTelMobile
 FROM 
     DeceasedInfo di
 JOIN 
@@ -77,8 +79,10 @@ JOIN
     PlanDetails pd ON di.DeceasedID = pd.CustomerID  -- Ensure correct foreign key relationship
 JOIN 
     TransactionDetails td ON di.DeceasedID = td.CustomerID  -- Join with TransactionDetails
+JOIN 
+    RepresentativeInfo ri ON di.DeceasedID = ri.CustomerID  -- Join with RepresentativeInfo
 WHERE 
-    dd.DispositionDateTime = @DispositionDateTime;"; // Add WHERE clause
+    dd.DispositionDateTime = @DispositionDateTime;";
 
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -102,6 +106,8 @@ WHERE
                         label18.Text = reader["DispositionPlace"].ToString();
                         label19.Text = Convert.ToDateTime(reader["DispositionDateTime"]).ToString("g"); // General date/time pattern
                         label21.Text = reader["Status"].ToString();
+                        label23.Text = reader["PrimaryTelMobile"].ToString(); // Assign PrimaryTelMobile to label23
+                        label25.Text = reader["SecondaryTelMobile"].ToString(); // Assign SecondaryTelMobile to label25
 
                     }
                     else
