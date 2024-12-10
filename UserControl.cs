@@ -26,9 +26,9 @@ namespace Mini_Cs
         private void InitializeComponent()
         {
             ComponentResourceManager resources = new ComponentResourceManager(typeof(UserControl));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             materialComboBox1 = new MaterialComboBox();
             bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -39,6 +39,7 @@ namespace Mini_Cs
             textBox2 = new TextBox();
             materialButton2 = new MaterialButton();
             textBox3 = new TextBox();
+            materialButton3 = new MaterialButton();
             ((ISupportInitialize)bunifuDataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -113,21 +114,21 @@ namespace Mini_Cs
             // bunifuDataGridView1
             // 
             bunifuDataGridView1.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(248, 251, 255);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(248, 251, 255);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             bunifuDataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             bunifuDataGridView1.BorderStyle = BorderStyle.None;
             bunifuDataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             bunifuDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 11.75F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(24, 115, 204);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI Semibold", 11.75F, FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(24, 115, 204);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             bunifuDataGridView1.ColumnHeadersHeight = 40;
             bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = Color.FromArgb(248, 251, 255);
             bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
@@ -147,14 +148,14 @@ namespace Mini_Cs
             bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = Color.Black;
             bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = Color.FromArgb(210, 232, 255);
             bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(210, 232, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(210, 232, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             bunifuDataGridView1.EnableHeadersVisualStyles = false;
             bunifuDataGridView1.GridColor = Color.FromArgb(221, 238, 255);
             bunifuDataGridView1.HeaderBackColor = Color.DodgerBlue;
@@ -181,9 +182,9 @@ namespace Mini_Cs
             materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton1.Name = "materialButton1";
             materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(73, 36);
+            materialButton1.Size = new Size(64, 36);
             materialButton1.TabIndex = 4;
-            materialButton1.Text = "Delete";
+            materialButton1.Text = "edit";
             materialButton1.Type = MaterialButton.MaterialButtonType.Contained;
             materialButton1.UseAccentColor = false;
             materialButton1.UseVisualStyleBackColor = true;
@@ -225,14 +226,35 @@ namespace Mini_Cs
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(577, 434);
+            textBox3.Location = new Point(479, 434);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(57, 23);
             textBox3.TabIndex = 9;
             // 
+            // materialButton3
+            // 
+            materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton3.Density = MaterialButton.MaterialButtonDensity.Default;
+            materialButton3.Depth = 0;
+            materialButton3.HighEmphasis = true;
+            materialButton3.Icon = null;
+            materialButton3.Location = new Point(543, 426);
+            materialButton3.Margin = new Padding(4, 6, 4, 6);
+            materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton3.Name = "materialButton3";
+            materialButton3.NoAccentTextColor = Color.Empty;
+            materialButton3.Size = new Size(90, 36);
+            materialButton3.TabIndex = 10;
+            materialButton3.Text = "Get Data";
+            materialButton3.Type = MaterialButton.MaterialButtonType.Contained;
+            materialButton3.UseAccentColor = false;
+            materialButton3.UseVisualStyleBackColor = true;
+            materialButton3.Click += materialButton3_Click;
+            // 
             // UserControl
             // 
             ClientSize = new Size(758, 477);
+            Controls.Add(materialButton3);
             Controls.Add(textBox3);
             Controls.Add(materialButton2);
             Controls.Add(textBox2);
@@ -259,11 +281,12 @@ namespace Mini_Cs
         private TextBox textBox2;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private TextBox textBox3;
+        private MaterialButton materialButton3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
 
         private void MaterialButton2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private string HashPassword(string password)
@@ -304,32 +327,18 @@ namespace Mini_Cs
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            int userId;
-            if (int.TryParse(textBox3.Text, out userId))
+            string userId = textBox3.Text;
+            string newUsername = textBox1.Text;
+            string newPassword = textBox2.Text;
+            string newRole = materialComboBox1.SelectedItem?.ToString();
+
+            if (!string.IsNullOrEmpty(userId) && !string.IsNullOrEmpty(newUsername) && !string.IsNullOrEmpty(newRole))
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "DELETE FROM Users WHERE UserID = @UserID";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@UserID", userId);
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("User deleted successfully.");
-                        }
-                        else
-                        {
-                            MessageBox.Show("User not found.");
-                        }
-                    }
-                }
-                LoadUsers();
+                UpdateUserData(userId, newUsername, newPassword, newRole);
             }
             else
             {
-                MessageBox.Show("Please enter a valid UserID.");
+                MessageBox.Show("Please fill in all fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -365,5 +374,98 @@ namespace Mini_Cs
 
             LoadUsers();
         }
+
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            string userId = textBox3.Text;
+
+            if (!string.IsNullOrEmpty(userId))
+            {
+                LoadUserData(userId);
+            }
+            else
+            {
+                MessageBox.Show("Please enter a User ID.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void LoadUserData(string userId)
+        {
+            string query = "SELECT Username, PasswordHash, Role FROM Users WHERE UserID = @UserID";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", userId);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Assuming you have textBoxUsername and textBoxPassword for user details
+                                textBox1.Text = reader["Username"].ToString();
+                                textBox2.Text = ""; // Clear password field for security
+                                materialComboBox1.SelectedItem = reader["Role"].ToString(); // Assuming comboBoxRole has "Admin" and "Staff"
+                            }
+                            else
+                            {
+                                MessageBox.Show("User not found.", "Data Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+
+        private void UpdateUserData(string userId, string username, string password, string role)
+        {
+            string query = "UPDATE Users SET Username = @Username, Role = @Role" +
+                           (string.IsNullOrEmpty(password) ? "" : ", PasswordHash = @PasswordHash") +
+                           " WHERE UserID = @UserID";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", userId);
+                        command.Parameters.AddWithValue("@Username", username);
+                        command.Parameters.AddWithValue("@Role", role);
+
+                        if (!string.IsNullOrEmpty(password))
+                        {
+                            // Assuming HashPassword is a method that hashes the password
+                            command.Parameters.AddWithValue("@PasswordHash", HashPassword(password));
+                        }
+
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("User data updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No changes were made.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
     }
 }
