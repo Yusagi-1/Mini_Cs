@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
+using Mini_Cs.TransacDetails;
 
 namespace Mini_Cs
 {
@@ -25,6 +26,8 @@ namespace Mini_Cs
             LoadStatusComboBox();
             LoadCustomerIDs();
             LoadModeOfPaymentComboBox();
+            txtContractPrice.ReadOnly = true;
+            txtContractPrice.BackColor = SystemColors.Control;
         }
         private void LoadModeOfPaymentComboBox()
         {
@@ -92,11 +95,20 @@ namespace Mini_Cs
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"
-            SELECT C.CustomerID 
+            WITH LatestTransactions AS (
+                SELECT 
+                    CustomerID, 
+                    RemainingBalance, 
+                    ROW_NUMBER() OVER (PARTITION BY CustomerID ORDER BY PaymentDate DESC) AS RowNum
+                FROM TransactionDetails
+            )
+            SELECT DISTINCT C.CustomerID
             FROM Customers C
             LEFT JOIN RegularPaymentDetails RPD ON C.CustomerID = RPD.CustomerID
             LEFT JOIN SeniorPaymentDetails SPD ON C.CustomerID = SPD.CustomerID
-            WHERE COALESCE(RPD.ContractPrice, SPD.ContractPrice) > 0
+            LEFT JOIN LatestTransactions LT ON C.CustomerID = LT.CustomerID AND LT.RowNum = 1
+            WHERE 
+                COALESCE(LT.RemainingBalance, RPD.ContractPrice, SPD.ContractPrice, 0) > 0
             ORDER BY C.CustomerID;";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -106,7 +118,7 @@ namespace Mini_Cs
                     conn.Open();
                     SqlDataReader reader = cmd.ExecuteReader();
 
-                    cbCustomerId.Items.Clear();  // Clear existing items
+                    cbCustomerId.Items.Clear(); // Clear existing items
 
                     while (reader.Read())
                     {
@@ -125,9 +137,10 @@ namespace Mini_Cs
             }
         }
 
-        private void txtContractPrice_Click(object sender, EventArgs e){ }
-        private void lblCustomerName_Click(object sender, EventArgs e){ }
-        private void txtAmountPaid_Click(object sender, EventArgs e) 
+
+        private void txtContractPrice_Click(object sender, EventArgs e) { }
+        private void lblCustomerName_Click(object sender, EventArgs e) { }
+        private void txtAmountPaid_Click(object sender, EventArgs e)
         {
             if (decimal.TryParse(txtContractPrice.Text, out decimal contractPrice) &&
             decimal.TryParse(txtAmountPaid.Text, out decimal amountPaid))
@@ -155,9 +168,17 @@ namespace Mini_Cs
                 return;
             }
 
-            int customerId = Convert.ToInt32(cbCustomerId.SelectedItem);
             decimal contractPrice = Convert.ToDecimal(txtContractPrice.Text);
             decimal paymentAmount = Convert.ToDecimal(txtAmountPaid.Text);
+
+            if (paymentAmount > contractPrice)
+            {
+                MessageBox.Show("Payment amount cannot exceed the contract price.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Remaining logic for inserting the transaction
+            int customerId = Convert.ToInt32(cbCustomerId.SelectedItem);
             decimal remainingBalance = contractPrice - paymentAmount;
             string status = cbStatus.SelectedItem.ToString();
             string modeOfPayment = cbModeOfPayment.SelectedItem.ToString();
@@ -222,6 +243,7 @@ namespace Mini_Cs
             }
         }
 
+
         private void ClearForm()
         {
             cbCustomerId.SelectedIndex = 0;
@@ -233,5 +255,26 @@ namespace Mini_Cs
             dpPaymentDate.Value = DateTime.Now;
         }
 
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            ViewTransac viewForm = new ViewTransac();
+
+            // Optionally, you can show it as a modal dialog
+            // viewForm.ShowDialog(); // Uncomment this line to show it as a modal dialog
+
+            // Or just show it normally
+            viewForm.Show();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateTransac updateTransac = new UpdateTransac();
+
+            // Optionally, you can show it as a modal dialog
+            // viewForm.ShowDialog(); // Uncomment this line to show it as a modal dialog
+
+            // Or just show it normally
+            updateTransac.Show();
+        }
     }
 }

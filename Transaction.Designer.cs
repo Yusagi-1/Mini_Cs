@@ -287,6 +287,7 @@
             btnUpdate.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             btnUpdate.UseAccentColor = false;
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnView
             // 
@@ -306,6 +307,7 @@
             btnView.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             btnView.UseAccentColor = false;
             btnView.UseVisualStyleBackColor = true;
+            btnView.Click += btnView_Click;
             // 
             // Transaction
             // 
